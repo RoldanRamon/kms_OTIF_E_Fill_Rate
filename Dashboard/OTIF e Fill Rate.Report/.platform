@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "OTIF e Fill Rate"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "961e03c6-26b1-449d-b815-b958330ea4c5"
+  }
+}

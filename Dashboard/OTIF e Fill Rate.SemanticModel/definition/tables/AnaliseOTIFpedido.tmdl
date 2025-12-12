@@ -1,0 +1,77 @@
+table AnaliseOTIFpedido
+	lineageTag: 5706d02d-2596-4dc4-879b-db55369b0e0a
+
+	column NR_PEDIDO
+		lineageTag: ab998eec-7896-4dcc-a5d7-1a83ce326d74
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: fPedido[NR_PEDIDO]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Qtde Linhas'
+		formatString: 0
+		lineageTag: 9d73aae0-e81a-4d36-8926-d31258fa4422
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Qtde Linhas]
+
+		annotation SummarizationSetBy = Automatic
+
+	column OTIF
+		formatString: 0
+		lineageTag: 767acc01-c928-4f2b-a9e4-cb57399816ae
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [OTIF]
+
+		annotation SummarizationSetBy = Automatic
+
+	column NO-OTIF
+		formatString: 0
+		lineageTag: dbeca6e4-8a3b-4a40-a5b1-a17972bb08b3
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [NO-OTIF]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ainda No Prazo'
+		formatString: 0
+		lineageTag: ae6c4d25-7ec7-4b55-bde7-1b8f072bd3cb
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Ainda No Prazo]
+
+		annotation SummarizationSetBy = Automatic
+
+	column '@OTIF Pedido'
+		lineageTag: 88534f1b-7916-4eb0-b48d-6ab7f3219675
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [@OTIF Pedido]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition AnaliseOTIFpedido = calculated
+		mode: import
+		source = ```
+				
+				ADDCOLUMNS(
+				    SUMMARIZECOLUMNS(
+				        fPedido[NR_PEDIDO],
+				        "Qtde Linhas", [Qtde Total de Linhas],
+				        "OTIF", CALCULATE([Qtde Total de Linhas], fPedido[@OTIF Linha] = "OTIF"),
+				        "NO-OTIF", CALCULATE([Qtde Total de Linhas], fPedido[@OTIF Linha] = "NO-OTIF"),
+				        "Ainda No Prazo", CALCULATE([Qtde Total de Linhas], fPedido[@OTIF Linha] = "Ainda No Prazo")
+				    ),
+				    "@OTIF Pedido", SWITCH(TRUE(),
+				                    [NO-OTIF] > 0, "NO-OTIF", 
+				                    [Ainda No Prazo] > 0, "Ainda No Prazo",
+				                    "OTIF"
+				                    )
+				)
+				```
+
+	annotation PBI_Id = ef58315a63fa4c988fe6cc5ca2590412
+

@@ -1,0 +1,222 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "f7ca000d30433eb3bc23",
+  "position": {
+    "x": 640,
+    "y": 529.48306595365443,
+    "z": 7000,
+    "height": 190.5169340463458,
+    "width": 640,
+    "tabOrder": 8000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "AnaliseOTIFpedido"
+                    }
+                  },
+                  "Property": "NR_PEDIDO"
+                }
+              },
+              "queryRef": "AnaliseOTIFpedido.NR_PEDIDO",
+              "nativeQueryRef": "NR_PEDIDO"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "AnaliseOTIFpedido"
+                    }
+                  },
+                  "Property": "Qtde Linhas"
+                }
+              },
+              "queryRef": "AnaliseOTIFpedido.Qtde Linhas",
+              "nativeQueryRef": "Qtde Linhas"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "AnaliseOTIFpedido"
+                    }
+                  },
+                  "Property": "OTIF"
+                }
+              },
+              "queryRef": "AnaliseOTIFpedido.OTIF",
+              "nativeQueryRef": "OTIF"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "AnaliseOTIFpedido"
+                    }
+                  },
+                  "Property": "NO-OTIF"
+                }
+              },
+              "queryRef": "AnaliseOTIFpedido.NO-OTIF",
+              "nativeQueryRef": "NO-OTIF"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "AnaliseOTIFpedido"
+                    }
+                  },
+                  "Property": "Ainda No Prazo"
+                }
+              },
+              "queryRef": "AnaliseOTIFpedido.Ainda No Prazo",
+              "nativeQueryRef": "Ainda No Prazo"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "AnaliseOTIFpedido"
+                  }
+                },
+                "Property": "Qtde Linhas"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnFormatting": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "AnaliseOTIFpedido.NR_PEDIDO"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "AnaliseOTIFpedido.Qtde Linhas"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "AnaliseOTIFpedido.OTIF"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "AnaliseOTIFpedido.NO-OTIF"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "AnaliseOTIFpedido.Ainda No Prazo"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

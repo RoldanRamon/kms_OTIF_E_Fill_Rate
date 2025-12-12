@@ -1,0 +1,131 @@
+table dCalendario
+	lineageTag: 34fdbf2d-fc9d-4505-b87e-7e5c3afab232
+
+	column Date
+		formatString: Short Date
+		lineageTag: 7305e1b8-edf3-4422-bb46-6548b099f968
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation __PBI_SemanticLinks = [{"LinkTarget":{"TableName":"dCalendario","TableItemName":"Date (compartimentos)","ObjectType":4},"LinkType":"UsedInGroup"}]
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Dia Mes' = DAY('dCalendario'[Date])
+		formatString: 0
+		lineageTag: 507f8789-ac09-4029-95d5-63ee85bce725
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes = MONTH('dCalendario'[Date])
+		formatString: 0
+		lineageTag: 4f0e7578-ad42-4acb-b894-86c1991a385a
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mês = ```
+			SWITCH (MONTH (LASTDATE(dCalendario[Date])), 1, "Jan" , 2, "Fev", 3, "Mar", 4, "Abr"  
+			               , 5, "Mai", 6, "Jun", 7, "Jul", 8, "Ago"  
+			               , 9, "Set", 10 , "Out", 11, "Nov", 12, "Dez"  
+			               , "N/D")
+			```
+		lineageTag: 1b0fd124-af64-4d49-aeb6-1c0232d71512
+		summarizeBy: none
+		sortByColumn: 'Ord Ano Fiscal'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ano Fiscal' = ```
+			If( Month([Date]) >= 4  , Year([Date]),Year([Date]) -1 ) 
+			```
+		formatString: 0
+		lineageTag: 18896772-5a4c-4cee-b81d-eadbed6fca88
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ord Ano Fiscal' = ```
+			
+			        SWITCH (
+			                TRUE(),
+			                dCalendario[Mes] = 1, "10",
+			                dCalendario[Mes] = 2, "11",
+			                dCalendario[Mes] = 3, "12",
+			                dCalendario[Mes] = 4, "1", 
+			                dCalendario[Mes] = 5, "2",
+			                dCalendario[Mes] = 6, "3",
+			                dCalendario[Mes] = 7, "4",
+			                dCalendario[Mes] = 8, "5", 
+			                dCalendario[Mes] = 9, "6",
+			                dCalendario[Mes] = 10, "7",
+			                dCalendario[Mes] = 11, "8",
+			                dCalendario[Mes] = 12, "9", 
+			                "N/D")
+			```
+		dataType: int64
+		formatString: 0
+		lineageTag: ce739f4b-48b3-413b-8291-df05069fe916
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date (compartimentos)' =
+			IF(
+			  ISBLANK('dCalendario'[Date]),
+			  BLANK(),
+			  DATE(
+			    YEAR('dCalendario'[Date]),
+			    1 + (MONTH('dCalendario'[Date]) - 1),
+			    1
+			  )
+			)
+		formatString: Short Date
+		lineageTag: 7865be19-15b9-4ccf-ac57-7c5647208cf2
+		summarizeBy: none
+
+		extendedProperty GroupingMetadata =
+				{
+				  "version": 0,
+				  "groupedColumns": [
+				    {
+				      "Column": {
+				        "Expression": {
+				          "SourceRef": {
+				            "Entity": "dCalendario"
+				          }
+				        },
+				        "Property": "Date"
+				      }
+				    }
+				  ],
+				  "binningMetadata": {
+				    "binSize": {
+				      "value": 1.0,
+				      "unit": 6
+				    }
+				  }
+				}
+
+		annotation GroupingDesignState = {"Version":0,"Sources":[{"Name":"d","Entity":"dCalendario"}],"GroupedColumns":[{"Column":{"Expression":{"SourceRef":{"Source":"d"}},"Property":"Date"}}],"BinItem":{"Expression":{"Floor":{"Expression":{"Column":{"Expression":{"SourceRef":{"Source":"d"}},"Property":"Date"}},"Size":1.0,"TimeUnit":2}}}}
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition dCalendario-dd250671-adc8-4082-9025-7b8e780c6056 = calculated
+		mode: import
+		source = ```
+				
+				VAR DataMinima = MIN('fPedido'[DT_EMISSAO])
+				VAR DataMaxima = MAX('fPedido'[DT_EMISSAO])+365
+				RETURN 
+				CALENDAR(DataMinima,DataMaxima)
+				```
+
+	annotation PBI_Id = 353a68298db64735b696b7756730acfb
+

@@ -1,0 +1,201 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "ca4e0a099e69af243d90",
+  "position": {
+    "x": 0,
+    "y": 529.48306595365443,
+    "z": 0,
+    "height": 190.5169340463458,
+    "width": 640,
+    "tabOrder": 6000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fPedido"
+                    }
+                  },
+                  "Property": "NR_PEDIDO"
+                }
+              },
+              "queryRef": "fPedido.NR_PEDIDO",
+              "nativeQueryRef": "NR_PEDIDO"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fPedido"
+                    }
+                  },
+                  "Property": "DIM_ITEM_ID"
+                }
+              },
+              "queryRef": "fPedido.DIM_ITEM_ID",
+              "nativeQueryRef": "DIM_ITEM_ID"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fPedido"
+                    }
+                  },
+                  "Property": "DT_EMISSAO"
+                }
+              },
+              "queryRef": "fPedido.DT_EMISSAO",
+              "nativeQueryRef": "DT_EMISSAO"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fPedido"
+                    }
+                  },
+                  "Property": "DT_ENTREGA"
+                }
+              },
+              "queryRef": "fPedido.DT_ENTREGA",
+              "nativeQueryRef": "DT_ENTREGA"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fPedido"
+                    }
+                  },
+                  "Property": "NF_DATA"
+                }
+              },
+              "queryRef": "fPedido.NF_DATA",
+              "nativeQueryRef": "NF_DATA"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fPedido"
+                    }
+                  },
+                  "Property": "NF_NUM"
+                }
+              },
+              "queryRef": "fPedido.NF_NUM",
+              "nativeQueryRef": "NF_NUM"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fPedido"
+                    }
+                  },
+                  "Property": "NF_SERIE"
+                }
+              },
+              "queryRef": "fPedido.NF_SERIE",
+              "nativeQueryRef": "NF_SERIE"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fPedido"
+                  }
+                },
+                "Property": "DT_ENTREGA"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "86.33049898601321D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "fPedido.DT_EMISSAO"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "119.29556023148184D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "fPedido.DIM_ITEM_ID"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

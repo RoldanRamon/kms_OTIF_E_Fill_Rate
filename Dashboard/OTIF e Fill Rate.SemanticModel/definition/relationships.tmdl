@@ -1,0 +1,9 @@
+relationship bd1d5d1b-c7ce-a4bb-6c52-1df6bb1eb62c
+	fromColumn: fPedido.DT_EMISSAO
+	toColumn: dCalendario.Date
+
+relationship d3f1e7b7-73fd-0570-79db-fac15311c4c4
+	crossFilteringBehavior: bothDirections
+	fromColumn: fPedido.NR_PEDIDO
+	toColumn: AnaliseOTIFpedido.NR_PEDIDO
+

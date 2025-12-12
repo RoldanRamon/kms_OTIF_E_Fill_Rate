@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "OTIF e Fill Rate"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "bd56a787-40f5-46f7-a403-832279e3e8ed"
+  }
+}

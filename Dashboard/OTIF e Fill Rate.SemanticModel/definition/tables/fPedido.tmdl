@@ -1,0 +1,366 @@
+table fPedido
+	lineageTag: 8d1d4e16-a9fc-496f-85f3-98825f614213
+
+	column DIM_CLIENTE_ID
+		dataType: string
+		lineageTag: 6d418e86-2750-41de-8581-4f8741af05d0
+		summarizeBy: none
+		sourceColumn: DIM_CLIENTE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DIM_EMPRESA_ID
+		dataType: string
+		lineageTag: ccc6ba8a-b04d-47a7-9626-43bb251da654
+		summarizeBy: none
+		sourceColumn: DIM_EMPRESA_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DIM_REPRESENTANTE_ID
+		dataType: string
+		lineageTag: f21a0d4e-930b-4c64-aed9-c53b31267f42
+		summarizeBy: none
+		sourceColumn: DIM_REPRESENTANTE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DIM_ITEM_ID
+		dataType: string
+		lineageTag: 5cfae459-a2a1-4c81-b4ed-84ff5154ce61
+		summarizeBy: none
+		sourceColumn: DIM_ITEM_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column NR_PEDIDO
+		dataType: string
+		lineageTag: a3e68213-6c70-4b65-8abc-2da20dda9c8f
+		summarizeBy: none
+		sourceColumn: NR_PEDIDO
+
+		annotation SummarizationSetBy = Automatic
+
+	column DT_EMISSAO
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 05efa664-fc3f-43a2-95f6-f0a6df15260e
+		summarizeBy: none
+		sourceColumn: DT_EMISSAO
+
+		changedProperty = FormatString
+
+		annotation SummarizationSetBy = Automatic
+
+	column POS_PDV
+		dataType: string
+		lineageTag: 17308021-2867-44a3-9b6b-b14e0b205567
+		summarizeBy: none
+		sourceColumn: POS_PDV
+
+		annotation SummarizationSetBy = Automatic
+
+	column QTDE
+		dataType: double
+		lineageTag: 7f94f909-dd7b-4179-8013-0ef7099003d0
+		summarizeBy: sum
+		sourceColumn: QTDE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column QTDE_ATEND
+		dataType: double
+		lineageTag: 7bc24213-72c2-47eb-a25b-6b0fa3c432de
+		summarizeBy: sum
+		sourceColumn: QTDE_ATEND
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column VLR_BRUTO
+		dataType: double
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		lineageTag: 6bc489c5-645d-4904-b751-e21b8ee88e51
+		summarizeBy: sum
+		sourceColumn: VLR_BRUTO
+
+		changedProperty = FormatString
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	column DT_ENTREGA
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 7b9d6070-1e2c-4308-acb5-d3d2278b0593
+		summarizeBy: none
+		sourceColumn: DT_ENTREGA
+
+		changedProperty = FormatString
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DIM_DIVISAO_VENDA_ID
+		dataType: string
+		lineageTag: 52e57309-aec6-4411-8a17-dca4df0a86f9
+		summarizeBy: none
+		sourceColumn: DIM_DIVISAO_VENDA_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column NF_DATA
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 9adc8c52-1451-4cc8-bc1b-356c4a696b0c
+		summarizeBy: none
+		sourceColumn: NF_DATA
+
+		changedProperty = DataType
+
+		changedProperty = FormatString
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column PRIORIDADE
+		dataType: string
+		lineageTag: 0d980689-cac9-4056-959a-f27109107695
+		summarizeBy: none
+		sourceColumn: PRIORIDADE
+
+		annotation SummarizationSetBy = Automatic
+
+	column NR_PEDIDO_CLIENTE
+		dataType: string
+		lineageTag: 362afce5-080f-448c-acce-b117b784447c
+		summarizeBy: none
+		sourceColumn: NR_PEDIDO_CLIENTE
+
+		annotation SummarizationSetBy = Automatic
+
+	column NR_SEQ_PED
+		dataType: int64
+		formatString: 0
+		lineageTag: 2462aa95-0935-40af-bf3d-59993bd0e743
+		summarizeBy: sum
+		sourceColumn: NR_SEQ_PED
+
+		annotation SummarizationSetBy = Automatic
+
+	column TP_DIVISAO_VENDA
+		dataType: string
+		lineageTag: 3cf32e0c-8be3-4f81-88a8-159e55e5520e
+		summarizeBy: none
+		sourceColumn: TP_DIVISAO_VENDA
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID PED'
+		dataType: string
+		lineageTag: e937d142-8caa-4bee-a7aa-77ee39bbbd93
+		summarizeBy: none
+		sourceColumn: ID PED
+
+		annotation SummarizationSetBy = Automatic
+
+	column '@OTIF Linha' = ```
+			
+			 //Caso tenha nota fiscal com a data igual ou anterior a data prometida na linha do pedido, então é OTIF.
+			 //Se não tiver data da nota após data prometida do cliente ou nota tiver sido emitida depois da data prometida para o cliente é NO-OTIF
+			 //Se não tiver nota fiscal, mas ainda estiver dentro do prazo prometido para o cliente deixar em branco.
+			VAR _DiferencaPrevistoHoje = DATEDIFF(fPedido[DT_ENTREGA], TODAY(), DAY)
+			VAR _DiferencaPrevistoNota = DATEDIFF(fPedido[DT_ENTREGA], fPedido[NF_DATA], DAY)
+			VAR _NotaEmBranco = IF(ISBLANK(fPedido[NF_DATA]), "Sim", "Não")
+			VAR _Conta =
+			SWITCH(TRUE(),
+			        _DiferencaPrevistoHoje <= 0 && _NotaEmBranco = "Sim", "Ainda No Prazo",
+			        _DiferencaPrevistoHoje > 0 && _NotaEmBranco = "Sim", "NO-OTIF",
+			        _DiferencaPrevistoNota > 0, "NO-OTIF",
+			        _DiferencaPrevistoNota <= 0, "OTIF",
+			        BLANK()
+			    )
+			RETURN _Conta
+			```
+		lineageTag: 658073b0-94b6-4151-b9c7-884a4f86bd3f
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column DIM_UNID_NEGOC_ID
+		dataType: string
+		lineageTag: 69e8e9c1-1d20-4d64-9685-75130af1bb18
+		summarizeBy: none
+		sourceColumn: DIM_UNID_NEGOC_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DIM_COND_PAGTO_ID
+		dataType: string
+		lineageTag: 749630c8-900a-479a-a67c-9780dcf2d83f
+		summarizeBy: none
+		sourceColumn: DIM_COND_PAGTO_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column TIPO
+		dataType: string
+		lineageTag: 917c0888-38b1-480b-b01e-e6b1c5827a60
+		summarizeBy: none
+		sourceColumn: TIPO
+
+		annotation SummarizationSetBy = Automatic
+
+	column QTDE_CANC
+		dataType: double
+		lineageTag: eeebad80-e8b1-444b-b800-b536e9eb2bf4
+		summarizeBy: sum
+		sourceColumn: QTDE_CANC
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column QTDE_SLDO
+		dataType: double
+		lineageTag: da1a80bd-28c3-4339-9707-f88996b37337
+		summarizeBy: sum
+		sourceColumn: QTDE_SLDO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PRECO_UNIT
+		dataType: double
+		lineageTag: 1070c272-e90b-4466-9cd3-9bd04a755140
+		summarizeBy: sum
+		sourceColumn: PRECO_UNIT
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column VLR_BRUTO_SICMS
+		dataType: double
+		lineageTag: bdc1970d-1d32-44d6-8cc7-2acff62f66a2
+		summarizeBy: sum
+		sourceColumn: VLR_BRUTO_SICMS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NF_SERIE
+		dataType: string
+		lineageTag: dcf7cc20-8abc-4b37-abe9-27e32c9d0d88
+		summarizeBy: none
+		sourceColumn: NF_SERIE
+
+		annotation SummarizationSetBy = Automatic
+
+	column NF_NUM
+		dataType: string
+		lineageTag: 2a312dc1-f0ca-4075-bf2d-e8ac94d1a9a6
+		summarizeBy: none
+		sourceColumn: NF_NUM
+
+		annotation SummarizationSetBy = Automatic
+
+	column NR_SEQ_PED_NF
+		dataType: int64
+		formatString: 0
+		lineageTag: 7aa0ef72-609b-4b14-ad3d-7c18117d1172
+		summarizeBy: sum
+		sourceColumn: NR_SEQ_PED_NF
+
+		annotation SummarizationSetBy = Automatic
+
+	column FATURAMENTO_PARCIAL
+		dataType: string
+		lineageTag: 9ab96b36-fb36-4bce-bf4d-726a0d84dc93
+		summarizeBy: none
+		sourceColumn: FATURAMENTO_PARCIAL
+
+		annotation SummarizationSetBy = Automatic
+
+	column VALOR_LIQUIDO_NF
+		dataType: double
+		lineageTag: 4aaca924-2ba0-4169-b6a1-e629ba122f0e
+		summarizeBy: sum
+		sourceColumn: VALOR_LIQUIDO_NF
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column QT_ALOCADA
+		dataType: double
+		lineageTag: b08b6bf3-03d7-450c-8e0a-107507ef5a19
+		summarizeBy: sum
+		sourceColumn: QT_ALOCADA
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column QT_EMBARCADA
+		dataType: double
+		lineageTag: 33d50249-592d-4647-b371-d91fb8604e20
+		summarizeBy: sum
+		sourceColumn: QT_EMBARCADA
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OBSERVACOES
+		dataType: string
+		lineageTag: 1a72d7c8-e8cd-4b6d-a346-ef370519eeb6
+		summarizeBy: none
+		sourceColumn: OBSERVACOES
+
+		annotation SummarizationSetBy = Automatic
+
+	column DT_CANCELA_ITEM
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 6fa840f0-3d8e-43eb-a696-eb204b23a041
+		summarizeBy: none
+		sourceColumn: DT_CANCELA_ITEM
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column NM_UNID_NEGOC
+		dataType: string
+		lineageTag: 5ce78953-ca32-4c46-91a1-4a822fba0e66
+		summarizeBy: none
+		sourceColumn: NM_UNID_NEGOC
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fPedido-24034e89-6c6d-42ea-a97d-3af7c3cf61e1 = m
+		mode: import
+		source =
+				let
+				    Fonte = Sql.Database("BRPIN-DBS008\PowerBI", "idba_komatsu", [Query="SELECT P.[DIM_CLIENTE_ID]#(lf)      ,P.[DIM_EMPRESA_ID]#(lf)      ,P.[DIM_COND_PAGTO_ID]#(lf)      ,P.[DIM_REPRESENTANTE_ID]#(lf)      ,P.[DIM_UNID_NEGOC_ID]#(lf)      ,P.[DIM_ITEM_ID]#(lf)      ,P.[NR_PEDIDO]#(lf)      ,P.[DT_EMISSAO]#(lf)      ,P.[DT_ENTREGA]#(lf)      ,P.[NF_NUM]#(lf)--      ,P.[DT_DIGITACAO]#(lf)--      ,P.[DATA_ENTREGA_PED]#(lf)      ,P.[TIPO]#(lf)      ,P.[POS_PDV]#(lf)      ,P.[QTDE]#(lf)      ,P.[QTDE_ATEND]#(lf)      ,P.[QTDE_CANC]#(lf)      ,P.[QTDE_SLDO]#(lf)      ,P.[PRECO_UNIT]#(lf)      ,P.[VLR_BRUTO]#(lf)      ,P.[VLR_BRUTO_SICMS]#(lf)      ,P.[DIM_DIVISAO_VENDA_ID]#(lf)      ,P.[NF_SERIE]#(lf)      ,P.[NF_DATA]#(lf)      ,P.[PRIORIDADE]#(lf)      ,P.[NR_PEDIDO_CLIENTE]#(lf)      ,P.[NR_SEQ_PED]#(lf)      ,P.[NR_SEQ_PED_NF]#(lf)      ,P.[FATURAMENTO_PARCIAL]#(lf)      ,P.[VALOR_LIQUIDO_NF]#(lf)      ,P.[QT_ALOCADA]#(lf)      ,P.[QT_EMBARCADA]#(lf)      ,P.[OBSERVACOES]#(lf)      ,P.[DT_CANCELA_ITEM]#(lf)      ,D.TP_DIVISAO_VENDA#(lf)      ,B.NM_UNID_NEGOC#(lf)  FROM [idba_komatsu].[dbo].[FATO_PEDIDO_BI] P#(lf)  INNER JOIN DIM_DIVISAO_VENDA_BI D ON P.DIM_DIVISAO_VENDA_ID = D.DIM_DIVISAO_VENDA_ID#(lf)  LEFT JOIN DIM_UNID_NEGOC_BI B ON B.COD_UNID_NEGOC = DIM_UNID_NEGOC_ID#(lf)  WHERE D.TP_DIVISAO_VENDA IN ('PEÇAS','PEÇAS ATIVAS','PEÇAS KDB', 'PEÇAS CONTRATO')#(lf)  AND P.DT_EMISSAO > '01/01/2022'"]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"DT_CANCELA_ITEM", type date},{"DIM_EMPRESA_ID", type text}}),
+				    #"Texto em Maiúscula1" = Table.TransformColumns(#"Tipo Alterado",{{"DIM_ITEM_ID", Text.Upper, type text}}),
+				    #"Coluna Mesclada Inserida" = Table.AddColumn(#"Texto em Maiúscula1", "ID PED", each Text.Combine({[NR_PEDIDO_CLIENTE], [DIM_ITEM_ID], Text.From([NR_SEQ_PED], "pt-BR")}, ""), type text)
+				in
+				    #"Coluna Mesclada Inserida"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegação
+

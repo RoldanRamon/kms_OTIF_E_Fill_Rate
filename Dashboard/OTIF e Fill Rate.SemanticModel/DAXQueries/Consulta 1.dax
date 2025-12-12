@@ -1,0 +1,20 @@
+// Bem-vindo ao modo de exibição de consulta DAX! Saiba mais sobre consultas DAX em https://aka.ms/dax-queries.
+// Clique com o botão direito do mouse em tabelas, colunas ou medidas no painel de dados para acessar consultas rápidas ou peça ajuda ao Copilot para escrever DAX.
+
+// Selecione "Executar" para experimentar esta consulta DAX de exemplo.
+EVALUATE
+
+ADDCOLUMNS(
+    SUMMARIZECOLUMNS(
+        fPedido[NR_PEDIDO],
+        "Qtde Linhas", [Qtde Total de Linhas],
+        "OTIF", CALCULATE([Qtde Total de Linhas], fPedido[@OTIF Linha] = "OTIF"),
+        "NO-OTIF", CALCULATE([Qtde Total de Linhas], fPedido[@OTIF Linha] = "NO-OTIF"),
+        "Ainda No Prazo", CALCULATE([Qtde Total de Linhas], fPedido[@OTIF Linha] = "Ainda No Prazo")
+    ),
+    "Conta", SWITCH(TRUE(),
+                    [NO-OTIF] > 0, "NO-OTIF", 
+                    [Ainda No Prazo] > 0, "Ainda No Prazo",
+                    "OTIF"
+                    )
+)
