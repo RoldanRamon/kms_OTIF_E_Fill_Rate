@@ -75,7 +75,7 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Qtde Total de Linhas"
+                  "Property": "_Qtde Total de Linhas"
                 }
               },
               "queryRef": "_Medidas.Qtde Total de Linhas",

@@ -1,0 +1,614 @@
+table fBaseCarteira
+	lineageTag: c9eb5820-b837-42c1-8379-753a4a9d901c
+
+	column Clas
+		dataType: string
+		lineageTag: 3a00b945-aed7-4e79-97c3-1c13bdc37ff8
+		summarizeBy: none
+		sourceColumn: Clas
+
+		annotation SummarizationSetBy = Automatic
+
+	column Descricao
+		dataType: string
+		lineageTag: 485a8ab7-f56b-4908-ba1f-759c2c59733a
+		summarizeBy: none
+		sourceColumn: Descricao
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Dt.Entrega'
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 52e54096-1dfd-4863-bac3-0606ce293b02
+		summarizeBy: none
+		sourceColumn: Dt.Entrega
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Observacao
+		dataType: string
+		lineageTag: 6c75061f-f096-4c40-acd4-b857d843e42a
+		summarizeBy: none
+		sourceColumn: Observacao
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID_PEDIDO_SEQ_ITEM
+		dataType: string
+		lineageTag: c9d94030-2348-4736-a0b8-542ef35013a6
+		summarizeBy: none
+		sourceColumn: ID_PEDIDO_SEQ_ITEM
+
+		annotation SummarizationSetBy = Automatic
+
+	column STATUS_BI
+		dataType: string
+		lineageTag: d88255f0-48cd-4229-82a8-8a0e995ed24a
+		summarizeBy: none
+		sourceColumn: STATUS_BI
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo Atendimento Princ/Alt'
+		dataType: string
+		lineageTag: 88197504-ca67-419c-8005-8e1102198e5c
+		summarizeBy: none
+		sourceColumn: Tipo Atendimento Princ/Alt
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Estab Atendimento'
+		dataType: string
+		lineageTag: 7dce65dc-d429-4712-ad68-8545a8056ac7
+		summarizeBy: none
+		sourceColumn: Estab Atendimento
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cod.Est'
+		dataType: int64
+		formatString: 0
+		lineageTag: 70068b0f-4fb0-466a-b1db-644426582f1e
+		summarizeBy: none
+		sourceColumn: Cod.Est
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo.Ped/Cot'
+		dataType: string
+		lineageTag: af64501f-0d5c-49a2-b50f-0ca4a91a7153
+		summarizeBy: none
+		sourceColumn: Tipo.Ped/Cot
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nome.Cliente'
+		dataType: string
+		lineageTag: 019fbad4-2248-4fb7-b12e-b43d4a18bf70
+		summarizeBy: none
+		sourceColumn: Nome.Cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ped.Interno'
+		dataType: string
+		lineageTag: 88579018-51fc-4291-87d1-33f9a391569c
+		summarizeBy: none
+		sourceColumn: Ped.Interno
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Seq.Interna'
+		dataType: int64
+		formatString: 0
+		lineageTag: 79fa5064-bb83-4e06-b8a4-1f6f8200501c
+		summarizeBy: none
+		sourceColumn: Seq.Interna
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cod.Entrega'
+		dataType: string
+		lineageTag: beebda82-07bf-4f48-a904-dfa88c99108a
+		summarizeBy: none
+		sourceColumn: Cod.Entrega
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ped.Cliente'
+		dataType: string
+		lineageTag: c776d44a-2f3f-4ece-b8e4-99176c2dcf45
+		summarizeBy: none
+		sourceColumn: Ped.Cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo.Fatur'
+		dataType: string
+		lineageTag: 98875993-047f-4ef3-b8c8-05c6fcd6debb
+		summarizeBy: none
+		sourceColumn: Tipo.Fatur
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Seq.Cliente'
+		dataType: int64
+		formatString: 0
+		lineageTag: d42f164b-3726-4f95-8359-419b4d1ed256
+		summarizeBy: none
+		sourceColumn: Seq.Cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Item.Altern'
+		dataType: string
+		lineageTag: 84f9158e-cf1a-4a92-8496-ab57eed69c65
+		summarizeBy: none
+		sourceColumn: Item.Altern
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cod.Item'
+		dataType: string
+		lineageTag: 99e027cf-6d66-40ee-b72d-4aee523e86d7
+		summarizeBy: none
+		sourceColumn: Cod.Item
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Item.Cliente'
+		dataType: string
+		lineageTag: 28dbaef8-3ec0-4341-8f6d-814052144694
+		summarizeBy: none
+		sourceColumn: Item.Cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Dt.Cotação'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f89b7ed7-dfa7-452f-974a-7326a623b201
+		summarizeBy: none
+		sourceColumn: Dt.Cotação
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nr.DD.Cotação'
+		dataType: int64
+		formatString: 0
+		lineageTag: 767aa932-92d9-4b5a-a928-7e49a89e640b
+		summarizeBy: none
+		sourceColumn: Nr.DD.Cotação
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Dt.Aprovação'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 74eb5178-1095-449d-896e-3b05d3b6d922
+		summarizeBy: none
+		sourceColumn: Dt.Aprovação
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nr.DD.Aprovação'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5131e9c4-7a92-449b-a539-05c35ff01121
+		summarizeBy: none
+		sourceColumn: Nr.DD.Aprovação
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nr.DD.Atraso'
+		dataType: int64
+		formatString: 0
+		lineageTag: c03ecdab-0964-4a31-ab06-02cc6aa86333
+		summarizeBy: none
+		sourceColumn: Nr.DD.Atraso
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo.Prior'
+		dataType: string
+		lineageTag: feebaaea-579a-476c-9d0f-75e24d7b0be6
+		summarizeBy: none
+		sourceColumn: Tipo.Prior
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Qt.Sld.Ped'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 697a05fa-c77b-4f73-915e-c51c7142d32c
+		summarizeBy: none
+		sourceColumn: Qt.Sld.Ped
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Qt.Alocada'
+		dataType: double
+		formatString: 0.00
+		lineageTag: 453bf0ec-9615-4591-9f5c-fc9f1b46e08d
+		summarizeBy: none
+		sourceColumn: Qt.Alocada
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sld.Atender'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 60fdc4ab-b660-4b8a-9db7-8fc5e8caeb4e
+		summarizeBy: none
+		sourceColumn: Sld.Atender
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sld.Dep.Filial'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: fa1d9b52-8be2-4892-ae08-d9085feeb77b
+		summarizeBy: none
+		sourceColumn: Sld.Dep.Filial
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Qt.Sep+Tra'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: fa0eba32-b966-45ff-8ef9-b7d0a6cc30ed
+		summarizeBy: none
+		sourceColumn: Qt.Sep+Tra
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SLd/Aloc.Matriz'
+		dataType: string
+		lineageTag: 41284848-98f9-432b-b71e-7d6187aaa474
+		summarizeBy: none
+		sourceColumn: SLd/Aloc.Matriz
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Qt.Possiv.Imediat'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 842743c5-68a9-44d0-a195-75095f435bb3
+		summarizeBy: none
+		sourceColumn: Qt.Possiv.Imediat
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo.Atend'
+		dataType: string
+		lineageTag: cf38c44c-0757-43a9-9630-90929f74a4a0
+		summarizeBy: none
+		sourceColumn: Tipo.Atend
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Prev.Dt.Entrega'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b22cd814-d286-4cc1-a3a9-d921dd6f55c8
+		summarizeBy: none
+		sourceColumn: Prev.Dt.Entrega
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Vl.Unit'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: be4185fc-1d96-40cb-906d-903d683776c2
+		summarizeBy: none
+		sourceColumn: Vl.Unit
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Vl.Total'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 47c15bde-8fea-4097-bc02-44d7f49eb667
+		summarizeBy: none
+		sourceColumn: Vl.Total
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Vl.Unit.Tab'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 5338e2c0-047d-42a9-b77f-b56b4a095b2b
+		summarizeBy: none
+		sourceColumn: Vl.Unit.Tab
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Vl.Tot.Tab'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 58980c5b-972c-4b32-8688-b013f744e74a
+		summarizeBy: none
+		sourceColumn: Vl.Tot.Tab
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Vl.Tab.Item.Alter'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 2ce6acdc-58dd-4f74-8963-ff273e9f0dcf
+		summarizeBy: none
+		sourceColumn: Vl.Tab.Item.Alter
+
+		annotation SummarizationSetBy = Automatic
+
+	column '%Dif.Item.Alter'
+		dataType: double
+		formatString: 0
+		lineageTag: 0df6f5bc-4f91-4939-b470-77556533624d
+		summarizeBy: none
+		sourceColumn: %Dif.Item.Alter
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Custo.It.Ped'
+		dataType: double
+		formatString: 0
+		lineageTag: e482a581-e8bf-4263-8c32-1e8ad9db74a4
+		summarizeBy: none
+		sourceColumn: Custo.It.Ped
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Custo.it.Altern'
+		dataType: double
+		formatString: 0
+		lineageTag: 96c47875-3576-46cd-8412-8dacd0afa3ee
+		summarizeBy: none
+		sourceColumn: Custo.it.Altern
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'F.Up.Seq'
+		dataType: int64
+		formatString: 0
+		lineageTag: e6362bb0-05a3-4c94-9055-12c6478fbb2d
+		summarizeBy: none
+		sourceColumn: F.Up.Seq
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'F.Up.Dt'
+		dataType: string
+		lineageTag: 5cc0323d-096f-48b3-b477-0505769888d4
+		summarizeBy: none
+		sourceColumn: F.Up.Dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'F.Up.Obs'
+		dataType: string
+		lineageTag: 7f25c499-f4df-45e9-8260-705a9c791870
+		summarizeBy: none
+		sourceColumn: F.Up.Obs
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Canal.Venda'
+		dataType: int64
+		formatString: 0
+		lineageTag: 484adb8d-0b9d-4795-b3a8-3ca40cc708b3
+		summarizeBy: none
+		sourceColumn: Canal.Venda
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Import.Qt'
+		dataType: double
+		formatString: 0
+		lineageTag: 86fd9873-f03b-4ecf-a2af-f06223458a71
+		summarizeBy: none
+		sourceColumn: Import.Qt
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Import.Modal'
+		dataType: string
+		lineageTag: af1e43a3-1fdf-4fbe-a5ad-ed89b9621f67
+		summarizeBy: none
+		sourceColumn: Import.Modal
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Qt.Ped'
+		dataType: double
+		formatString: 0.00
+		lineageTag: 2f8e1faf-396b-4e5f-899e-b204f1e40da6
+		summarizeBy: none
+		sourceColumn: Qt.Ped
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Qt.OC'
+		dataType: double
+		formatString: 0.00
+		lineageTag: b0c74997-069f-4e26-9711-87f17eab2d33
+		summarizeBy: none
+		sourceColumn: Qt.OC
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Dt.Acomp'
+		dataType: string
+		lineageTag: c4793e28-e916-4371-9498-06843dee0903
+		summarizeBy: none
+		sourceColumn: Dt.Acomp
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Status.Ped'
+		dataType: string
+		lineageTag: 6bd4fb72-7822-4106-be86-2903a22d2c29
+		summarizeBy: none
+		sourceColumn: Status.Ped
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Obs.Acomp'
+		dataType: string
+		lineageTag: 5decf482-4295-444c-85cf-8560a857778b
+		summarizeBy: none
+		sourceColumn: Obs.Acomp
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parcela.OC'
+		dataType: int64
+		formatString: 0
+		lineageTag: ed692bc3-492e-402c-8443-e9272e78b705
+		summarizeBy: none
+		sourceColumn: Parcela.OC
+
+		annotation SummarizationSetBy = Automatic
+
+	column %PIS
+		dataType: double
+		formatString: #,0.0
+		lineageTag: 22a811db-971e-4609-874c-eabfc873e60c
+		summarizeBy: none
+		sourceColumn: %PIS
+
+		annotation SummarizationSetBy = Automatic
+
+	column %COFINS
+		dataType: double
+		formatString: #,0.0
+		lineageTag: 205519f6-fe22-446f-b080-d50b4a0944aa
+		summarizeBy: none
+		sourceColumn: %COFINS
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Vl.Unit.Sem.Imp'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 8607d911-d7e3-485e-b914-40b0efa73fe8
+		summarizeBy: none
+		sourceColumn: Vl.Unit.Sem.Imp
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Vl.Tot.Sem.Imp'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: a8577b95-f7b8-48ee-9f57-8445b81893e8
+		summarizeBy: none
+		sourceColumn: Vl.Tot.Sem.Imp
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Qt.Pedida'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: a9658592-0ad5-47f8-ae09-cdde9ca30fff
+		summarizeBy: none
+		sourceColumn: Qt.Pedida
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Dt.Implant'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 6d2a894d-bec6-4395-8529-70eb2aebbb7b
+		summarizeBy: none
+		sourceColumn: Dt.Implant
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Usuário.Implant'
+		dataType: string
+		lineageTag: 640b3363-92fe-4a94-82e5-67ce470067d2
+		summarizeBy: none
+		sourceColumn: Usuário.Implant
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Contato.Ped'
+		dataType: string
+		lineageTag: fe5922b5-4d36-41e7-8a9f-7b78ddd911c8
+		summarizeBy: none
+		sourceColumn: Contato.Ped
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Observacoes.Ped'
+		dataType: string
+		lineageTag: 3b1519b5-955b-4127-ad49-ded398f912c4
+		summarizeBy: none
+		sourceColumn: Observacoes.Ped
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Romaneio.Ped'
+		dataType: int64
+		formatString: 0
+		lineageTag: 0f12fbee-c6ba-473c-a94a-91da5646bf99
+		summarizeBy: none
+		sourceColumn: Romaneio.Ped
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Critico.Ped'
+		dataType: string
+		lineageTag: da7f9621-82fe-48d0-86bd-31797817a9b0
+		summarizeBy: none
+		sourceColumn: Critico.Ped
+
+		annotation SummarizationSetBy = Automatic
+
+	column Atendimento_OC_OF
+		dataType: string
+		lineageTag: 6ff3e2c2-8ff8-4556-8918-9acd76faf3bf
+		summarizeBy: none
+		sourceColumn: Atendimento_OC_OF
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fBaseCarteira = m
+		mode: import
+		source =
+				let
+				    Fonte = Folder.Files("\\brpin-aps019\spool\rpw\Carteira"),
+				    #"Linhas Filtradas" = Table.SelectRows(Fonte, each Text.StartsWith([Name], "planilha")),
+				    #"Linhas Classificadas" = Table.Sort(#"Linhas Filtradas",{{"Date created", Order.Descending}}),
+				    #"Linhas Filtradas2" = Table.SelectRows(#"Linhas Classificadas", each ([Extension] = ".xlsx")),
+				    #"Linhas Filtradas1" = Table.SelectRows(#"Linhas Filtradas2", let latest = List.Max(#"Linhas Filtradas2"[Date created]) in each [Date created] = latest),
+				    #"\\brpin-aps019\spool\rpw\Carteira\_planilha-carteira xlsx" = #"Linhas Filtradas1"{[#"Folder Path"="\\brpin-aps019\spool\rpw\Carteira\",Name="planilha-carteira.xlsx"]}[Content],
+				    #"Pasta de Trabalho Importada do Excel" = Excel.Workbook(#"\\brpin-aps019\spool\rpw\Carteira\_planilha-carteira xlsx"),
+				    Sheet1_Sheet = #"Pasta de Trabalho Importada do Excel"{[Item="Sheet1",Kind="Sheet"]}[Data],
+				    #"Linhas Superiores Removidas" = Table.Skip(Sheet1_Sheet,1),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"Linhas Superiores Removidas", [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Cod.Est", Int64.Type}, {"Tipo.Ped/Cot", type text}, {"Nome.Cliente", type text}, {"Ped.Interno", type text}, {"Seq.Interna", Int64.Type}, {"Cod.Entrega", type text}, {"Ped.Cliente", type text}, {"Tipo.Fatur", type text}, {"Seq.Cliente", Int64.Type}, {"Item.Altern", type text}, {"Cod.Item", type text}, {"Item.Cliente", type text}, {"Clas", type text}, {"Descricao", type text}, {"Dt.Cotação", type datetime}, {"Nr.DD.Cotação", Int64.Type}, {"Dt.Aprovação", type datetime}, {"Nr.DD.Aprovação", Int64.Type}, {"Dt.Entrega", type datetime}, {"Nr.DD.Atraso", Int64.Type}, {"Tipo.Prior", type text}, {"Qt.Sld.Ped", type number}, {"Qt.Alocada", type number}, {"Sld.Atender", type number}, {"Sld.Dep.Filial", type number}, {"Qt.Sep+Tra", Int64.Type}, {"SLd/Aloc.Matriz", type text}, {"Tipo.Atend", type text}, {"Prev.Dt.Entrega", type datetime}, {"Observacao", type text}, {"F.Up.Seq", Int64.Type}, {"F.Up.Dt", type any}, {"F.Up.Obs", type any}, {"Canal.Venda", Int64.Type}, {"Import.Qt", type number}, {"Import.Modal", type any}, {"Qt.Ped", type number}, {"Qt.OC", type number}, {"Dt.Acomp", type any}, {"Status.Ped", type any}, {"Obs.Acomp", type any}, {"Parcela.OC", Int64.Type}, {"%PIS", type number}, {"%COFINS", type number}, {"Qt.Pedida", type number}, {"Dt.Implant", type datetime}, {"Usuário.Implant", type text}, {"Contato.Ped", type any}, {"Observacoes.Ped", type text}, {"Romaneio.Ped", Int64.Type}, {"Critico.Ped", type text}}),
+				    #"Tipo Alterado com Localidade" = Table.TransformColumnTypes(#"Tipo Alterado", {{"Vl.Unit", type number}, {"Vl.Total", type number}, {"Vl.Unit.Tab", type number}, {"Vl.Tot.Tab", type number}, {"Vl.Tab.Item.Alter", type number}, {"%Dif.Item.Alter", type number}, {"Custo.It.Ped", type number}, {"Custo.it.Altern", type number}, {"Vl.Unit.Sem.Imp", type number}, {"Vl.Tot.Sem.Imp", type number}, {"Qt.Possiv.Imediat", type number}}, "en-US"),
+				    #"Coluna Mesclada Inserida" = Table.AddColumn(#"Tipo Alterado com Localidade", "ID_PEDIDO_SEQ_ITEM", each Text.Combine({[Ped.Interno], Text.From([Seq.Interna], "pt-BR"), [Cod.Item]}, "-"), type text),
+				    #"Valor Substituído" = Table.ReplaceValue(#"Coluna Mesclada Inserida",null," ",Replacer.ReplaceValue,{"Observacao"}),
+				    #"Personalização Adicionada" = Table.AddColumn(#"Valor Substituído", "Atendimento_OC_OF", each if Text.Contains([Tipo.Atend],"OCP") then "OC" else if Text.Contains([Tipo.Atend],"OPR") then "OF" else ""),
+				    #"Coluna Condicional Adicionada" = Table.AddColumn(#"Personalização Adicionada", "STATUS_BI", each if Text.StartsWith([Observacao], "Atender por ordem") and [Atendimento_OC_OF] = "OF"  then "Atendimento por OF" else if Text.StartsWith([Observacao], "Atender por ordem") and [Atendimento_OC_OF] = "OC"  then "Atendimento por OC" else if [Observacao] = "Crítico" then "Sem Atendimento" else if Text.StartsWith([Observacao], "Em Recebimento") then "Em recebimento" else if [Observacao] = "Já Pode Atender" then "Já Pode Atender" else if Text.StartsWith([Observacao], "Já Pode Atender - Alternativo") then "Já Pode Atender" else if Text.StartsWith([Observacao], "Já Pode Atender Parcial") then "Já Pode Atender" else if Text.StartsWith([Observacao], "Já Pode Atender na filial") then "Opção de atendimento em filial" else if Text.StartsWith([Observacao], "Material em SENF") then "Material em SENF" else if Text.StartsWith([Observacao], "Material em transito") then "Material em trânsito" else if Text.StartsWith([Observacao], "Possivel Transferencia") then "Opção de atendimento em filial (Verificar)" else "Sem Atendimento"),
+				    #"Tipo Alterado2" = Table.TransformColumnTypes(#"Coluna Condicional Adicionada",{{"STATUS_BI", type text}}),
+				    #"Texto Inserido Após o Delimitador" = Table.AddColumn(#"Tipo Alterado2", "Texto Após o Delimitador", each Text.AfterDelimiter([Observacao], "- "), type text),
+				    #"Colunas Renomeadas3" = Table.RenameColumns(#"Texto Inserido Após o Delimitador",{{"Texto Após o Delimitador", "Tipo Atendimento Princ/Alt"}}),
+				    #"Valor Substituído1" = Table.ReplaceValue(#"Colunas Renomeadas3","","Principal",Replacer.ReplaceValue,{"Tipo Atendimento Princ/Alt"}),
+				    #"Texto Inserido Entre os Delimitadores" = Table.AddColumn(#"Valor Substituído1", "Estab Atendimento", each Text.BetweenDelimiters([Observacao], "filial ", " "), type text)
+				in
+				    #"Texto Inserido Entre os Delimitadores"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

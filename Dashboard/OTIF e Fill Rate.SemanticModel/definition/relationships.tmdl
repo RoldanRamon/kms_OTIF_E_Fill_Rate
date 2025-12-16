@@ -2,8 +2,22 @@ relationship bd1d5d1b-c7ce-a4bb-6c52-1df6bb1eb62c
 	fromColumn: fPedido.DT_EMISSAO
 	toColumn: dCalendario.Date
 
+relationship 9f1b809b-6501-f7a4-ac11-27abfc2c37f0
+	toCardinality: many
+	fromColumn: dSaldoEstoqueDiario.IdPedidoSaldoEstoque
+	toColumn: fPedido.IdPedidoSaldoEstoque
+
 relationship d3f1e7b7-73fd-0570-79db-fac15311c4c4
 	crossFilteringBehavior: bothDirections
 	fromColumn: fPedido.NR_PEDIDO
-	toColumn: AnaliseOTIFpedido.NR_PEDIDO
+	toColumn: Analise_OTIF_Pedido.NR_PEDIDO
+
+relationship 7f88c489-0263-263f-34af-a13e738e0fad
+	crossFilteringBehavior: bothDirections
+	fromColumn: fPedido.NR_PEDIDO
+	toColumn: Analise_FILL_RATE_Pedido.NR_PEDIDO
+
+relationship ab6fe1b0-29b5-b472-4ccb-cf732e86ebe7
+	fromColumn: fPedido.ID_PEDIDO_SEQ_ITEM
+	toColumn: fBaseCarteira.ID_PEDIDO_SEQ_ITEM
 

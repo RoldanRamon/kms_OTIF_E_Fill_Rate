@@ -37,6 +37,20 @@
                       "Entity": "fPedido"
                     }
                   },
+                  "Property": "POS_PDV"
+                }
+              },
+              "queryRef": "fPedido.POS_PDV",
+              "nativeQueryRef": "POS_PDV"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fPedido"
+                    }
+                  },
                   "Property": "DIM_ITEM_ID"
                 }
               },
@@ -112,6 +126,36 @@
               },
               "queryRef": "fPedido.NF_SERIE",
               "nativeQueryRef": "NF_SERIE"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fPedido"
+                    }
+                  },
+                  "Property": "@OTIF Linha"
+                }
+              },
+              "queryRef": "fPedido.@OTIF Linha",
+              "nativeQueryRef": "ANALISE",
+              "displayName": "ANALISE"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fPedido"
+                    }
+                  },
+                  "Property": "@Observacao"
+                }
+              },
+              "queryRef": "fPedido.@Observacao",
+              "nativeQueryRef": "OBS CARTEIRA",
+              "displayName": "OBS CARTEIRA"
             }
           ]
         }
@@ -192,6 +236,73 @@
           },
           "selector": {
             "metadata": "fPedido.DIM_ITEM_ID"
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Detalhes Linha'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
           }
         }
       ]

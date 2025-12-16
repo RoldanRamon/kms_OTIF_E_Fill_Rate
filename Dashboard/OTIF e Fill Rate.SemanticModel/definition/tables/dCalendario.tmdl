@@ -10,7 +10,7 @@ table dCalendario
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation __PBI_SemanticLinks = [{"LinkTarget":{"TableName":"dCalendario","TableItemName":"Date (compartimentos)","ObjectType":4},"LinkType":"UsedInGroup"}]
+		annotation __PBI_SemanticLinks = [{"LinkTarget":{"TableName":"dCalendario","TableItemName":"InicioDoMes","ObjectType":4},"LinkType":"UsedInGroup"}]
 
 		annotation UnderlyingDateTimeDataType = Date
 
@@ -74,7 +74,7 @@ table dCalendario
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'Date (compartimentos)' =
+	column InicioDoMes =
 			IF(
 			  ISBLANK('dCalendario'[Date]),
 			  BLANK(),

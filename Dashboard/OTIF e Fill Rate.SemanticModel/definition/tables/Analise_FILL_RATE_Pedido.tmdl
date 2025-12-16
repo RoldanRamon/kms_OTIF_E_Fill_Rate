@@ -1,0 +1,66 @@
+table Analise_FILL_RATE_Pedido
+	lineageTag: 7815e988-e1e8-421e-bbb1-f5b059accad2
+
+	column NR_PEDIDO
+		lineageTag: b4668257-ddd4-49e7-8dc1-981309c0787e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: fPedido[NR_PEDIDO]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Qtde Linhas'
+		formatString: 0
+		lineageTag: 7c1383d8-b91e-48a7-9577-80f9100b0ccd
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Qtde Linhas]
+
+		annotation SummarizationSetBy = Automatic
+
+	column FILL_RATE
+		formatString: 0
+		lineageTag: 610745dd-69b4-430b-965e-19a23a25e7f0
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [FILL_RATE]
+
+		annotation SummarizationSetBy = Automatic
+
+	column NO-FILL_RATE
+		formatString: 0
+		lineageTag: de965e7b-28d9-4085-9263-5aa2c72602ac
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [NO-FILL_RATE]
+
+		annotation SummarizationSetBy = Automatic
+
+	column '@FILL_RATE Pedido'
+		lineageTag: eedc4abc-afdd-41e4-b50b-3be7f622beab
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [@FILL_RATE Pedido]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Analise_FILL_RATE_Pedido = calculated
+		mode: import
+		source = ```
+				
+				ADDCOLUMNS(
+				    SUMMARIZECOLUMNS(
+				        fPedido[NR_PEDIDO],
+				        "Qtde Linhas", [_Qtde Total de Linhas],
+				        "FILL_RATE", CALCULATE([_Qtde Total de Linhas], fPedido[@FILL RATE Linha] = "FILL_RATE"),
+				        "NO-FILL_RATE", CALCULATE([_Qtde Total de Linhas], fPedido[@FILL RATE Linha] = "NO-FILL_RATE")
+				    ),
+				    "@FILL_RATE Pedido", SWITCH(TRUE(),
+				                    [NO-FILL_RATE] > 0, "NO-FILL_RATE", 
+				                    "FILL_RATE"
+				                    )
+				)
+				```
+
+	annotation PBI_Id = 4c1983bc078341c78b45b0497476b463
+

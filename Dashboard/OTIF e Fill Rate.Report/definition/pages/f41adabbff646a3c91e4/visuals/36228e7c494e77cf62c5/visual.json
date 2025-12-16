@@ -54,7 +54,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "AnaliseOTIFpedido"
+                      "Entity": "Analise_OTIF_Pedido"
                     }
                   },
                   "Property": "@OTIF Pedido"
@@ -75,11 +75,11 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Qtde Total de Pedidos"
+                  "Property": "_Qtde Pedidos"
                 }
               },
               "queryRef": "_Medidas.Qtde Total de Pedidos",
-              "nativeQueryRef": "Qtde Total de Pedidos"
+              "nativeQueryRef": "_Qtde Pedidos"
             }
           ]
         }
@@ -91,7 +91,7 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "AnaliseOTIFpedido"
+                    "Entity": "Analise_OTIF_Pedido"
                   }
                 },
                 "Property": "@OTIF Pedido"
@@ -745,7 +745,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "AnaliseOTIFpedido"
+                            "Entity": "Analise_OTIF_Pedido"
                           }
                         },
                         "Property": "@OTIF Pedido"
@@ -787,7 +787,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "AnaliseOTIFpedido"
+                            "Entity": "Analise_OTIF_Pedido"
                           }
                         },
                         "Property": "@OTIF Pedido"
@@ -829,7 +829,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "AnaliseOTIFpedido"
+                            "Entity": "Analise_OTIF_Pedido"
                           }
                         },
                         "Property": "@OTIF Pedido"

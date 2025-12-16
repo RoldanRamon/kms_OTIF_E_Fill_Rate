@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "AnaliseOTIFpedido"
+                      "Entity": "Analise_OTIF_Pedido"
                     }
                   },
                   "Property": "NR_PEDIDO"
@@ -34,21 +34,22 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "AnaliseOTIFpedido"
+                      "Entity": "Analise_OTIF_Pedido"
                     }
                   },
                   "Property": "Qtde Linhas"
                 }
               },
               "queryRef": "AnaliseOTIFpedido.Qtde Linhas",
-              "nativeQueryRef": "Qtde Linhas"
+              "nativeQueryRef": "QTDE LINHAS",
+              "displayName": "QTDE LINHAS"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "AnaliseOTIFpedido"
+                      "Entity": "Analise_OTIF_Pedido"
                     }
                   },
                   "Property": "OTIF"
@@ -62,7 +63,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "AnaliseOTIFpedido"
+                      "Entity": "Analise_OTIF_Pedido"
                     }
                   },
                   "Property": "NO-OTIF"
@@ -76,14 +77,30 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "AnaliseOTIFpedido"
+                      "Entity": "Analise_OTIF_Pedido"
                     }
                   },
                   "Property": "Ainda No Prazo"
                 }
               },
               "queryRef": "AnaliseOTIFpedido.Ainda No Prazo",
-              "nativeQueryRef": "Ainda No Prazo"
+              "nativeQueryRef": "AINDA NO PRAZO",
+              "displayName": "AINDA NO PRAZO"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Analise_OTIF_Pedido"
+                    }
+                  },
+                  "Property": "@OTIF Pedido"
+                }
+              },
+              "queryRef": "Analise_OTIF_Pedido.@OTIF Pedido",
+              "nativeQueryRef": "ANALISE",
+              "displayName": "ANALISE"
             }
           ]
         }
@@ -95,7 +112,7 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "AnaliseOTIFpedido"
+                    "Entity": "Analise_OTIF_Pedido"
                   }
                 },
                 "Property": "Qtde Linhas"
@@ -210,6 +227,73 @@
                       "Percent": 0
                     }
                   }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Detalhes Pedido'"
                 }
               }
             }

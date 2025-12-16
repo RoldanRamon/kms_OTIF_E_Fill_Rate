@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "0cbfdbf888c78091fa62",
   "position": {
-    "x": 113.6166194523135,
+    "x": 113.59560841720037,
     "y": 0,
     "z": 5000,
-    "height": 103.94711992445703,
-    "width": 126.91218130311614,
+    "height": 104.22689844464776,
+    "width": 127.64867337602928,
     "tabOrder": 3000
   },
   "visual": {
@@ -61,6 +61,13 @@
                   "Value": "'Dropdown'"
                 }
               }
+            },
+            "isInvertedSelectionMode": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
@@ -85,6 +92,19 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "selection": [
+        {
+          "properties": {
+            "selectAllCheckboxEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -138,6 +158,13 @@
                       "Percent": 0
                     }
                   }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
                 }
               }
             }

@@ -10,13 +10,15 @@ annotation __PBI_TimeIntelligenceEnabled = 0
 
 annotation PBI_ProTooling = ["DevMode","TMDLView_Desktop","DaxQueryView_Desktop"]
 
-annotation PBI_QueryOrder = ["fPedido","FSaldoEstoqueDiario"]
+annotation PBI_QueryOrder = ["fPedido","dSaldoEstoqueDiario","fBaseCarteira"]
 
 ref table fPedido
-ref table FSaldoEstoqueDiario
 ref table dCalendario
 ref table _Medidas
-ref table AnaliseOTIFpedido
+ref table Analise_OTIF_Pedido
+ref table dSaldoEstoqueDiario
+ref table Analise_FILL_RATE_Pedido
+ref table fBaseCarteira
 
 ref cultureInfo pt-BR
 

@@ -1,110 +1,746 @@
 createOrReplace
 
-	table dCalendario
+	table fBaseCarteira
 
 
-		column Date
+		column Clas
+			dataType: string
+
+			summarizeBy: none
+			sourceColumn: Clas
+
+			annotation SummarizationSetBy = Automatic
+
+		column Descricao
+			dataType: string
+
+			summarizeBy: none
+			sourceColumn: Descricao
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Dt.Entrega'
+			dataType: dateTime
 			formatString: Short Date
 
 			summarizeBy: none
-			isNameInferred
-			sourceColumn: [Date]
+			sourceColumn: Dt.Entrega
+
+			changedProperty = DataType
 
 			annotation SummarizationSetBy = Automatic
 
-			annotation __PBI_SemanticLinks = [{"LinkTarget":{"TableName":"dCalendario","TableItemName":"Date (compartimentos)","ObjectType":4},"LinkType":"UsedInGroup"}]
+			annotation UnderlyingDateTimeDataType = Date
 
-		column 'Dia Mes' = DAY('dCalendario'[Date])
+		column Observacao
+			dataType: string
+
+			summarizeBy: none
+			sourceColumn: Observacao
+
+			annotation SummarizationSetBy = Automatic
+
+		column ID_PEDIDO_SEQ_ITEM
+			dataType: string
+
+			summarizeBy: none
+			sourceColumn: ID_PEDIDO_SEQ_ITEM
+
+			annotation SummarizationSetBy = Automatic
+
+		column STATUS_BI
+			dataType: string
+
+			summarizeBy: none
+			sourceColumn: STATUS_BI
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Tipo Atendimento Princ/Alt'
+			dataType: string
+
+			summarizeBy: none
+			sourceColumn: Tipo Atendimento Princ/Alt
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Estab Atendimento'
+			dataType: string
+
+			summarizeBy: none
+			sourceColumn: Estab Atendimento
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Cores Dias Aprovação' =
+				
+				SWITCH(
+				    TRUE(),
+				    fBaseCarteira[Nr.DD.Aprovação] < 5, "Verde",
+				    fBaseCarteira[Nr.DD.Aprovação] < 15, "Azul",
+				    fBaseCarteira[Nr.DD.Aprovação] < 30, "Amarelo",
+				    fBaseCarteira[Nr.DD.Aprovação] < 45, "Dourado",
+				    fBaseCarteira[Nr.DD.Aprovação] < 60, "Vermelho",
+				    fBaseCarteira[Nr.DD.Aprovação] < 90, "Preto",
+				    fBaseCarteira[Nr.DD.Aprovação] < 999, "Roxo")
+
+			summarizeBy: none
+			sortByColumn: 'Ordem Cores Dias Aprovação'
+
+			changedProperty = SortByColumn
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Ordem Cores Dias Aprovação' =
+				
+				SWITCH(
+				    TRUE(),
+				    fBaseCarteira[Nr.DD.Aprovação] < 5, 1,
+				    fBaseCarteira[Nr.DD.Aprovação] < 15, 2,
+				    fBaseCarteira[Nr.DD.Aprovação] < 30, 3,
+				    fBaseCarteira[Nr.DD.Aprovação] < 45, 4,
+				    fBaseCarteira[Nr.DD.Aprovação] < 60, 5,
+				    fBaseCarteira[Nr.DD.Aprovação] < 90, 6,
+				    fBaseCarteira[Nr.DD.Aprovação] < 999, 7)
 			formatString: 0
 
-			summarizeBy: sum
+			summarizeBy: max
 
-			annotation SummarizationSetBy = Automatic
+			annotation SummarizationSetBy = User
 
-		column Mes = MONTH('dCalendario'[Date])
-			formatString: 0
-
-			summarizeBy: sum
-
-			annotation SummarizationSetBy = Automatic
-
-		column Mês = ```
-				SWITCH (MONTH (LASTDATE(dCalendario[Date])), 1, "Jan" , 2, "Fev", 3, "Mar", 4, "Abr"  
-				               , 5, "Mai", 6, "Jun", 7, "Jul", 8, "Ago"  
-				               , 9, "Set", 10 , "Out", 11, "Nov", 12, "Dez"  
-				               , "N/D")
+		column Status_Atendimento_OF_OC = ```
+				
+				VAR __DataAtend = 
+				 IF([DT Min Entrega OC] <> BLANK(), [DT Min Entrega OC], [DT Min Entrega OF])
+				RETURN
+				SWITCH(
+				    TRUE(),
+				    fBaseCarteira[STATUS_BI] = "Atendimento por OF" && fBaseCarteira[Dt.Entrega] < __DataAtend , "Falha Atendimento",
+				    fBaseCarteira[STATUS_BI] = "Atendimento por OF" && fBaseCarteira[Qtde Compras] < fBaseCarteira[Qt.Sld.Ped]  , "Falha Atendimento",
+				    fBaseCarteira[Dt.Entrega] < TODAY(), "Falha Atendimento",    
+				    "Normal"
+				)
 				```
 
 			summarizeBy: none
-			sortByColumn: 'Ord Ano Fiscal'
 
 			annotation SummarizationSetBy = Automatic
 
-		column 'Ano Fiscal' = ```
-				If( Month([Date]) >= 4  , Year([Date]),Year([Date]) -1 ) 
-				```
-			formatString: 0
-
-			summarizeBy: sum
-
-			annotation SummarizationSetBy = Automatic
-
-		column 'Ord Ano Fiscal' = ```
+		column 'Qtde Compras' = ```
 				
-				        SWITCH (
-				                TRUE(),
-				                dCalendario[Mes] = 1, "10",
-				                dCalendario[Mes] = 2, "11",
-				                dCalendario[Mes] = 3, "12",
-				                dCalendario[Mes] = 4, "1", 
-				                dCalendario[Mes] = 5, "2",
-				                dCalendario[Mes] = 6, "3",
-				                dCalendario[Mes] = 7, "4",
-				                dCalendario[Mes] = 8, "5", 
-				                dCalendario[Mes] = 9, "6",
-				                dCalendario[Mes] = 10, "7",
-				                dCalendario[Mes] = 11, "8",
-				                dCalendario[Mes] = 12, "9", 
-				                "N/D")
+				VAR __DTEntrega = fBaseCarteira[Dt.Entrega]
+				VAR __Compras = 
+				 CALCULATE(
+				        sumx(fCompras, fCompras[QTDE_PARCELA] - fCompras[QTDE_ATENDIDA]),
+				        FILTER(ALLSELECTED(fCompras[DATA_ENTREGA_PARCELA]), fCompras[DATA_ENTREGA_PARCELA] <= __DTEntrega)
+				) 
+				VAR __Producao = 
+				 CALCULATE(
+				        SUMX(fProducao, fProducao[qt-ordem] - [qt-produzida]),
+				        FILTER(ALLSELECTED(fProducao[dt-termino]), fProducao[dt-termino] <= __DTEntrega)
+				) 
+				RETURN
+				IF(
+				    __Compras <> BLANK(),
+				    __Compras,
+				    __Producao)
 				```
+
+			summarizeBy: none
+
+			annotation SummarizationSetBy = Automatic
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		column 'Cod.Est'
 			dataType: int64
 			formatString: 0
 
-			summarizeBy: sum
+			summarizeBy: none
+			sourceColumn: Cod.Est
 
 			annotation SummarizationSetBy = Automatic
 
-		column 'Date (compartimentos)' =
-				IF(
-				  ISBLANK('dCalendario'[Date]),
-				  BLANK(),
-				  DATE(
-				    YEAR('dCalendario'[Date]),
-				    1 + (MONTH('dCalendario'[Date]) - 1),
-				    1
-				  )
-				)
-			formatString: mmmm" de "yyyy
+		column 'Tipo.Ped/Cot'
+			dataType: string
+
+			summarizeBy: none
+			sourceColumn: Tipo.Ped/Cot
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Nome.Cliente'
+			dataType: string
+
+			summarizeBy: none
+			sourceColumn: Nome.Cliente
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Ped.Interno'
+			dataType: string
+
+			summarizeBy: none
+			sourceColumn: Ped.Interno
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Seq.Interna'
+			dataType: int64
+			formatString: 0
+
+			summarizeBy: none
+			sourceColumn: Seq.Interna
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Cod.Entrega'
+			dataType: string
+
+			summarizeBy: none
+			sourceColumn: Cod.Entrega
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Ped.Cliente'
+			dataType: string
+
+			summarizeBy: none
+			sourceColumn: Ped.Cliente
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Tipo.Fatur'
+			dataType: string
+
+			summarizeBy: none
+			sourceColumn: Tipo.Fatur
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Seq.Cliente'
+			dataType: int64
+			formatString: 0
+
+			summarizeBy: none
+			sourceColumn: Seq.Cliente
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Item.Altern'
+			dataType: string
+
+			summarizeBy: none
+			sourceColumn: Item.Altern
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Cod.Item'
+			dataType: string
+
+			summarizeBy: none
+			sourceColumn: Cod.Item
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Item.Cliente'
+			dataType: string
+
+			summarizeBy: none
+			sourceColumn: Item.Cliente
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Dt.Cotação'
+			dataType: dateTime
+			formatString: General Date
+
+			summarizeBy: none
+			sourceColumn: Dt.Cotação
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Nr.DD.Cotação'
+			dataType: int64
+			formatString: 0
+
+			summarizeBy: none
+			sourceColumn: Nr.DD.Cotação
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Dt.Aprovação'
+			dataType: dateTime
+			formatString: General Date
+
+			summarizeBy: none
+			sourceColumn: Dt.Aprovação
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Nr.DD.Aprovação'
+			dataType: int64
+			formatString: 0
+
+			summarizeBy: none
+			sourceColumn: Nr.DD.Aprovação
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Nr.DD.Atraso'
+			dataType: int64
+			formatString: 0
+
+			summarizeBy: none
+			sourceColumn: Nr.DD.Atraso
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Tipo.Prior'
+			dataType: string
+
+			summarizeBy: none
+			sourceColumn: Tipo.Prior
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Qt.Sld.Ped'
+			dataType: double
+			formatString: #,0.00
+
+			summarizeBy: none
+			sourceColumn: Qt.Sld.Ped
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Qt.Alocada'
+			dataType: double
+			formatString: 0.00
+
+			summarizeBy: none
+			sourceColumn: Qt.Alocada
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Sld.Atender'
+			dataType: double
+			formatString: #,0.00
+
+			summarizeBy: none
+			sourceColumn: Sld.Atender
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Sld.Dep.Filial'
+			dataType: double
+			formatString: #,0.00
+
+			summarizeBy: none
+			sourceColumn: Sld.Dep.Filial
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Qt.Sep+Tra'
+			dataType: double
+			formatString: #,0.00
+
+			summarizeBy: none
+			sourceColumn: Qt.Sep+Tra
+
+			changedProperty = DataType
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'SLd/Aloc.Matriz'
+			dataType: string
+
+			summarizeBy: none
+			sourceColumn: SLd/Aloc.Matriz
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Qt.Possiv.Imediat'
+			dataType: double
+			formatString: #,0.00
+
+			summarizeBy: none
+			sourceColumn: Qt.Possiv.Imediat
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Tipo.Atend'
+			dataType: string
+
+			summarizeBy: none
+			sourceColumn: Tipo.Atend
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Prev.Dt.Entrega'
+			dataType: dateTime
+			formatString: General Date
+
+			summarizeBy: none
+			sourceColumn: Prev.Dt.Entrega
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Vl.Unit'
+			dataType: double
+			formatString: #,0.00
+
+			summarizeBy: none
+			sourceColumn: Vl.Unit
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Vl.Total'
+			dataType: double
+			formatString: #,0.00
+
+			summarizeBy: none
+			sourceColumn: Vl.Total
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Vl.Unit.Tab'
+			dataType: double
+			formatString: #,0.00
+
+			summarizeBy: none
+			sourceColumn: Vl.Unit.Tab
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Vl.Tot.Tab'
+			dataType: double
+			formatString: #,0.00
+
+			summarizeBy: none
+			sourceColumn: Vl.Tot.Tab
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Vl.Tab.Item.Alter'
+			dataType: double
+			formatString: #,0.00
+
+			summarizeBy: none
+			sourceColumn: Vl.Tab.Item.Alter
+
+			annotation SummarizationSetBy = Automatic
+
+		column '%Dif.Item.Alter'
+			dataType: double
+			formatString: 0
+
+			summarizeBy: none
+			sourceColumn: %Dif.Item.Alter
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Custo.It.Ped'
+			dataType: double
+			formatString: 0
+
+			summarizeBy: none
+			sourceColumn: Custo.It.Ped
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Custo.it.Altern'
+			dataType: double
+			formatString: 0
+
+			summarizeBy: none
+			sourceColumn: Custo.it.Altern
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'F.Up.Seq'
+			dataType: int64
+			formatString: 0
+
+			summarizeBy: none
+			sourceColumn: F.Up.Seq
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'F.Up.Dt'
+			dataType: string
+
+			summarizeBy: none
+			sourceColumn: F.Up.Dt
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'F.Up.Obs'
+			dataType: string
+
+			summarizeBy: none
+			sourceColumn: F.Up.Obs
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Canal.Venda'
+			dataType: int64
+			formatString: 0
+
+			summarizeBy: none
+			sourceColumn: Canal.Venda
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Import.Qt'
+			dataType: double
+			formatString: 0
+
+			summarizeBy: none
+			sourceColumn: Import.Qt
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Import.Modal'
+			dataType: string
+
+			summarizeBy: none
+			sourceColumn: Import.Modal
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Qt.Ped'
+			dataType: double
+			formatString: 0.00
+
+			summarizeBy: none
+			sourceColumn: Qt.Ped
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Qt.OC'
+			dataType: double
+			formatString: 0.00
+
+			summarizeBy: none
+			sourceColumn: Qt.OC
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Dt.Acomp'
+			dataType: string
+
+			summarizeBy: none
+			sourceColumn: Dt.Acomp
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Status.Ped'
+			dataType: string
+
+			summarizeBy: none
+			sourceColumn: Status.Ped
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Obs.Acomp'
+			dataType: string
+
+			summarizeBy: none
+			sourceColumn: Obs.Acomp
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Parcela.OC'
+			dataType: int64
+			formatString: 0
+
+			summarizeBy: none
+			sourceColumn: Parcela.OC
+
+			annotation SummarizationSetBy = Automatic
+
+		column %PIS
+			dataType: double
+			formatString: #,0.0
+
+			summarizeBy: none
+			sourceColumn: %PIS
+
+			annotation SummarizationSetBy = Automatic
+
+		column %COFINS
+			dataType: double
+			formatString: #,0.0
+
+			summarizeBy: none
+			sourceColumn: %COFINS
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Vl.Unit.Sem.Imp'
+			dataType: double
+			formatString: #,0.00
+
+			summarizeBy: none
+			sourceColumn: Vl.Unit.Sem.Imp
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Vl.Tot.Sem.Imp'
+			dataType: double
+			formatString: #,0.00
+
+			summarizeBy: none
+			sourceColumn: Vl.Tot.Sem.Imp
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Qt.Pedida'
+			dataType: double
+			formatString: #,0.00
+
+			summarizeBy: none
+			sourceColumn: Qt.Pedida
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Dt.Implant'
+			dataType: dateTime
+			formatString: General Date
+
+			summarizeBy: none
+			sourceColumn: Dt.Implant
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Usuário.Implant'
+			dataType: string
+
+			summarizeBy: none
+			sourceColumn: Usuário.Implant
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Contato.Ped'
+			dataType: string
+
+			summarizeBy: none
+			sourceColumn: Contato.Ped
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Observacoes.Ped'
+			dataType: string
+
+			summarizeBy: none
+			sourceColumn: Observacoes.Ped
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Romaneio.Ped'
+			dataType: int64
+			formatString: 0
+
+			summarizeBy: none
+			sourceColumn: Romaneio.Ped
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Critico.Ped'
+			dataType: string
+
+			summarizeBy: none
+			sourceColumn: Critico.Ped
+
+			annotation SummarizationSetBy = Automatic
+
+		column Atendimento_OC_OF
+			dataType: string
+
+			summarizeBy: none
+			sourceColumn: Atendimento_OC_OF
+
+			annotation SummarizationSetBy = Automatic
+
+		column vl_total_pedido =
+				
+				[Total Liquido Pedido Aberto]
 
 			summarizeBy: none
 
-			extendedProperty GroupingMetadata = {"version":0,"groupedColumns":[{"Column":{"Expression":{"SourceRef":{"Entity":"dCalendario"}},"Property":"Date"}}],"binningMetadata":{"binSize":{"value":1.0,"unit":6}}}
+			annotation SummarizationSetBy = Automatic
 
-			annotation GroupingDesignState = {"Version":0,"Sources":[{"Name":"d","Entity":"dCalendario"}],"GroupedColumns":[{"Column":{"Expression":{"SourceRef":{"Source":"d"}},"Property":"Date"}}],"BinItem":{"Expression":{"Floor":{"Expression":{"Column":{"Expression":{"SourceRef":{"Source":"d"}},"Property":"Date"}},"Size":1.0,"TimeUnit":2}}}}
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		column 'Ordem Dias Entrega' =
+				
+				SWITCH(
+				    TRUE(),
+				    fBaseCarteira[Dias_Entrega] > 0 , 1,
+				    fBaseCarteira[Dias_Entrega] >= -10, 2,
+				     3
+				)
+			formatString: 0
+
+			summarizeBy: none
 
 			annotation SummarizationSetBy = Automatic
 
-			annotation PBI_FormatHint = {"isDateTimeCustom":true}
+		column Dias_Entrega =
+				
+				DATEDIFF(fBaseCarteira[Dt.Entrega], TODAY(),DAY)
+			formatString: 0
 
-		partition dCalendario-dd250671-adc8-4082-9025-7b8e780c6056 = calculated
+			summarizeBy: none
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Cores Dias Entrega' =
+				
+				SWITCH(
+				    TRUE(),
+				    fBaseCarteira[Dias_Entrega] > 0 , "Vermelho",
+				    fBaseCarteira[Dias_Entrega] >= -10, "Amarelo",
+				    "Verde"
+				)
+
+			summarizeBy: none
+			sortByColumn: 'Ordem Dias Entrega'
+
+			changedProperty = SortByColumn
+
+			annotation SummarizationSetBy = Automatic
+
+		partition fBaseCarteira = m
 			mode: import
-			source = ```
-					
-					VAR DataMinima = MIN('fPedido'[DT_EMISSAO])
-					VAR DataMaxima = MAX('fPedido'[DT_EMISSAO])+365
-					RETURN 
-					CALENDAR(DataMinima,DataMaxima)
-					```
+			source =
+					let
+					    Fonte = Folder.Files("\\brpin-aps019\spool\rpw\Carteira"),
+					    #"Linhas Filtradas" = Table.SelectRows(Fonte, each Text.StartsWith([Name], "planilha")),
+					    #"Linhas Classificadas" = Table.Sort(#"Linhas Filtradas",{{"Date created", Order.Descending}}),
+					    #"Linhas Filtradas2" = Table.SelectRows(#"Linhas Classificadas", each ([Extension] = ".xlsx")),
+					    #"Linhas Filtradas1" = Table.SelectRows(#"Linhas Filtradas2", let latest = List.Max(#"Linhas Filtradas2"[Date created]) in each [Date created] = latest),
+					    #"Arquivos Ocultos Filtrados1" = Table.SelectRows(#"Linhas Filtradas1", each [Attributes]?[Hidden]? <> true),
+					    #"Invocar Função Personalizada1" = Table.AddColumn(#"Arquivos Ocultos Filtrados1", "Transformar Arquivo", each #"Transformar Arquivo"([Content])),
+					    #"Colunas Renomeadas2" = Table.RenameColumns(#"Invocar Função Personalizada1", {"Name", "Nome da Origem"}),
+					    #"Outras Colunas Removidas1" = Table.SelectColumns(#"Colunas Renomeadas2", {"Nome da Origem", "Transformar Arquivo"}),
+					    #"Colunas Removidas" = Table.RemoveColumns(#"Outras Colunas Removidas1",{"Nome da Origem"}),
+					    #"Coluna de Tabela Expandida1" = Table.ExpandTableColumn(#"Colunas Removidas", "Transformar Arquivo", Table.ColumnNames(#"Transformar Arquivo"(#"Arquivo de Amostra"))),
+					    #"Tipo Alterado" = Table.TransformColumnTypes(#"Coluna de Tabela Expandida1",{{"Cod.Est", Int64.Type}, {"Tipo.Ped/Cot", type text}, {"Nome.Cliente", type text}, {"Ped.Interno", type text}, {"Seq.Interna", Int64.Type}, {"Cod.Entrega", type text}, {"Ped.Cliente", type text}, {"Tipo.Fatur", type text}, {"Seq.Cliente", Int64.Type}, {"Item.Altern", type text}, {"Cod.Item", type text}, {"Item.Cliente", type text}, {"Clas", type text}, {"Descricao", type text}, {"Dt.Cotação", type datetime}, {"Nr.DD.Cotação", Int64.Type}, {"Dt.Aprovação", type datetime}, {"Nr.DD.Aprovação", Int64.Type}, {"Dt.Entrega", type datetime}, {"Nr.DD.Atraso", Int64.Type}, {"Tipo.Prior", type text}, {"Qt.Sld.Ped", type number}, {"Qt.Alocada", type number}, {"Sld.Atender", type number}, {"Sld.Dep.Filial", type number}, {"Qt.Sep+Tra", Int64.Type}, {"SLd/Aloc.Matriz", type text}, {"Qt.Possiv.Imediat", type number}, {"Tipo.Atend", type text}, {"Prev.Dt.Entrega", type datetime}, {"Observacao", type text}, {"Vl.Unit", type number}, {"Vl.Total", type number}, {"Vl.Unit.Tab", type number}, {"Vl.Tot.Tab", type number}, {"Vl.Tab.Item.Alter", type number}, {"%Dif.Item.Alter", type number}, {"Custo.It.Ped", type number}, {"Custo.it.Altern", type number}, {"F.Up.Seq", Int64.Type}, {"F.Up.Dt", type any}, {"F.Up.Obs", type any}, {"Canal.Venda", Int64.Type}, {"Import.Qt", type number}, {"Import.Modal", type any}, {"Qt.Ped", type number}, {"Qt.OC", type number}, {"Dt.Acomp", type any}, {"Status.Ped", type any}, {"Obs.Acomp", type any}, {"Parcela.OC", Int64.Type}, {"%PIS", type number}, {"%COFINS", type number}, {"Vl.Unit.Sem.Imp", type number}, {"Vl.Tot.Sem.Imp", type number}, {"Qt.Pedida", type number}, {"Dt.Implant", type datetime}, {"Usuário.Implant", type text}, {"Contato.Ped", type any}, {"Observacoes.Ped", type text}, {"Romaneio.Ped", Int64.Type}, {"Critico.Ped", type text}}),
+					    #"Coluna Mesclada Inserida" = Table.AddColumn(#"Tipo Alterado", "ID_PEDIDO_SEQ_ITEM", each Text.Combine({[Ped.Interno], Text.From([Seq.Interna], "pt-BR"), [Cod.Item]}, "-"), type text),
+					    #"Valor Substituído" = Table.ReplaceValue(#"Coluna Mesclada Inserida",null," ",Replacer.ReplaceValue,{"Observacao"}),
+					    #"Personalização Adicionada" = Table.AddColumn(#"Valor Substituído", "Atendimento_OC_OF", each if Text.Contains([Tipo.Atend],"OCP") then "OC" else if Text.Contains([Tipo.Atend],"OPR") then "OF" else ""),
+					    #"Coluna Condicional Adicionada" = Table.AddColumn(#"Personalização Adicionada", "STATUS_BI", each if Text.StartsWith([Observacao], "Atender por ordem") and [Atendimento_OC_OF] = "OF"  then "Atendimento por OF" else if Text.StartsWith([Observacao], "Atender por ordem") and [Atendimento_OC_OF] = "OC"  then "Atendimento por OC" else if [Observacao] = "Crítico" then "Sem Atendimento" else if Text.StartsWith([Observacao], "Em Recebimento") then "Em recebimento" else if [Observacao] = "Já Pode Atender" then "Já Pode Atender" else if Text.StartsWith([Observacao], "Já Pode Atender - Alternativo") then "Já Pode Atender" else if Text.StartsWith([Observacao], "Já Pode Atender Parcial") then "Já Pode Atender" else if Text.StartsWith([Observacao], "Já Pode Atender na filial") then "Opção de atendimento em filial" else if Text.StartsWith([Observacao], "Material em SENF") then "Material em SENF" else if Text.StartsWith([Observacao], "Material em transito") then "Material em trânsito" else if Text.StartsWith([Observacao], "Possivel Transferencia") then "Opção de atendimento em filial (Verificar)" else "Sem Atendimento"),
+					    #"Tipo Alterado2" = Table.TransformColumnTypes(#"Coluna Condicional Adicionada",{{"STATUS_BI", type text}}),
+					    #"Texto Inserido Após o Delimitador" = Table.AddColumn(#"Tipo Alterado2", "Texto Após o Delimitador", each Text.AfterDelimiter([Observacao], "- "), type text),
+					    #"Colunas Renomeadas3" = Table.RenameColumns(#"Texto Inserido Após o Delimitador",{{"Texto Após o Delimitador", "Tipo Atendimento Princ/Alt"}}),
+					    #"Valor Substituído1" = Table.ReplaceValue(#"Colunas Renomeadas3","","Principal",Replacer.ReplaceValue,{"Tipo Atendimento Princ/Alt"}),
+					    #"Texto Inserido Entre os Delimitadores" = Table.AddColumn(#"Valor Substituído1", "Estab Atendimento", each Text.BetweenDelimiters([Observacao], "filial ", " "), type text),
+					    #"Erros Removidos" = Table.RemoveRowsWithErrors(#"Texto Inserido Entre os Delimitadores", {"Qt.Ped"})
+					in
+					    #"Erros Removidos"
 
-		annotation PBI_Id = 353a68298db64735b696b7756730acfb
+		annotation PBI_NavigationStepName = Navegação
+
+		annotation PBI_ResultType = Table
 

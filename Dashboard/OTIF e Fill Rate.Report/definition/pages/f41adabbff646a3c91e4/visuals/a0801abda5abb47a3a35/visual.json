@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "a0801abda5abb47a3a35",
   "position": {
-    "x": 640,
-    "y": 103.81461675579322,
+    "x": 640.58554437328451,
+    "y": 104.22689844464776,
     "z": 6000,
-    "height": 237.29055258467022,
-    "width": 640,
+    "height": 236.55992680695334,
+    "width": 639.41445562671549,
     "tabOrder": 7000
   },
   "visual": {
@@ -23,10 +23,10 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Qtde Total de Pedidos"
+                  "Property": "_Qtde Pedidos"
                 }
               },
-              "queryRef": "_Medidas.Qtde Total de Pedidos",
+              "queryRef": "_Medidas._Qtde Pedidos",
               "nativeQueryRef": "Pedidos",
               "displayName": "Pedidos"
             },
@@ -83,7 +83,7 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "(R$) Total Pedidos"
+                  "Property": "_(R$) Total Pedidos"
                 }
               },
               "queryRef": "_Medidas.(R$) Total Pedidos",
@@ -148,7 +148,7 @@
                     "Entity": "_Medidas"
                   }
                 },
-                "Property": "Qtde Total de Pedidos"
+                "Property": "_Qtde Pedidos"
               }
             },
             "direction": "Descending"
@@ -205,7 +205,28 @@
             "horizontalAlignment": {
               "expr": {
                 "Literal": {
-                  "Value": "'left'"
+                  "Value": "'center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "outline": [
+        {
+          "properties": {
+            "lineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             }
@@ -280,8 +301,149 @@
             }
           }
         }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "afb5aabf339576e75b7b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "Qtde Pedidos OTIF"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6f155fa31e39eccdda49",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "Qtde Pedidos NO-OTIF"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "af22e5233847fe61ab30",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "Qtde Pedidos Ainda No Prazo"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "edfa2e741bc3d59de6ed",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "_(R$) Total Pedidos"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "22dd1c4eab9fe0fcd6d4",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "% OTIF PEDIDO"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "32f53ffeca785c9e09c8",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "% NO-OTIF PEDIDO"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "08c216cd2f7d571e897a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "% Ainda No Prazo Pedido"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "cde028f2e7f3364cb703",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "_Qtde Pedidos"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

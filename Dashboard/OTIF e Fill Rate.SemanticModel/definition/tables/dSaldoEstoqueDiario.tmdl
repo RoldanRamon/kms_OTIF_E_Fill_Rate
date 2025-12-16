@@ -1,0 +1,45 @@
+table dSaldoEstoqueDiario
+	lineageTag: dc4c8d65-fe3e-4109-8f7a-9d3d73903c06
+
+	column periodo
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 320e18d4-5723-42e6-8d2c-a6622510db0b
+		summarizeBy: none
+		sourceColumn: periodo
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column IdPedidoSaldoEstoque
+		dataType: string
+		lineageTag: f73685b9-db2b-4649-82df-48d141390127
+		summarizeBy: none
+		sourceColumn: IdPedidoSaldoEstoque
+
+		annotation SummarizationSetBy = Automatic
+
+	column quantidade
+		dataType: double
+		lineageTag: 1aa50966-9789-4cb9-b8c0-30a849677d21
+		summarizeBy: sum
+		sourceColumn: quantidade
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition dSaldoEstoqueDiario = m
+		mode: import
+		source =
+				let
+				    Fonte = Sql.Database("BRPIN-DBS008\PowerBI", "idba_komatsu", [Query="#(tab)select distinct#(lf)#(tab)periodo#(lf)#(tab),concat([cod-estabel], '_', [it-codigo]) as IdPedidoSaldoEstoque#(lf)#(tab),sum(quantidade) as quantidade#(lf)#(lf)#(tab)from FATO_SALDO_ESTOQUE_DIARIO#(lf)#(tab)where periodo >= '2022-01-01'#(lf)#(tab)group by periodo, [cod-estabel], [it-codigo]#(lf)#(tab)order by periodo desc#(lf)#(tab);"]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"periodo", type date}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Exception
+

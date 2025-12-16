@@ -3,10 +3,10 @@
   "name": "c17a40af33fbc2ef3a63",
   "position": {
     "x": 0,
-    "y": 103.81461675579322,
+    "y": 104.22689844464776,
     "z": 2000,
-    "height": 237.29055258467022,
-    "width": 640,
+    "height": 236.55992680695334,
+    "width": 640.58554437328451,
     "tabOrder": 5000
   },
   "visual": {
@@ -23,7 +23,7 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Qtde Total de Linhas"
+                  "Property": "_Qtde Total de Linhas"
                 }
               },
               "queryRef": "_Medidas.Qtde Total de Linhas",
@@ -83,7 +83,7 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "(R$) Total Pedidos"
+                  "Property": "_(R$) Total Pedidos"
                 }
               },
               "queryRef": "_Medidas.(R$) Total Pedidos",
@@ -146,7 +146,7 @@
                     "Entity": "_Medidas"
                   }
                 },
-                "Property": "Qtde Total de Linhas"
+                "Property": "_Qtde Total de Linhas"
               }
             },
             "direction": "Descending"
@@ -189,7 +189,28 @@
             "horizontalAlignment": {
               "expr": {
                 "Literal": {
-                  "Value": "'left'"
+                  "Value": "'center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "outline": [
+        {
+          "properties": {
+            "lineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             }
@@ -302,6 +323,25 @@
               "expr": {
                 "Literal": {
                   "Value": "1D"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             }
