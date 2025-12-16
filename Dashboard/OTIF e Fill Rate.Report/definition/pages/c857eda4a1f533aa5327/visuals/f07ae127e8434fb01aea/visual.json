@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "bcc986b601617fb18b49",
+  "name": "f07ae127e8434fb01aea",
   "position": {
-    "x": 0,
-    "y": 341.030363818729,
-    "z": 4000,
-    "height": 187.44232698094282,
-    "width": 640,
-    "tabOrder": 0
+    "x": 640.64581231079717,
+    "y": 340.98890010090821,
+    "z": 8000,
+    "height": 187.28557013118063,
+    "width": 639.35418768920283,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "hundredPercentStackedColumnChart",
@@ -54,14 +54,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "fPedido"
+                      "Entity": "Analise_OTIF_Pedido"
                     }
                   },
-                  "Property": "@OTIF Linha"
+                  "Property": "@OTIF Pedido"
                 }
               },
-              "queryRef": "fPedido.@OTIF Linha",
-              "nativeQueryRef": "@OTIF Linha"
+              "queryRef": "AnaliseOTIFpedido.@OTIF Pedido",
+              "nativeQueryRef": "@OTIF Pedido"
             }
           ]
         },
@@ -75,11 +75,11 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "_Qtde Total de Linhas"
+                  "Property": "_Qtde Pedidos"
                 }
               },
-              "queryRef": "_Medidas.Qtde Total de Linhas",
-              "nativeQueryRef": "Qtde Total de Linhas"
+              "queryRef": "_Medidas.Qtde Total de Pedidos",
+              "nativeQueryRef": "_Qtde Pedidos"
             }
           ]
         }
@@ -91,10 +91,10 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "fPedido"
+                    "Entity": "Analise_OTIF_Pedido"
                   }
                 },
-                "Property": "@OTIF Linha"
+                "Property": "@OTIF Pedido"
               }
             },
             "direction": "Descending"
@@ -120,17 +120,17 @@
                 }
               }
             },
-            "enableBackground": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
             "labelOverflow": {
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "enableBackground": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             },
@@ -162,17 +162,17 @@
                 }
               }
             },
-            "detailLabelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "0L"
-                }
-              }
-            },
             "detailUnderline": {
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "detailLabelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
                 }
               }
             }
@@ -186,6 +186,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'OTIF Logística'"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'TopCenter'"
                 }
               }
             },
@@ -205,13 +212,6 @@
                       "Percent": 0
                     }
                   }
-                }
-              }
-            },
-            "position": {
-              "expr": {
-                "Literal": {
-                  "Value": "'TopCenter'"
                 }
               }
             }
@@ -719,6 +719,132 @@
               }
             ]
           }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Analise_OTIF_Pedido"
+                          }
+                        },
+                        "Property": "@OTIF Pedido"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'OTIF'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 9,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Analise_OTIF_Pedido"
+                          }
+                        },
+                        "Property": "@OTIF Pedido"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'NO-OTIF'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Analise_OTIF_Pedido"
+                          }
+                        },
+                        "Property": "@OTIF Pedido"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Ainda No Prazo'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
         }
       ],
       "categoryAxis": [
@@ -756,6 +882,13 @@
       "valueAxis": [
         {
           "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
             "labelColor": {
               "solid": {
                 "color": {
@@ -765,13 +898,6 @@
                       "Percent": 0
                     }
                   }
-                }
-              }
-            },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
                 }
               }
             },
@@ -797,17 +923,17 @@
                 }
               }
             },
-            "fontSize": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "9D"
+                  "Value": "false"
                 }
               }
             },
-            "alignment": {
+            "titleWrap": {
               "expr": {
                 "Literal": {
-                  "Value": "'center'"
+                  "Value": "true"
                 }
               }
             },
@@ -823,10 +949,17 @@
                 }
               }
             },
-            "show": {
+            "alignment": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "'center'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
                 }
               }
             }
@@ -849,17 +982,37 @@
       "visualTooltip": [
         {
           "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
             "section": {
               "expr": {
                 "Literal": {
                   "Value": "'ReportSection06a4614e8cb023dedbbe'"
                 }
               }
-            },
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }
@@ -869,6 +1022,13 @@
       "border": [
         {
           "properties": {
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
             "show": {
               "expr": {
                 "Literal": {

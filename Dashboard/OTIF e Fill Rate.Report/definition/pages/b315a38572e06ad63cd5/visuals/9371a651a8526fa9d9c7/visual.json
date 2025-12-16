@@ -1,0 +1,69 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "9371a651a8526fa9d9c7",
+  "position": {
+    "x": 407.33264675592176,
+    "y": 81.730175077239963,
+    "z": 4,
+    "height": 570.79299691040171,
+    "width": 628.7950566426365
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fBaseCarteira"
+                    }
+                  },
+                  "Property": "STATUS_BI"
+                }
+              },
+              "queryRef": "fBaseCarteira.STATUS_BI",
+              "nativeQueryRef": "STATUS_BI"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fBaseCarteira"
+                  }
+                },
+                "Property": "STATUS_BI"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

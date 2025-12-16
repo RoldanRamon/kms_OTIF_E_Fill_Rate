@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "f7ca000d30433eb3bc23",
   "position": {
-    "x": 640,
-    "y": 529.48306595365443,
-    "z": 7000,
-    "height": 190.5169340463458,
-    "width": 640,
-    "tabOrder": 8000
+    "x": 10.98188751191611,
+    "y": 613.76549094375594,
+    "z": 5000,
+    "height": 93.956148713060045,
+    "width": 298.95138226882744,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "tableEx",
@@ -269,6 +269,13 @@
                   }
                 }
               }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
             }
           }
         }
@@ -294,6 +301,19 @@
               "expr": {
                 "Literal": {
                   "Value": "'Detalhes Pedido'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

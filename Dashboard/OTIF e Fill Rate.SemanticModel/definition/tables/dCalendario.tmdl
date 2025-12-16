@@ -36,7 +36,7 @@ table dCalendario
 			```
 		lineageTag: 1b0fd124-af64-4d49-aeb6-1c0232d71512
 		summarizeBy: none
-		sortByColumn: 'Ord Ano Fiscal'
+		sortByColumn: Mes
 
 		annotation SummarizationSetBy = Automatic
 
@@ -116,6 +116,28 @@ table dCalendario
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Ano E Mês' =
+			
+			[Mês]& "/" &YEAR([Date])
+		lineageTag: 0272606d-e55b-4a63-9ecf-dd071e42c5fa
+		summarizeBy: none
+		sortByColumn: 'Ord Mês e Ano'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ord Mês e Ano' = YEAR([Date]) & [Mes]
+		lineageTag: eff917f8-8d5d-4bac-82e6-6fdb8b4eb11a
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ano = YEAR([Date])
+		formatString: 0
+		lineageTag: e34022b4-bee6-4049-be42-e5b55d2e81da
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
 
 	partition dCalendario-dd250671-adc8-4082-9025-7b8e780c6056 = calculated
 		mode: import

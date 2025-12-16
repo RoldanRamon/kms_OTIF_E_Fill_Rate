@@ -1,38 +1,6 @@
 table fPedido
 	lineageTag: 8d1d4e16-a9fc-496f-85f3-98825f614213
 
-	column DIM_CLIENTE_ID
-		dataType: string
-		lineageTag: 6d418e86-2750-41de-8581-4f8741af05d0
-		summarizeBy: none
-		sourceColumn: DIM_CLIENTE_ID
-
-		annotation SummarizationSetBy = Automatic
-
-	column DIM_EMPRESA_ID
-		dataType: string
-		lineageTag: ccc6ba8a-b04d-47a7-9626-43bb251da654
-		summarizeBy: none
-		sourceColumn: DIM_EMPRESA_ID
-
-		annotation SummarizationSetBy = Automatic
-
-	column DIM_REPRESENTANTE_ID
-		dataType: string
-		lineageTag: f21a0d4e-930b-4c64-aed9-c53b31267f42
-		summarizeBy: none
-		sourceColumn: DIM_REPRESENTANTE_ID
-
-		annotation SummarizationSetBy = Automatic
-
-	column DIM_ITEM_ID
-		dataType: string
-		lineageTag: 5cfae459-a2a1-4c81-b4ed-84ff5154ce61
-		summarizeBy: none
-		sourceColumn: DIM_ITEM_ID
-
-		annotation SummarizationSetBy = Automatic
-
 	column NR_PEDIDO
 		dataType: string
 		lineageTag: a3e68213-6c70-4b65-8abc-2da20dda9c8f
@@ -185,14 +153,6 @@ table fPedido
 
 		annotation SummarizationSetBy = Automatic
 
-	column DIM_UNID_NEGOC_ID
-		dataType: string
-		lineageTag: 69e8e9c1-1d20-4d64-9685-75130af1bb18
-		summarizeBy: none
-		sourceColumn: DIM_UNID_NEGOC_ID
-
-		annotation SummarizationSetBy = Automatic
-
 	column DIM_COND_PAGTO_ID
 		dataType: string
 		lineageTag: 749630c8-900a-479a-a67c-9780dcf2d83f
@@ -292,45 +252,6 @@ table fPedido
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column QT_ALOCADA
-		dataType: double
-		lineageTag: b08b6bf3-03d7-450c-8e0a-107507ef5a19
-		summarizeBy: sum
-		sourceColumn: QT_ALOCADA
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column QT_EMBARCADA
-		dataType: double
-		lineageTag: 33d50249-592d-4647-b371-d91fb8604e20
-		summarizeBy: sum
-		sourceColumn: QT_EMBARCADA
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column OBSERVACOES
-		dataType: string
-		lineageTag: 1a72d7c8-e8cd-4b6d-a346-ef370519eeb6
-		summarizeBy: none
-		sourceColumn: OBSERVACOES
-
-		annotation SummarizationSetBy = Automatic
-
-	column DT_CANCELA_ITEM
-		dataType: dateTime
-		formatString: Long Date
-		lineageTag: 6fa840f0-3d8e-43eb-a696-eb204b23a041
-		summarizeBy: none
-		sourceColumn: DT_CANCELA_ITEM
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation UnderlyingDateTimeDataType = Date
-
 	column NM_UNID_NEGOC
 		dataType: string
 		lineageTag: 5ce78953-ca32-4c46-91a1-4a822fba0e66
@@ -417,12 +338,58 @@ table fPedido
 
 		annotation SummarizationSetBy = Automatic
 
+	column @StatusBI = RELATED(fBaseCarteira[STATUS_BI])
+		lineageTag: 41db5d90-1a04-444c-9ab0-8cd228860bcb
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column CLIENTE
+		dataType: string
+		lineageTag: 0be744ba-414e-4bd2-87c5-16109b438df6
+		summarizeBy: none
+		sourceColumn: CLIENTE
+
+		annotation SummarizationSetBy = Automatic
+
+	column FAMILIA_COMERCIAL
+		dataType: string
+		lineageTag: f8dd2d2c-382d-442b-b2ff-a721ffd5db2c
+		summarizeBy: none
+		sourceColumn: FAMILIA_COMERCIAL
+
+		annotation SummarizationSetBy = Automatic
+
+	column EMPRESA
+		dataType: string
+		lineageTag: 155a4881-247c-4736-a6e0-509367c7d0de
+		summarizeBy: none
+		sourceColumn: EMPRESA
+
+		annotation SummarizationSetBy = Automatic
+
+	column REPRESENTANTE
+		dataType: string
+		lineageTag: cb396e71-d561-4648-9748-eda261e4a1bd
+		summarizeBy: none
+		sourceColumn: REPRESENTANTE
+
+		annotation SummarizationSetBy = Automatic
+
+	column DIM_ITEM_ID
+		dataType: string
+		lineageTag: 9021a134-cc62-4282-b671-d8d76bfb5295
+		summarizeBy: none
+		sourceColumn: DIM_ITEM_ID
+
+		annotation SummarizationSetBy = Automatic
+
 	partition fPedido-24034e89-6c6d-42ea-a97d-3af7c3cf61e1 = m
 		mode: import
 		source =
 				let
-				    Fonte = Sql.Database("BRPIN-DBS008\PowerBI", "idba_komatsu", [Query="SELECT A.DIM_CLIENTE_ID#(lf)      ,A.DIM_EMPRESA_ID#(lf)      ,A.DIM_COND_PAGTO_ID#(lf)      ,A.DIM_REPRESENTANTE_ID#(lf)      ,A.DIM_UNID_NEGOC_ID#(lf)      ,UPPER(A.DIM_ITEM_ID) AS DIM_ITEM_ID#(lf)      ,A.NR_PEDIDO#(lf)      ,A.DT_EMISSAO#(lf)      ,A.DT_ENTREGA#(lf)      ,A.NF_NUM#(lf)      ,A.TIPO#(lf)      ,A.POS_PDV#(lf)      ,A.QTDE#(lf)      ,A.QTDE_ATEND#(lf)      ,A.QTDE - A.QTDE_ATEND AS QTDE_EM_ABERTO#(lf)      ,A.QTDE_CANC#(lf)      ,A.QTDE_SLDO#(lf)      ,A.PRECO_UNIT#(lf)      ,A.VLR_BRUTO#(lf)      ,A.VLR_BRUTO_SICMS#(lf)      ,A.DIM_DIVISAO_VENDA_ID#(lf)      ,A.NF_SERIE#(lf)      ,A.NF_DATA#(lf)      ,A.PRIORIDADE#(lf)      ,A.NR_PEDIDO_CLIENTE#(lf)      ,A.NR_SEQ_PED#(lf)      ,A.NR_SEQ_PED_NF#(lf)      ,A.FATURAMENTO_PARCIAL#(lf)      ,A.VALOR_LIQUIDO_NF#(lf)      ,A.QT_ALOCADA#(lf)      ,A.QT_EMBARCADA#(lf)      ,A.OBSERVACOES#(lf)      ,A.DT_CANCELA_ITEM#(lf)      ,B.TP_DIVISAO_VENDA#(lf)      ,C.NM_UNID_NEGOC#(lf)      ,CONCAT(A.DIM_EMPRESA_ID, '_', A.DIM_ITEM_ID) AS IdPedidoSaldoEstoque#(lf)      ,CONCAT(A.NR_PEDIDO_CLIENTE,'-', A.NR_SEQ_PED,'-', A.DIM_ITEM_ID) AS ID_PEDIDO_SEQ_ITEM#(lf)#(lf)  FROM [idba_komatsu].[dbo].[FATO_PEDIDO_BI] A#(lf)  INNER JOIN DIM_DIVISAO_VENDA_BI B ON A.DIM_DIVISAO_VENDA_ID = B.DIM_DIVISAO_VENDA_ID#(lf)  LEFT JOIN DIM_UNID_NEGOC_BI C ON C.COD_UNID_NEGOC = A.DIM_UNID_NEGOC_ID#(lf)  WHERE B.TP_DIVISAO_VENDA IN ('PEÇAS','PEÇAS ATIVAS','PEÇAS KDB', 'PEÇAS CONTRATO')#(lf)  AND A.POS_PDV <> 'Cancelado'#(lf)  AND A.DT_EMISSAO > '01/01/2022'#(lf)  ORDER BY A.DT_EMISSAO DESC#(lf);"]),
-				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"DT_CANCELA_ITEM", type date}, {"DIM_EMPRESA_ID", type text}, {"DT_EMISSAO", type date}, {"DT_ENTREGA", type date}, {"NF_DATA", type date}})
+				    Fonte = Sql.Database("BRPIN-DBS008\PowerBI", "idba_komatsu", [Query="SELECT #(lf)      A.DIM_COND_PAGTO_ID#(lf)      ,A.NR_PEDIDO#(lf)      ,CONCAT(E.DIM_ITEM_ID, ' - ', E.NM_ITEM) AS DIM_ITEM_ID#(lf)      ,A.DT_EMISSAO#(lf)      ,A.DT_ENTREGA#(lf)      ,A.NF_NUM#(lf)      ,A.TIPO#(lf)      ,A.POS_PDV#(lf)      ,A.QTDE#(lf)      ,A.QTDE_ATEND#(lf)      ,A.QTDE - A.QTDE_ATEND AS QTDE_EM_ABERTO#(lf)      ,A.QTDE_CANC#(lf)      ,A.QTDE_SLDO#(lf)      ,A.PRECO_UNIT#(lf)      ,A.VLR_BRUTO#(lf)      ,A.VLR_BRUTO_SICMS#(lf)      ,A.DIM_DIVISAO_VENDA_ID#(lf)      ,A.NF_SERIE#(lf)      ,A.NF_DATA#(lf)      ,A.PRIORIDADE#(lf)      ,A.NR_PEDIDO_CLIENTE#(lf)      ,A.NR_SEQ_PED#(lf)      ,A.NR_SEQ_PED_NF#(lf)      ,A.FATURAMENTO_PARCIAL#(lf)      ,A.VALOR_LIQUIDO_NF#(lf)      ,B.TP_DIVISAO_VENDA#(lf)      ,C.NM_UNID_NEGOC#(lf)      ,CONCAT(A.DIM_EMPRESA_ID, '_', A.DIM_ITEM_ID) AS IdPedidoSaldoEstoque#(lf)      ,CONCAT(A.NR_PEDIDO_CLIENTE, '-', A.NR_SEQ_PED,'-', A.DIM_ITEM_ID) AS ID_PEDIDO_SEQ_ITEM#(lf)      ,CONCAT(D.COD_CLIENTE, ' - ', D.CLIENTE) AS CLIENTE#(lf)      ,E.DESC_C1 AS FAMILIA_COMERCIAL#(lf)      ,CONCAT(F.DIM_EMPRESA_ID, ' - ', F.CIDADE) AS EMPRESA#(lf)      ,CONCAT(G.COD_REPRESENTANTE, ' - ', G.REPRESENTANTE) AS REPRESENTANTE#(lf)#(lf)  FROM [idba_komatsu].[dbo].[FATO_PEDIDO_BI] A#(lf)  INNER JOIN DIM_DIVISAO_VENDA_BI B ON A.DIM_DIVISAO_VENDA_ID = B.DIM_DIVISAO_VENDA_ID#(lf)  LEFT JOIN DIM_UNID_NEGOC_BI C ON C.COD_UNID_NEGOC = A.DIM_UNID_NEGOC_ID#(lf)  LEFT JOIN DIM_CLIENTE_BI D ON D.COD_CLIENTE = A.DIM_CLIENTE_ID#(lf)  LEFT JOIN DIM_ITEM_BI E ON E.CD_ITEM = A.DIM_ITEM_ID#(lf)  LEFT JOIN DIM_EMPRESA_BI F ON F.COD_EMPRESA = A.DIM_EMPRESA_ID#(lf)  LEFT JOIN DIM_REPRESENTANTE_BI G ON G.COD_REPRESENTANTE = A.DIM_REPRESENTANTE_ID#(lf)  WHERE B.TP_DIVISAO_VENDA IN ('PEÇAS','PEÇAS ATIVAS','PEÇAS KDB', 'PEÇAS CONTRATO')#(lf)  AND A.POS_PDV <> 'Cancelado'#(lf)  AND A.DT_EMISSAO > '01/01/2022'#(lf)  ORDER BY A.DT_EMISSAO DESC#(lf);"]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{ {"DT_EMISSAO", type date}, {"DT_ENTREGA", type date}, {"NF_DATA", type date}})
 				in
 				    #"Tipo Alterado"
 

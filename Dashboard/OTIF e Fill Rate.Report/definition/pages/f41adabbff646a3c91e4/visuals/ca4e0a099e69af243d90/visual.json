@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "ca4e0a099e69af243d90",
   "position": {
-    "x": 0,
-    "y": 529.48306595365443,
-    "z": 0,
-    "height": 190.5169340463458,
-    "width": 640,
-    "tabOrder": 6000
+    "x": 319.69494756911342,
+    "y": 613.76549094375594,
+    "z": 1000,
+    "height": 93.956148713060045,
+    "width": 308.71306005719731,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "tableEx",
@@ -55,7 +55,8 @@
                 }
               },
               "queryRef": "fPedido.DIM_ITEM_ID",
-              "nativeQueryRef": "DIM_ITEM_ID"
+              "nativeQueryRef": "ITEM",
+              "displayName": "ITEM"
             },
             {
               "field": {
@@ -275,6 +276,13 @@
                   }
                 }
               }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
             }
           }
         }
@@ -300,6 +308,19 @@
               "expr": {
                 "Literal": {
                   "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

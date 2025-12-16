@@ -1,0 +1,521 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "visual003",
+  "position": {
+    "x": 10.267379679144385,
+    "y": 0,
+    "z": 102,
+    "height": 719.85739750445634,
+    "width": 1269.7326203208556
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "OTIF (On-Time In-Full)",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "OTIF é um indicador de desempenho logístico que mede a capacidade de entregar pedidos no prazo (On-Time) e completo (In-Full) simultaneamente."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "A dashboard analisa em dois níveis:"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "• "
+                  },
+                  {
+                    "value": "OTIF POR LINHA",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ": Avalia cada linha de item dentro de um pedido."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "• "
+                  },
+                  {
+                    "value": "OTIF POR PEDIDO",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ": Consolida o status de todas as linhas."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "• "
+                  },
+                  {
+                    "value": "OBS.",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ": Considera apenas pedidos com"
+                  },
+                  {
+                    "value": " Prioridade Programada",
+                    "textStyle": {
+                      "textDecoration": "underline"
+                    }
+                  },
+                  {
+                    "value": "."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "CLASSIFICAÇÃO OTIF - NÍVEL LINHA",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "OTIF",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ": Data da Nota Fiscal (NF_DATA) ≤ Data Prometida (DT_ENTREGA), então a interpretação será Entrega no prazo."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "NO-OTIF",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ": Data da Nota Fiscal (NF_DATA) > Data Prometida (DT_ENTREGA), então a interpretação será Entrega atrasada."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Ainda No Prazo",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ": Se ainda não temos nota fiscal e a data atual <= Data Prometida (DT_ENTREGA), então a interpretação será que estamos aguardando."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "CLASSIFICAÇÃO OTIF - NÍVEL PEDIDO",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "OTIF",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ": Quando TODAS as linhas do mesmo pedido estão em situação OTIF."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "NO-OTIF",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ": Quando pelo menos uma linha está com atraso na entrega."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Ainda No Prazo",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ": Quando não temos linha \"NO-OTIF\" e ainda temos linhas para faturar com data prevista futura (posterior a hoje)."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "FILL RATE (Taxa de Preenchimento)",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Fill Rate mede a capacidade de atender a quantidade solicitada com base no estoque disponível no dia da emissão do pedido."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "A dashboard analisa em dois níveis:"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "• FILL RATE POR LINHA",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ": Avalia cada linha de item dentro de um pedido."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "• FILL RATE POR PEDIDO",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ": Consolida o status de todas as linhas."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "• "
+                  },
+                  {
+                    "value": "OBS.",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ": Considera apenas pedidos com "
+                  },
+                  {
+                    "value": "Prioridade Normal e Emergencial",
+                    "textStyle": {
+                      "textDecoration": "underline"
+                    }
+                  },
+                  {
+                    "value": "."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "CLASSIFICAÇÃO FILL RATE - NÍVEL LINHA",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "FILL_RATE",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ": Estoque disponível ≥ Quantidade em aberto (100% atendimento possível)."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "NO-FILL_RATE",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ": Estoque disponível < Quantidade em aberto (Falta de produtos)."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "OBS.",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ": "
+                  },
+                  {
+                    "value": "Estoque disponível é a soma de estoque no final do dia anterior para esse item na filial que emitiu o pedido.",
+                    "textStyle": {
+                      "textDecoration": "underline"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "CLASSIFICAÇÃO FILL RATE - NÍVEL PEDIDO",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "FILL_RATE",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ": Todas as linhas têm estoque suficiente."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "NO-FILL_RATE",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ": Pelo menos uma linha não tem estoque suficiente."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "FILTROS GERAIS DA DASHBOARD",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": " "
+                  },
+                  {
+                    "value": " - Tipo Divisão de Venda",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "textDecoration": "underline"
+                    }
+                  },
+                  {
+                    "value": ":",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " PEÇAS, PEÇAS ATIVAS, PEÇAS KDB, PEÇAS CONTRATO"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "textDecoration": "underline"
+                    }
+                  },
+                  {
+                    "value": " - POS_PDV",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "textDecoration": "underline"
+                    }
+                  },
+                  {
+                    "value": ": Diferente de \"Cancelado\""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "textDecoration": "underline"
+                    }
+                  },
+                  {
+                    "value": " - DATA_EMISSAO",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "textDecoration": "underline"
+                    }
+                  },
+                  {
+                    "value": ":",
+                    "textStyle": {
+                      "textDecoration": "underline"
+                    }
+                  },
+                  {
+                    "value": " A partir de 01/01/2022"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

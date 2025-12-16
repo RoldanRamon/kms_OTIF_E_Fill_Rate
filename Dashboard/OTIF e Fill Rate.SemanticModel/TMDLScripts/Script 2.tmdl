@@ -1,0 +1,213 @@
+createOrReplace
+
+	table _Medidas
+		lineageTag: 129502df-8550-4b7d-a314-0d34a45134ec
+
+		measure '_Qtde Total de Linhas' = COUNTROWS(fPedido)
+			formatString: #,0
+			displayFolder: _GERAL
+			lineageTag: 06a172ae-b489-4675-a31c-656065997023
+
+		measure '_Qtde Linhas OTIF' =
+				
+				CALCULATE(
+				    [_Qtde Total de Linhas],
+				    fPedido[@OTIF Linha] = "OTIF"
+				)
+			formatString: #,0
+			displayFolder: OTIF\LINHA
+			lineageTag: 65fa613f-d3c9-4fb9-b34a-10d9f780b339
+
+		measure 'Qtde Linhas NO-OTIF' =
+				
+				CALCULATE(
+				    [_Qtde Total de Linhas],
+				    fPedido[@OTIF Linha] = "NO-OTIF"
+				)
+			formatString: #,0
+			displayFolder: OTIF\LINHA
+			lineageTag: 34640daf-1c84-429e-b7a6-92a1d99d642e
+
+		measure '_Qtde Linhas Ainda No Prazo' =
+				
+				CALCULATE(
+				    [_Qtde Total de Linhas],
+				    fPedido[@OTIF Linha] = "Ainda No Prazo"
+				)
+			formatString: #,0
+			displayFolder: OTIF\LINHA
+			lineageTag: 4b27f5dd-e6ad-4942-b521-6d8e291681ca
+
+		measure '% OTIF' = DIVIDE([_Qtde Linhas OTIF], [_Qtde Total de Linhas], 0)
+			formatString: 0.00%;-0.00%;0.00%
+			displayFolder: OTIF\LINHA
+			lineageTag: 2b3046ff-ad16-44af-bc6c-55e71fab0f88
+
+		measure '% NO-OTIF' = DIVIDE([Qtde Linhas NO-OTIF], [_Qtde Total de Linhas], 0)
+			formatString: 0.00%;-0.00%;0.00%
+			displayFolder: OTIF\LINHA
+			lineageTag: dab40cac-85e5-44d1-855b-5a170560e575
+
+		measure '% Ainda No Prazo' = DIVIDE([_Qtde Linhas Ainda No Prazo], [_Qtde Total de Linhas], 0)
+			formatString: 0.00%;-0.00%;0.00%
+			displayFolder: OTIF\LINHA
+			lineageTag: ca46dd1d-1650-4f8d-862b-2f63e1bbfbf4
+
+		measure '_(R$) Total Pedidos' = SUMX(fPedido, fPedido[PRECO_UNIT] * fPedido[QTDE])
+			formatString: "R$"#,0;-"R$"#,0;"R$"#,0
+			displayFolder: _GERAL
+			lineageTag: b55c16dc-c2de-46ca-8a79-30457bcbb7f6
+
+			annotation PBI_FormatHint = {"currencyCulture":"es-BR"}
+
+		measure 'Qtde Pedidos OTIF' =
+				
+				CALCULATE(
+				    [_Qtde Pedidos],
+				    Analise_OTIF_Pedido[@OTIF Pedido] = "OTIF"
+				)
+			formatString: #,0
+			displayFolder: OTIF\PEDIDO
+			lineageTag: a1b2c3d4-e5f6-4g7h-8i9j-0k1l2m3n4o5p
+
+		measure 'Qtde Pedidos NO-OTIF' =
+				
+				CALCULATE(
+				    [_Qtde Pedidos],
+				    Analise_OTIF_Pedido[@OTIF Pedido] = "NO-OTIF"
+				)
+			formatString: #,0
+			displayFolder: OTIF\PEDIDO
+			lineageTag: b2c3d4e5-f6g7-4h8i-9j0k-1l2m3n4o5p6q
+
+		measure 'Qtde Pedidos Ainda No Prazo' =
+				
+				CALCULATE(
+				    [_Qtde Pedidos],
+				    Analise_OTIF_Pedido[@OTIF Pedido] = "Ainda No Prazo"
+				)
+			formatString: #,0
+			displayFolder: OTIF\PEDIDO
+			lineageTag: 92ba4434-6b79-446f-9182-377737419128
+
+		measure '% OTIF PEDIDO' =
+				
+				DIVIDE([Qtde Pedidos OTIF], [_Qtde Pedidos], 0)
+			formatString: 0.00%;-0.00%;0.00%
+			displayFolder: OTIF\PEDIDO
+			lineageTag: 7380af43-fd1e-432a-a970-6f489f640ab7
+
+		measure '% NO-OTIF PEDIDO' =
+				
+				DIVIDE([Qtde Pedidos NO-OTIF], [_Qtde Pedidos], 0)
+			formatString: 0.00%;-0.00%;0.00%
+			displayFolder: OTIF\PEDIDO
+			lineageTag: eecd8fa8-03aa-4b9e-8a9c-1dc51faf25e3
+
+		measure '% Ainda No Prazo Pedido' =
+				
+				DIVIDE([Qtde Pedidos Ainda No Prazo], [_Qtde Pedidos], 0)
+			formatString: 0.00%;-0.00%;0.00%
+			displayFolder: OTIF\PEDIDO
+			lineageTag: 33fc3220-bb82-4da3-8e16-1697aab5e41a
+
+		measure 'Qtde Linhas FILL_RATE' =
+				
+				CALCULATE(
+				    [_Qtde Total de Linhas],
+				    fPedido[@FILL RATE Linha] = "FILL_RATE"
+				)
+			formatString: #,0
+			displayFolder: FILL_RATE\LINHA
+			lineageTag: 52531a9f-8b74-4bf8-bcf6-6d3f96fcbd82
+
+		measure 'Qtde Pedidos FILL_RATE' =
+				
+				CALCULATE(
+				    [_Qtde Pedidos],
+				    Analise_FILL_RATE_Pedido[@FILL_RATE Pedido] = "FILL_RATE"
+				)
+			formatString: #,0
+			displayFolder: FILL_RATE\PEDIDO
+			lineageTag: 40afc551-8d55-4a94-be2b-144652dea708
+
+		measure 'Qtde Linhas NO-FILL_RATE' =
+				
+				CALCULATE(
+				    [_Qtde Total de Linhas],
+				    fPedido[@FILL RATE Linha] = "NO-FILL_RATE"
+				)
+			formatString: #,0
+			displayFolder: FILL_RATE\LINHA
+			lineageTag: 13b3d57b-6213-44de-bbc4-705be8a25e6b
+
+		measure '% FILL_RATE' = DIVIDE([Qtde Linhas FILL_RATE], [_Qtde Total de Linhas], 0)
+			formatString: 0.00%;-0.00%;0.00%
+			displayFolder: FILL_RATE\LINHA
+			lineageTag: bb0eac24-30fa-4e45-a7be-a03d65d0dbae
+
+		measure '% NO-FILL_RATE' = DIVIDE([Qtde Linhas NO-FILL_RATE], [_Qtde Total de Linhas], 0)
+			formatString: 0.00%;-0.00%;0.00%
+			displayFolder: FILL_RATE\LINHA
+			lineageTag: 63dbd56a-9d71-4f33-b2ee-33c8e410e2a3
+
+		measure 'Qtde Pedidos NO-FILL_RATE' =
+				
+				CALCULATE(
+				    [_Qtde Pedidos],
+				    Analise_FILL_RATE_Pedido[@FILL_RATE Pedido] = "NO-FILL_RATE"
+				)
+			formatString: #,0
+			displayFolder: FILL_RATE\PEDIDO
+			lineageTag: 762fb35e-6712-4209-b215-4e6df04c4db2
+
+		measure '% NO-FILL_RATE PEDIDO' =
+				
+				DIVIDE([Qtde Pedidos NO-FILL_RATE], [_Qtde Pedidos], 0)
+			formatString: 0.00%;-0.00%;0.00%
+			displayFolder: FILL_RATE\PEDIDO
+			lineageTag: e38d6c72-b802-4181-b077-13737e4f57e4
+
+		measure '% FILL_RATE PEDIDO' =
+				
+				DIVIDE([Qtde Pedidos FILL_RATE], [_Qtde Pedidos], 0)
+			formatString: 0.00%;-0.00%;0.00%
+			displayFolder: FILL_RATE\PEDIDO
+			lineageTag: b44b4934-8b6d-422c-b0bf-1e9e739e0754
+
+		measure '_Qtde Pedidos' = DISTINCTCOUNT(fPedido[NR_PEDIDO])
+			formatString: 0
+			displayFolder: _GERAL
+			lineageTag: 98ec833f-b679-40a5-aaec-486409bf60b8
+
+		measure 'Qtde Estoque No Dia' = SUM(fPedido[@Qtde Estoque No Dia])
+			formatString: #,0.00
+			displayFolder: FILL_RATE\LINHA
+			lineageTag: 76a5cee7-27fa-4967-857c-1f34b6a75f67
+
+		measure 'Qtde Em Aberto' = SUM(fPedido[QTDE_EM_ABERTO])
+			formatString: #,0.00
+			displayFolder: FILL_RATE\LINHA
+			lineageTag: 6344e0b7-c5c3-4ff5-9eb4-4c569d480ca0
+
+		measure 'Dif. Estoque No Dia x Em Aberto' = [Qtde Estoque No Dia] - [Qtde Em Aberto]
+			formatString: #,0.00
+			displayFolder: FILL_RATE\LINHA
+			lineageTag: 8ca5817d-40ef-4206-b5d6-addb1dd8da52
+
+		column Value
+			isHidden
+			formatString: 0
+			lineageTag: 3ccd33d6-dbec-48e1-ba6a-ea58f7fbfd44
+			summarizeBy: sum
+			isNameInferred
+			sourceColumn: [Value]
+
+			annotation SummarizationSetBy = Automatic
+
+		partition _Medidas = calculated
+			mode: import
+			source = {1}
+
+		annotation PBI_Id = 5ae64b622b7948ac8a958c62722aa216
+

@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "36228e7c494e77cf62c5",
   "position": {
-    "x": 640,
-    "y": 341.10516934046348,
-    "z": 8000,
-    "height": 187.09447415329768,
-    "width": 640,
-    "tabOrder": 1000
+    "x": -1000,
+    "y": -1000,
+    "z": 6000,
+    "height": 187.28557013118063,
+    "width": 639.35418768920283,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "hundredPercentStackedColumnChart",
@@ -919,14 +919,14 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'OTIF Attendance Level'"
+                  "Value": "'grafico mensal'"
                 }
               }
             },
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },

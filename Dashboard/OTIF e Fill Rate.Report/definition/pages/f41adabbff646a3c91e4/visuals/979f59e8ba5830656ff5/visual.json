@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "a0801abda5abb47a3a35",
+  "name": "979f59e8ba5830656ff5",
   "position": {
-    "x": 640.58554437328451,
-    "y": 104.22689844464776,
-    "z": 6000,
-    "height": 236.55992680695334,
-    "width": 639.41445562671549,
-    "tabOrder": 7000
+    "x": 0,
+    "y": 61.010486177311719,
+    "z": 0,
+    "height": 169.60915157292658,
+    "width": 1280,
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,12 +23,12 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "_Qtde Pedidos"
+                  "Property": "Total - Dinamico"
                 }
               },
-              "queryRef": "_Medidas._Qtde Pedidos",
-              "nativeQueryRef": "Pedidos",
-              "displayName": "Pedidos"
+              "queryRef": "_Medidas.Total - Dinamico",
+              "nativeQueryRef": "Qtde Total",
+              "displayName": "Qtde Total"
             },
             {
               "field": {
@@ -38,10 +38,10 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Qtde Pedidos OTIF"
+                  "Property": "OTIF - Dinamico"
                 }
               },
-              "queryRef": "_Medidas.Qtde Pedidos OTIF",
+              "queryRef": "_Medidas.OTIF - Dinamico",
               "nativeQueryRef": "OTIF",
               "displayName": "OTIF"
             },
@@ -53,10 +53,10 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Qtde Pedidos NO-OTIF"
+                  "Property": "NO-OTIF - Dinamico"
                 }
               },
-              "queryRef": "_Medidas.Qtde Pedidos NO-OTIF",
+              "queryRef": "_Medidas.NO-OTIF - Dinamico",
               "nativeQueryRef": "NO-OTIF",
               "displayName": "NO-OTIF"
             },
@@ -68,12 +68,11 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Qtde Pedidos Ainda No Prazo"
+                  "Property": "Ainda No Prazo - Dinamico"
                 }
               },
-              "queryRef": "_Medidas.Qtde Pedidos Ainda No Prazo",
-              "nativeQueryRef": "Ainda No Prazo",
-              "displayName": "Ainda No Prazo"
+              "queryRef": "_Medidas.Ainda No Prazo - Dinamico",
+              "nativeQueryRef": "Ainda No Prazo - Dinamico"
             },
             {
               "field": {
@@ -86,9 +85,9 @@
                   "Property": "_(R$) Total Pedidos"
                 }
               },
-              "queryRef": "_Medidas.(R$) Total Pedidos",
-              "nativeQueryRef": "(R$) Pedidos",
-              "displayName": "(R$) Pedidos"
+              "queryRef": "_Medidas._(R$) Total Pedidos",
+              "nativeQueryRef": "(R$) Total",
+              "displayName": "(R$) Total"
             },
             {
               "field": {
@@ -98,10 +97,10 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "% OTIF PEDIDO"
+                  "Property": "% OTIF - Dinamico"
                 }
               },
-              "queryRef": "_Medidas.% OTIF PEDIDO",
+              "queryRef": "_Medidas.% OTIF - Dinamico",
               "nativeQueryRef": "% OTIF",
               "displayName": "% OTIF"
             },
@@ -113,10 +112,10 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "% NO-OTIF PEDIDO"
+                  "Property": "% NO-OTIF - Dinamico"
                 }
               },
-              "queryRef": "_Medidas.% NO-OTIF PEDIDO",
+              "queryRef": "_Medidas.% NO-OTIF - Dinamico",
               "nativeQueryRef": "% NO-OTIF",
               "displayName": "% NO-OTIF"
             },
@@ -128,12 +127,12 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "% Ainda No Prazo Pedido"
+                  "Property": "% Ainda No Prazo - Dinamico"
                 }
               },
-              "queryRef": "_Medidas.% Ainda No Prazo Pedido",
-              "nativeQueryRef": "%Ainda No Prazo",
-              "displayName": "%Ainda No Prazo"
+              "queryRef": "_Medidas.% Ainda No Prazo - Dinamico",
+              "nativeQueryRef": "% Ainda No Prazo",
+              "displayName": "% Ainda No Prazo"
             }
           ]
         }
@@ -148,7 +147,7 @@
                     "Entity": "_Medidas"
                   }
                 },
-                "Property": "_Qtde Pedidos"
+                "Property": "Total - Dinamico"
               }
             },
             "direction": "Descending"
@@ -181,6 +180,27 @@
                   "Value": "0D"
                 }
               }
+            },
+            "style": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Cards'"
+                }
+              }
+            },
+            "autoGrid": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "calloutSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "34D"
+                }
+              }
             }
           }
         },
@@ -190,6 +210,13 @@
               "expr": {
                 "Literal": {
                   "Value": "12L"
+                }
+              }
+            },
+            "backgroundShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -208,10 +235,31 @@
                   "Value": "'center'"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
+                }
+              }
             }
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "23D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Medidas.Total - Dinamico"
           }
         }
       ],
@@ -227,6 +275,51 @@
                       "Percent": 0
                     }
                   }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "fillCustom": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "referenceLabelLayout": [
+        {
+          "properties": {
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'right'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "label": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
                 }
               }
             }
@@ -257,7 +350,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -270,8 +363,13 @@
             },
             "text": {
               "expr": {
-                "Literal": {
-                  "Value": "'Pedido'"
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Visao Selecionada"
                 }
               }
             },
@@ -308,7 +406,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -323,127 +421,18 @@
                   }
                 }
               }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
             }
           }
         }
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "afb5aabf339576e75b7b",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Medidas"
-              }
-            },
-            "Property": "Qtde Pedidos OTIF"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "6f155fa31e39eccdda49",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Medidas"
-              }
-            },
-            "Property": "Qtde Pedidos NO-OTIF"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "af22e5233847fe61ab30",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Medidas"
-              }
-            },
-            "Property": "Qtde Pedidos Ainda No Prazo"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "edfa2e741bc3d59de6ed",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Medidas"
-              }
-            },
-            "Property": "_(R$) Total Pedidos"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "22dd1c4eab9fe0fcd6d4",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Medidas"
-              }
-            },
-            "Property": "% OTIF PEDIDO"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "32f53ffeca785c9e09c8",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Medidas"
-              }
-            },
-            "Property": "% NO-OTIF PEDIDO"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "08c216cd2f7d571e897a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Medidas"
-              }
-            },
-            "Property": "% Ainda No Prazo Pedido"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "cde028f2e7f3364cb703",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Medidas"
-              }
-            },
-            "Property": "_Qtde Pedidos"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

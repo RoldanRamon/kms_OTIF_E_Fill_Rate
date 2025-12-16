@@ -193,6 +193,54 @@ table _Medidas
 		displayFolder: FILL_RATE\LINHA
 		lineageTag: 8ca5817d-40ef-4206-b5d6-addb1dd8da52
 
+	measure 'Valor NO-OTIF (R$)' =
+			
+			CALCULATE(
+			    [_(R$) Total Pedidos],
+			    Analise_OTIF_Pedido[@OTIF Pedido] = "NO-OTIF"
+			)
+		formatString: "R$"#,0;-"R$"#,0;"R$"#,0
+		displayFolder: FINANCEIRO\OTIF
+		lineageTag: f1a2b3c4-d5e6-f7g8-h9i0-j1k2l3m4n5o6
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure '% Perda Financeira' = DIVIDE([Valor NO-OTIF (R$)], [_(R$) Total Pedidos], 0)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: FINANCEIRO\OTIF
+		lineageTag: a1b2c3d4-e5f6-g7h8-i9j0-k1l2m3n4o5p6
+
+	measure 'Ticket Médio (R$)' = DIVIDE([_(R$) Total Pedidos], [_Qtde Pedidos], 0)
+		formatString: "R$"#,0.00;-"R$"#,0.00;"R$"#,0.00
+		displayFolder: FINANCEIRO\GERAL
+		lineageTag: b2c3d4e5-f6g7-h8i9-j0k1-l2m3n4o5p6q7
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Valor Em Risco (R$)' =
+			
+			CALCULATE(
+			    [_(R$) Total Pedidos],
+			    Analise_OTIF_Pedido[@OTIF Pedido] = "Ainda No Prazo"
+			)
+		formatString: "R$"#,0;-"R$"#,0;"R$"#,0
+		displayFolder: FINANCEIRO\OTIF
+		lineageTag: c3d4e5f6-g7h8-i9j0-k1l2-m3n4o5p6q7r8
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Valor OTIF (R$)' =
+			
+			CALCULATE(
+			    [_(R$) Total Pedidos],
+			    Analise_OTIF_Pedido[@OTIF Pedido] = "OTIF"
+			)
+		formatString: "R$"#,0;-"R$"#,0;"R$"#,0
+		displayFolder: FINANCEIRO\OTIF
+		lineageTag: d4e5f6g7-h8i9-j0k1-l2m3-n4o5p6q7r8s9
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
 	column Value
 		isHidden
 		formatString: 0
