@@ -3,10 +3,10 @@
   "name": "3af0f9087d3c9fe1ba7a",
   "position": {
     "x": 0,
-    "y": 137.1027216856892,
+    "y": 104.02826855123675,
     "z": 2000,
-    "height": 203.40649692712904,
-    "width": 640.5618964003512,
+    "height": 236.32508833922262,
+    "width": 640,
     "tabOrder": 5000
   },
   "visual": {
@@ -38,10 +38,10 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "_Qtde Linhas OTIF"
+                  "Property": "Qtde Linhas OTIF"
                 }
               },
-              "queryRef": "_Medidas.Qtde Linhas OTIF",
+              "queryRef": "_Medidas.Qtde Linhas OTIF1",
               "nativeQueryRef": "OTIF",
               "displayName": "OTIF"
             },
@@ -68,10 +68,10 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "_Qtde Linhas Ainda No Prazo - Linha"
+                  "Property": "Qtde Linhas Ainda No Prazo"
                 }
               },
-              "queryRef": "_Medidas.Qtde Linhas Ainda No Prazo",
+              "queryRef": "_Medidas.Qtde Linhas Ainda No Prazo1",
               "nativeQueryRef": "Ainda No Prazo",
               "displayName": "Ainda No Prazo"
             },

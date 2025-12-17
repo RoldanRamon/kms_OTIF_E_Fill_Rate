@@ -241,6 +241,115 @@ table _Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
+	/// MEDIDAS DINÂMICAS - Alternam entre Linha e Pedido baseado no parâmetro
+	measure 'OTIF (Dinâmico)' = ```
+			
+			VAR _TipoVisao = SELECTEDVALUE('Parametro Visao OTIF'[Tipo Visao], "Por Linha")
+			RETURN
+				SWITCH(
+				    _TipoVisao,
+				    "Por Linha", [Qtde Linhas OTIF],
+				    "Por Pedido", [Qtde Pedidos OTIF],
+				    [Qtde Linhas OTIF]
+				)
+			
+			```
+		formatString: 0
+		displayFolder: DINAMICA
+		lineageTag: 535a0c40-f283-4845-97b5-b87f1773172e
+
+	measure 'NO-OTIF (Dinâmico)' = ```
+			
+			VAR _TipoVisao = SELECTEDVALUE('Parametro Visao OTIF'[Tipo Visao], "Por Linha")
+			RETURN
+				SWITCH(
+				    _TipoVisao,
+				    "Por Linha", [Qtde Linhas NO-OTIF],
+				    "Por Pedido", [Qtde Pedidos NO-OTIF],
+				    [Qtde Linhas NO-OTIF]
+				)
+			
+			```
+		formatString: 0
+		displayFolder: DINAMICA
+		lineageTag: e73a2a5c-fc1d-4ebf-9dc9-cdf034230411
+
+	measure 'Total (Dinâmico)' = ```
+			
+			VAR _TipoVisao = SELECTEDVALUE('Parametro Visao OTIF'[Tipo Visao], "Por Linha")
+			RETURN
+				SWITCH(
+				    _TipoVisao,
+				    "Por Linha", [_Qtde Total de Linhas],
+				    "Por Pedido", [_Qtde Pedidos],
+				    [_Qtde Total de Linhas]
+				)
+			
+			```
+		formatString: 0
+		displayFolder: DINAMICA
+		lineageTag: 71c74bc2-c645-4aa0-b30c-343b565d98f8
+
+	measure '% OTIF (Dinâmico)' = ```
+			
+			VAR _TipoVisao = SELECTEDVALUE('Parametro Visao OTIF'[Tipo Visao], "Por Linha")
+			RETURN
+				SWITCH(
+				    _TipoVisao,
+				    "Por Linha", [% OTIF],
+				    "Por Pedido", [% OTIF PEDIDO],
+				    [% OTIF]
+				)
+			
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: DINAMICA
+		lineageTag: ec0d3aa4-a7d8-4da3-a40d-3d57eab06e8b
+
+	measure '% NO-OTIF (Dinâmico)' =
+			
+			VAR _TipoVisao = SELECTEDVALUE('Parametro Visao OTIF'[Tipo Visao], "Por Linha")
+			RETURN
+				SWITCH(
+				    _TipoVisao,
+				    "Por Linha", [% NO-OTIF],
+				    "Por Pedido", [% NO-OTIF PEDIDO],
+				    [% NO-OTIF]
+				)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: DINAMICA
+		lineageTag: 19169dfa-9440-403f-af8c-2f1f88de9b01
+
+	measure 'Ainda No Prazo (Dinâmico)' = ```
+			
+			VAR _TipoVisao = SELECTEDVALUE('Parametro Visao OTIF'[Tipo Visao], "Por Linha")
+			RETURN
+				SWITCH(
+				    _TipoVisao,
+				    "Por Linha", [Qtde Linhas Ainda No Prazo],
+				    "Por Pedido", [Qtde Pedidos Ainda No Prazo],
+				    [Qtde Linhas Ainda No Prazo]
+				)
+			
+			```
+		formatString: #,0
+		displayFolder: DINAMICA
+		lineageTag: c09ea419-6eba-4e7d-be23-e5bb53cbccd0
+
+	measure '% Ainda No Prazo (Dinâmico)' =
+			
+			VAR _TipoVisao = SELECTEDVALUE('Parametro Visao OTIF'[Tipo Visao], "Por Linha")
+			RETURN
+				SWITCH(
+				    _TipoVisao,
+				    "Por Linha", [% Ainda No Prazo],
+				    "Por Pedido", [% Ainda No Prazo Pedido],
+				    [% Ainda No Prazo]
+				)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: DINAMICA
+		lineageTag: 55f58052-fae6-4a04-af9e-748bde901f33
+
 	column Value
 		isHidden
 		formatString: 0

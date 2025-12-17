@@ -23,10 +23,10 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Total - Dinamico"
+                  "Property": "Total (Dinâmico)"
                 }
               },
-              "queryRef": "_Medidas.Total - Dinamico",
+              "queryRef": "_Medidas.Total (Dinâmico)",
               "nativeQueryRef": "Qtde Total",
               "displayName": "Qtde Total"
             },
@@ -38,11 +38,11 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "OTIF - Dinamico"
+                  "Property": "OTIF (Dinâmico)"
                 }
               },
-              "queryRef": "_Medidas.OTIF - Dinamico",
-              "nativeQueryRef": "OTIF",
+              "queryRef": "_Medidas.OTIF (Dinâmico)",
+              "nativeQueryRef": "OTIF1",
               "displayName": "OTIF"
             },
             {
@@ -53,11 +53,11 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "NO-OTIF - Dinamico"
+                  "Property": "NO-OTIF (Dinâmico)"
                 }
               },
-              "queryRef": "_Medidas.NO-OTIF - Dinamico",
-              "nativeQueryRef": "NO-OTIF",
+              "queryRef": "_Medidas.NO-OTIF (Dinâmico)",
+              "nativeQueryRef": "NO-OTIF1",
               "displayName": "NO-OTIF"
             },
             {
@@ -68,11 +68,11 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Ainda No Prazo - Dinamico"
+                  "Property": "Ainda No Prazo (Dinâmico)"
                 }
               },
-              "queryRef": "_Medidas.Ainda No Prazo - Dinamico",
-              "nativeQueryRef": "Ainda No Prazo - Dinamico"
+              "queryRef": "_Medidas.Ainda No Prazo (Dinâmico)",
+              "nativeQueryRef": "Ainda No Prazo (Dinâmico)"
             },
             {
               "field": {
@@ -97,11 +97,11 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "% OTIF - Dinamico"
+                  "Property": "% OTIF (Dinâmico)"
                 }
               },
-              "queryRef": "_Medidas.% OTIF - Dinamico",
-              "nativeQueryRef": "% OTIF",
+              "queryRef": "_Medidas.% OTIF (Dinâmico)",
+              "nativeQueryRef": "% OTIF1",
               "displayName": "% OTIF"
             },
             {
@@ -112,11 +112,11 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "% NO-OTIF - Dinamico"
+                  "Property": "% NO-OTIF (Dinâmico)"
                 }
               },
-              "queryRef": "_Medidas.% NO-OTIF - Dinamico",
-              "nativeQueryRef": "% NO-OTIF",
+              "queryRef": "_Medidas.% NO-OTIF (Dinâmico)",
+              "nativeQueryRef": "% NO-OTIF1",
               "displayName": "% NO-OTIF"
             },
             {
@@ -127,10 +127,10 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "% Ainda No Prazo - Dinamico"
+                  "Property": "% Ainda No Prazo (Dinâmico)"
                 }
               },
-              "queryRef": "_Medidas.% Ainda No Prazo - Dinamico",
+              "queryRef": "_Medidas.% Ainda No Prazo (Dinâmico)",
               "nativeQueryRef": "% Ainda No Prazo",
               "displayName": "% Ainda No Prazo"
             }
@@ -147,7 +147,7 @@
                     "Entity": "_Medidas"
                   }
                 },
-                "Property": "Total - Dinamico"
+                "Property": "Total (Dinâmico)"
               }
             },
             "direction": "Descending"
@@ -246,20 +246,6 @@
           },
           "selector": {
             "id": "default"
-          }
-        },
-        {
-          "properties": {
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "23D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Medidas.Total - Dinamico"
           }
         }
       ],

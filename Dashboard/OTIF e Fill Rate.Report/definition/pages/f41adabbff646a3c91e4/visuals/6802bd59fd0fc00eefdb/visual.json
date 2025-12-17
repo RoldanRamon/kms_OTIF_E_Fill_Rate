@@ -47,25 +47,6 @@
             }
           ]
         },
-        "Tooltips": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Medidas"
-                    }
-                  },
-                  "Property": "% OTIF - Dinamico"
-                }
-              },
-              "queryRef": "_Medidas.% OTIF - Dinamico",
-              "nativeQueryRef": "% OTIF",
-              "displayName": "% OTIF"
-            }
-          ]
-        },
         "Y": {
           "projections": [
             {
@@ -76,10 +57,10 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "OTIF - Dinamico"
+                  "Property": "OTIF (Dinâmico)"
                 }
               },
-              "queryRef": "_Medidas.OTIF - Dinamico",
+              "queryRef": "_Medidas.OTIF (Dinâmico)",
               "nativeQueryRef": "OTIF",
               "displayName": "OTIF"
             },
@@ -91,10 +72,10 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "NO-OTIF - Dinamico"
+                  "Property": "NO-OTIF (Dinâmico)"
                 }
               },
-              "queryRef": "_Medidas.NO-OTIF - Dinamico",
+              "queryRef": "_Medidas.NO-OTIF (Dinâmico)",
               "nativeQueryRef": "NO-OTIF",
               "displayName": "NO-OTIF"
             },
@@ -106,10 +87,10 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Ainda No Prazo - Dinamico"
+                  "Property": "Ainda No Prazo (Dinâmico)"
                 }
               },
-              "queryRef": "_Medidas.Ainda No Prazo - Dinamico",
+              "queryRef": "_Medidas.Ainda No Prazo (Dinâmico)",
               "nativeQueryRef": "Ainda No Prazo",
               "displayName": "Ainda No Prazo"
             }
@@ -125,11 +106,11 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "% OTIF - Dinamico"
+                  "Property": "% OTIF (Dinâmico)"
                 }
               },
-              "queryRef": "_Medidas.% OTIF - Dinamico",
-              "nativeQueryRef": "% OTIF",
+              "queryRef": "_Medidas.% OTIF (Dinâmico)",
+              "nativeQueryRef": "% OTIF1",
               "displayName": "% OTIF"
             }
           ]
@@ -232,7 +213,7 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 2,
+                      "ColorId": 5,
                       "Percent": 0
                     }
                   }
@@ -241,7 +222,7 @@
             }
           },
           "selector": {
-            "metadata": "_Medidas.% OTIF - Dinamico"
+            "metadata": "_Medidas.% OTIF (Dinâmico)"
           }
         }
       ],
@@ -803,7 +784,7 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 3,
+                      "ColorId": 2,
                       "Percent": 0
                     }
                   }
@@ -812,7 +793,7 @@
             }
           },
           "selector": {
-            "metadata": "_Medidas.OTIF - Dinamico"
+            "metadata": "_Medidas.OTIF (Dinâmico)"
           }
         },
         {
@@ -831,7 +812,7 @@
             }
           },
           "selector": {
-            "metadata": "_Medidas.NO-OTIF - Dinamico"
+            "metadata": "_Medidas.NO-OTIF (Dinâmico)"
           }
         },
         {
@@ -850,7 +831,7 @@
             }
           },
           "selector": {
-            "metadata": "_Medidas.Ainda No Prazo - Dinamico"
+            "metadata": "_Medidas.Ainda No Prazo (Dinâmico)"
           }
         },
         {
@@ -860,7 +841,7 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 2,
+                      "ColorId": 5,
                       "Percent": 0
                     }
                   }
@@ -869,7 +850,7 @@
             }
           },
           "selector": {
-            "metadata": "_Medidas.% OTIF - Dinamico"
+            "metadata": "_Medidas.% OTIF (Dinâmico)"
           }
         }
       ],
@@ -966,6 +947,13 @@
               "expr": {
                 "Literal": {
                   "Value": "0D"
+                }
+              }
+            },
+            "secShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

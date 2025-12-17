@@ -23,10 +23,10 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "NO-OTIF - Dinamico"
+                  "Property": "NO-OTIF (Dinâmico)"
                 }
               },
-              "queryRef": "_Medidas.NO-OTIF - Dinamico",
+              "queryRef": "_Medidas.NO-OTIF (Dinâmico)",
               "nativeQueryRef": "NO-OTIF",
               "displayName": "NO-OTIF"
             }
@@ -48,21 +48,6 @@
               "queryRef": "fPedido.NR_PEDIDO",
               "nativeQueryRef": "Pedido",
               "displayName": "Pedido"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "fPedido"
-                    }
-                  },
-                  "Property": "FAMILIA_COMERCIAL"
-                }
-              },
-              "queryRef": "fPedido.FAMILIA_COMERCIAL",
-              "nativeQueryRef": "Familia",
-              "displayName": "Familia"
             },
             {
               "field": {
@@ -102,6 +87,21 @@
                       "Entity": "fPedido"
                     }
                   },
+                  "Property": "CLIENTE"
+                }
+              },
+              "queryRef": "fPedido.CLIENTE",
+              "nativeQueryRef": "Cliente",
+              "displayName": "Cliente"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fPedido"
+                    }
+                  },
                   "Property": "DIM_ITEM_ID"
                 }
               },
@@ -117,12 +117,12 @@
                       "Entity": "fPedido"
                     }
                   },
-                  "Property": "CLIENTE"
+                  "Property": "FAMILIA_COMERCIAL"
                 }
               },
-              "queryRef": "fPedido.CLIENTE",
-              "nativeQueryRef": "Cliente",
-              "displayName": "Cliente"
+              "queryRef": "fPedido.FAMILIA_COMERCIAL",
+              "nativeQueryRef": "Familia",
+              "displayName": "Familia"
             }
           ]
         }
@@ -137,7 +137,7 @@
                     "Entity": "_Medidas"
                   }
                 },
-                "Property": "NO-OTIF - Dinamico"
+                "Property": "NO-OTIF (Dinâmico)"
               }
             },
             "direction": "Descending"
