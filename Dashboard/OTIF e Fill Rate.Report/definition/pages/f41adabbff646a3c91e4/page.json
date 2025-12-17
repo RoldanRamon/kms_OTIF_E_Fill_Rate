@@ -3,8 +3,13 @@
   "name": "f41adabbff646a3c91e4",
   "displayName": "OTIF",
   "displayOption": "FitToPage",
-  "height": 720,
+  "height": 900,
   "width": 1280,
+  "pageBinding": {
+    "name": "0a71c80cc983cdf25c9c",
+    "type": "Default",
+    "parameters": []
+  },
   "objects": {
     "outspacePane": [
       {

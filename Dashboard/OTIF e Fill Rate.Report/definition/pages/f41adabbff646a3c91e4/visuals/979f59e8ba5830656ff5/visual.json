@@ -3,11 +3,11 @@
   "name": "979f59e8ba5830656ff5",
   "position": {
     "x": 0,
-    "y": 61.304706853839804,
+    "y": 61.134328358208954,
     "z": 0,
-    "height": 169.11643270024774,
-    "width": 627.84475639966968,
-    "tabOrder": 12000
+    "height": 206.32835820895522,
+    "width": 389.73134328358208,
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -72,7 +72,8 @@
                 }
               },
               "queryRef": "_Medidas.Ainda No Prazo (Dinâmico)",
-              "nativeQueryRef": "Ainda No Prazo (Dinâmico)"
+              "nativeQueryRef": "No Prazo",
+              "displayName": "No Prazo"
             },
             {
               "field": {
@@ -101,8 +102,8 @@
                 }
               },
               "queryRef": "_Medidas.% OTIF (Dinâmico)",
-              "nativeQueryRef": "% OTIF1",
-              "displayName": "% OTIF"
+              "nativeQueryRef": "%OTIF",
+              "displayName": "%OTIF"
             },
             {
               "field": {
@@ -116,8 +117,8 @@
                 }
               },
               "queryRef": "_Medidas.% NO-OTIF (Dinâmico)",
-              "nativeQueryRef": "% NO-OTIF1",
-              "displayName": "% NO-OTIF"
+              "nativeQueryRef": "%NO-OTIF",
+              "displayName": "%NO-OTIF"
             },
             {
               "field": {
@@ -131,8 +132,8 @@
                 }
               },
               "queryRef": "_Medidas.% Ainda No Prazo (Dinâmico)",
-              "nativeQueryRef": "% Ainda No Prazo",
-              "displayName": "% Ainda No Prazo"
+              "nativeQueryRef": "%No Prazo",
+              "displayName": "%No Prazo"
             }
           ]
         }
@@ -239,7 +240,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "15D"
                 }
               }
             }
@@ -305,7 +306,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "9D"
                 }
               }
             }

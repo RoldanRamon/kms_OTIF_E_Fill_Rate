@@ -1397,6 +1397,16 @@ cultureInfo pt-BR
 			            "State": "Generated",
 			            "Weight": 0.75
 			          }
+			        },
+			        {
+			          "No Prazo": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -5472,6 +5482,16 @@ cultureInfo pt-BR
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
+			        },
+			        {
+			          "%NO-OTIF": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -5610,6 +5630,16 @@ cultureInfo pt-BR
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "%OTIF": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -6190,6 +6220,258 @@ cultureInfo pt-BR
 			            "State": "Generated",
 			            "Weight": 0.75
 			          }
+			        },
+			        {
+			          "%No Prazo": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "f_pedido.categoria_valor_pedido": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fPedido",
+			          "ConceptualProperty": "@Categoria Valor Pedido"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "@categoria valor pedido": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "f_pedido.status_estoque": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fPedido",
+			          "ConceptualProperty": "@Status Estoque"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "@status estoque": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "@ category estoque": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "@ importance estoque": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "@ prestige estoque": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "@ prominence estoque": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "@ condition estoque": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "@ class estoque": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "@ grade estoque": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "@ level estoque": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "@ position estoque": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "@ rank estoque": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "f_pedido.tipo_cliente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fPedido",
+			          "ConceptualProperty": "@Tipo Cliente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "@tipo cliente": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "f_pedido.regional": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fPedido",
+			          "ConceptualProperty": "REGIONAL"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "regional": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "local": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "area": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "county": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "district": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "f_pedido.QtdeItensNoPedido": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fPedido",
+			          "ConceptualProperty": "@Faixa Qtde Itens Pedido"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "@QtdeItensNoPedido": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.AindaNoPrazoJaPodeAtender_dinâmico": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "AindaNoPrazoJaPodeAtender (Dinâmico)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "AindaNoPrazoJaPodeAtender (dinâmico)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "AindaNoPrazoJaPodeAtender": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
 			        }
 			      ]
 			    }
@@ -6376,6 +6658,369 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "d_calendarios_have_f_pedidos"
+			        }
+			      ]
+			    },
+			    "f_pedido_has_entity__medida_AindaNoPrazoJaPodeAtender_dinâmico": {
+			      "Binding": {
+			        "ConceptualEntity": "fPedido"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_pedido": {
+			          "Target": {
+			            "Entity": "f_pedido"
+			          }
+			        },
+			        "entity__medida.AindaNoPrazoJaPodeAtender_dinâmico": {
+			          "Target": {
+			            "Entity": "entity__medida.AindaNoPrazoJaPodeAtender_dinâmico"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_pedido"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.AindaNoPrazoJaPodeAtender_dinâmico"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_pedidos_have_AindaNoPrazoJaPodeAtender_dinâmico"
+			        }
+			      ]
+			    },
+			    "parametro_visao_OTIF_has_entity__medida_AindaNoPrazoJaPodeAtender_dinâmico": {
+			      "Binding": {
+			        "ConceptualEntity": "Parametro Visao OTIF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "parametro_visao_OTIF": {
+			          "Target": {
+			            "Entity": "parametro_visao_OTIF"
+			          }
+			        },
+			        "entity__medida.AindaNoPrazoJaPodeAtender_dinâmico": {
+			          "Target": {
+			            "Entity": "entity__medida.AindaNoPrazoJaPodeAtender_dinâmico"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "parametro_visao_OTIF"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.AindaNoPrazoJaPodeAtender_dinâmico"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "parametro_visao_OTIFs_have_AindaNoPrazoJaPodeAtender_dinâmico"
+			        }
+			      ]
+			    },
+			    "f_pedido_has_QtdeItensNoPedido": {
+			      "Binding": {
+			        "ConceptualEntity": "fPedido"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_pedido": {
+			          "Target": {
+			            "Entity": "f_pedido"
+			          }
+			        },
+			        "f_pedido.QtdeItensNoPedido": {
+			          "Target": {
+			            "Entity": "f_pedido.QtdeItensNoPedido"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_pedido"
+			            },
+			            "Object": {
+			              "Role": "f_pedido.QtdeItensNoPedido"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_pedidos_have_QtdeItensNoPedidos"
+			        }
+			      ]
+			    },
+			    "f_pedido_has_regional": {
+			      "Binding": {
+			        "ConceptualEntity": "fPedido"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_pedido": {
+			          "Target": {
+			            "Entity": "f_pedido"
+			          }
+			        },
+			        "f_pedido.regional": {
+			          "Target": {
+			            "Entity": "f_pedido.regional"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_pedido"
+			            },
+			            "Object": {
+			              "Role": "f_pedido.regional"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_pedidos_have_regionals"
+			        }
+			      ]
+			    },
+			    "f_pedido_has_tipo_cliente": {
+			      "Binding": {
+			        "ConceptualEntity": "fPedido"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_pedido": {
+			          "Target": {
+			            "Entity": "f_pedido"
+			          }
+			        },
+			        "f_pedido.tipo_cliente": {
+			          "Target": {
+			            "Entity": "f_pedido.tipo_cliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_pedido"
+			            },
+			            "Object": {
+			              "Role": "f_pedido.tipo_cliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_pedidos_have_tipo_clientes"
+			        }
+			      ]
+			    },
+			    "f_pedido_has_prioridade_pedido": {
+			      "Binding": {
+			        "ConceptualEntity": "fPedido"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_pedido": {
+			          "Target": {
+			            "Entity": "f_pedido"
+			          }
+			        },
+			        "f_pedido.prioridade_pedido": {
+			          "Target": {
+			            "Entity": "f_pedido.prioridade_pedido"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_pedido"
+			            },
+			            "Object": {
+			              "Role": "f_pedido.prioridade_pedido"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_pedidos_have_prioridade_pedidos"
+			        }
+			      ]
+			    },
+			    "f_pedido_has_status_estoque": {
+			      "Binding": {
+			        "ConceptualEntity": "fPedido"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_pedido": {
+			          "Target": {
+			            "Entity": "f_pedido"
+			          }
+			        },
+			        "f_pedido.status_estoque": {
+			          "Target": {
+			            "Entity": "f_pedido.status_estoque"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_pedido"
+			            },
+			            "Object": {
+			              "Role": "f_pedido.status_estoque"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_pedidos_have_status_estoques"
+			        }
+			      ]
+			    },
+			    "f_pedido_has_categoria_valor_pedido": {
+			      "Binding": {
+			        "ConceptualEntity": "fPedido"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_pedido": {
+			          "Target": {
+			            "Entity": "f_pedido"
+			          }
+			        },
+			        "f_pedido.categoria_valor_pedido": {
+			          "Target": {
+			            "Entity": "f_pedido.categoria_valor_pedido"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_pedido"
+			            },
+			            "Object": {
+			              "Role": "f_pedido.categoria_valor_pedido"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_pedidos_have_categoria_valor_pedidos"
+			        }
+			      ]
+			    },
+			    "f_pedido_has_tipo_problema_entrega": {
+			      "Binding": {
+			        "ConceptualEntity": "fPedido"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_pedido": {
+			          "Target": {
+			            "Entity": "f_pedido"
+			          }
+			        },
+			        "f_pedido.tipo_problema_entrega": {
+			          "Target": {
+			            "Entity": "f_pedido.tipo_problema_entrega"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_pedido"
+			            },
+			            "Object": {
+			              "Role": "f_pedido.tipo_problema_entrega"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_pedidos_have_tipo_problema_entregas"
+			        }
+			      ]
+			    },
+			    "f_pedido_has_faixa_dias_atraso": {
+			      "Binding": {
+			        "ConceptualEntity": "fPedido"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_pedido": {
+			          "Target": {
+			            "Entity": "f_pedido"
+			          }
+			        },
+			        "f_pedido.faixa_dias_atraso": {
+			          "Target": {
+			            "Entity": "f_pedido.faixa_dias_atraso"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_pedido"
+			            },
+			            "Object": {
+			              "Role": "f_pedido.faixa_dias_atraso"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_pedidos_have_faixa_dias_atrasos"
+			        }
+			      ]
+			    },
+			    "f_pedido_has_motivo_atraso_principal": {
+			      "Binding": {
+			        "ConceptualEntity": "fPedido"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_pedido": {
+			          "Target": {
+			            "Entity": "f_pedido"
+			          }
+			        },
+			        "f_pedido.motivo_atraso_principal": {
+			          "Target": {
+			            "Entity": "f_pedido.motivo_atraso_principal"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_pedido"
+			            },
+			            "Object": {
+			              "Role": "f_pedido.motivo_atraso_principal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_pedidos_have_motivo_atraso_principals"
 			        }
 			      ]
 			    },

@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "d9f2c6913f2db3cdd116",
   "position": {
-    "x": 640.610104861773,
-    "y": 230.6196377502383,
-    "z": 14000,
-    "height": 255.023832221163,
-    "width": 625.9675881792183,
-    "tabOrder": 14000
+    "x": 630.44776119402979,
+    "y": 576.955223880597,
+    "z": 13000,
+    "height": 222.88557213930349,
+    "width": 635.542288557214,
+    "tabOrder": 13000
   },
   "visual": {
     "visualType": "decompositionTreeVisual",
@@ -57,36 +57,6 @@
                       "Entity": "fPedido"
                     }
                   },
-                  "Property": "REPRESENTANTE"
-                }
-              },
-              "queryRef": "fPedido.REPRESENTANTE",
-              "nativeQueryRef": "Representante",
-              "displayName": "Representante"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "fPedido"
-                    }
-                  },
-                  "Property": "EMPRESA"
-                }
-              },
-              "queryRef": "fPedido.EMPRESA",
-              "nativeQueryRef": "Empresa",
-              "displayName": "Empresa"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "fPedido"
-                    }
-                  },
                   "Property": "CLIENTE"
                 }
               },
@@ -123,6 +93,36 @@
               "queryRef": "fPedido.FAMILIA_COMERCIAL",
               "nativeQueryRef": "Familia",
               "displayName": "Familia"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fPedido"
+                    }
+                  },
+                  "Property": "REPRESENTANTE"
+                }
+              },
+              "queryRef": "fPedido.REPRESENTANTE",
+              "nativeQueryRef": "Representante",
+              "displayName": "Representante"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fPedido"
+                    }
+                  },
+                  "Property": "EMPRESA"
+                }
+              },
+              "queryRef": "fPedido.EMPRESA",
+              "nativeQueryRef": "Empresa",
+              "displayName": "Empresa"
             }
           ]
         }
@@ -184,12 +184,12 @@
                             "Entity": "fPedido"
                           }
                         },
-                        "Property": "CLIENTE"
+                        "Property": "EMPRESA"
                       }
                     },
                     "Right": {
                       "Literal": {
-                        "Value": "'2754 - SUZANO PA 29'"
+                        "Value": "'115 - TRES LAGOAS'"
                       }
                     }
                   }

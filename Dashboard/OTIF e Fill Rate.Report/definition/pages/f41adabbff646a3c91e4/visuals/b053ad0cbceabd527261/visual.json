@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "b053ad0cbceabd527261",
   "position": {
-    "x": 640.52848885218827,
-    "y": 498.89347646573083,
-    "z": 14501,
-    "height": 209.28158546655658,
-    "width": 625.73080099091658,
-    "tabOrder": 14001
+    "x": 3.8208955223880596,
+    "y": 639.363184079602,
+    "z": 14000,
+    "height": 160.47761194029852,
+    "width": 616.43781094527367,
+    "tabOrder": 14000
   },
   "visual": {
     "visualType": "textbox",
@@ -8896,7 +8896,7 @@
                     }
                   },
                   {
-                    "value": " linhas apresentaram problemas (",
+                    "value": " linhas com problemas (",
                     "textStyle": {
                       "fontSize": "10.5pt"
                     }
@@ -8918,7 +8918,7 @@
                     }
                   },
                   {
-                    "value": "), seja por atraso na entrega ou quantidade incorreta.",
+                    "value": "), seja por atraso na entrega.",
                     "textStyle": {
                       "fontSize": "10.5pt"
                     }
@@ -8979,7 +8979,7 @@
                     }
                   },
                   {
-                    "value": " podem ser convertidas em OTIF com ação imediata",
+                    "value": " podem ser convertidas em OTIF com ação imediata porque tem estoque",
                     "textStyle": {
                       "fontSize": "10.5pt"
                     }
@@ -8989,20 +8989,6 @@
                     "textStyle": {
                       "fontSize": "11pt"
                     }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
                   }
                 ]
               }

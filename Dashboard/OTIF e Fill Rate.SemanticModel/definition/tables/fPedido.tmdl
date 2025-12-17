@@ -384,11 +384,111 @@ table fPedido
 
 		annotation SummarizationSetBy = Automatic
 
+	column '@Categoria Valor Pedido' = ```
+			
+			VAR _CategoriaValor = 
+			SWITCH(TRUE(),
+			    fPedido[VLR_BRUTO] <= 500, "Baixo Valor (≤R$500)",
+			    fPedido[VLR_BRUTO] <= 2000, "Valor Médio (R$501-2.000)",
+			    fPedido[VLR_BRUTO] <= 5000, "Alto Valor (R$2.001-5.000)",
+			    fPedido[VLR_BRUTO] <= 15000, "Valor Premium (R$5.001-15.000)",
+			    fPedido[VLR_BRUTO] > 15000, "Valor Crítico (>R$15.000)",
+			    "Valor Não Informado"
+			)
+			
+			RETURN _CategoriaValor
+			```
+		lineageTag: af1a5f78-e4f9-4d0f-bf8f-4f6f7a8b9cae
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column '@Status Estoque' = ```
+			
+			VAR _EstoqueDisponivel = fPedido[@Qtde Estoque No Dia]
+			VAR _QtdeSolicitada = fPedido[QTDE_EM_ABERTO]
+			VAR _PercentualAtendimento = DIVIDE(_EstoqueDisponivel, _QtdeSolicitada, 0)
+			
+			VAR _StatusEstoque = 
+			SWITCH(TRUE(),
+			    ISBLANK(_EstoqueDisponivel) || _EstoqueDisponivel = 0, "Sem Estoque",
+			    _PercentualAtendimento >= 1, "Estoque Suficiente",
+			    _PercentualAtendimento >= 0.8, "Estoque Parcial (80-99%)",
+			    _PercentualAtendimento >= 0.5, "Estoque Limitado (50-79%)",
+			    _PercentualAtendimento > 0, "Estoque Crítico (<50%)",
+			    _QtdeSolicitada = 0, "Linha Atendida",
+			    "Não Verificado"
+			)
+			
+			RETURN _StatusEstoque
+			```
+		lineageTag: bf2a6f89-f5fa-4e0f-cf9f-5f7f8a9bacbf
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column '@Tipo Cliente' = ```
+			
+			VAR _Cliente = fPedido[CLIENTE]
+			VAR _ValorTotal = fPedido[VLR_BRUTO]
+			VAR _TotalPedidosCliente = CALCULATE(
+			    COUNTROWS(fPedido),
+			    ALLEXCEPT(fPedido, fPedido[CLIENTE])
+			)
+			
+			VAR _TipoCliente = 
+			SWITCH(TRUE(),
+			    _TotalPedidosCliente >= 100 && _ValorTotal >= 5000, "Cliente VIP",
+			    _TotalPedidosCliente >= 50 && _ValorTotal >= 2000, "Cliente Premium",
+			    _TotalPedidosCliente >= 20, "Cliente Frequente",
+			    _TotalPedidosCliente >= 5, "Cliente Regular",
+			    _TotalPedidosCliente < 5, "Cliente Novo/Esporádico",
+			    "Não Classificado"
+			)
+			
+			RETURN _TipoCliente
+			```
+		lineageTag: df4a8fab-17fc-4g2f-ef1f-7f9faabbccdf
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column REGIONAL
+		dataType: string
+		lineageTag: f1cfe4af-bbdb-4105-ade7-6aff8f5314fe
+		summarizeBy: none
+		sourceColumn: REGIONAL
+
+		annotation SummarizationSetBy = Automatic
+
+	column '@Faixa Qtde Itens Pedido' = ```
+			
+			VAR _QtdItens = CALCULATE(
+			    DISTINCTCOUNT(fPedido[DIM_ITEM_ID]),
+			    ALLEXCEPT(fPedido, fPedido[NR_PEDIDO])
+			)
+			
+			VAR _Faixa = SWITCH(TRUE(),
+			    _QtdItens = 1, "Item Único",
+			    _QtdItens <= 8, "Pedido Pequeno (2-8 itens)",
+			    _QtdItens <= 19, "Pedido Médio (9-19 itens)",
+			    _QtdItens <= 550, "Pedido Grande (20-550 itens)",
+			    _QtdItens > 551, "Pedido Complexo (+551 itens)",
+			    "Não Classificado"
+			)
+			RETURN _Faixa
+			
+			```
+		lineageTag: 77711844-494f-4880-9022-411b236f7591
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition fPedido-24034e89-6c6d-42ea-a97d-3af7c3cf61e1 = m
 		mode: import
 		source =
 				let
-				    Fonte = Sql.Database("BRPIN-DBS008\PowerBI", "idba_komatsu", [Query="SELECT #(lf)      A.DIM_COND_PAGTO_ID#(lf)      ,A.NR_PEDIDO#(lf)      ,CONCAT(E.DIM_ITEM_ID, ' - ', E.NM_ITEM) AS DIM_ITEM_ID#(lf)      ,A.DT_EMISSAO#(lf)      ,A.DT_ENTREGA#(lf)      ,A.NF_NUM#(lf)      ,A.TIPO#(lf)      ,A.POS_PDV#(lf)      ,A.QTDE#(lf)      ,A.QTDE_ATEND#(lf)      ,A.QTDE - A.QTDE_ATEND AS QTDE_EM_ABERTO#(lf)      ,A.QTDE_CANC#(lf)      ,A.QTDE_SLDO#(lf)      ,A.PRECO_UNIT#(lf)      ,A.VLR_BRUTO#(lf)      ,A.VLR_BRUTO_SICMS#(lf)      ,A.DIM_DIVISAO_VENDA_ID#(lf)      ,A.NF_SERIE#(lf)      ,A.NF_DATA#(lf)      ,A.PRIORIDADE#(lf)      ,A.NR_PEDIDO_CLIENTE#(lf)      ,A.NR_SEQ_PED#(lf)      ,A.NR_SEQ_PED_NF#(lf)      ,A.FATURAMENTO_PARCIAL#(lf)      ,A.VALOR_LIQUIDO_NF#(lf)      ,B.TP_DIVISAO_VENDA#(lf)      ,C.NM_UNID_NEGOC#(lf)      ,CONCAT(A.DIM_EMPRESA_ID, '_', A.DIM_ITEM_ID) AS IdPedidoSaldoEstoque#(lf)      ,CONCAT(A.NR_PEDIDO_CLIENTE, '-', A.NR_SEQ_PED,'-', A.DIM_ITEM_ID) AS ID_PEDIDO_SEQ_ITEM#(lf)      ,CONCAT(D.COD_CLIENTE, ' - ', D.CLIENTE) AS CLIENTE#(lf)      ,E.DESC_C1 AS FAMILIA_COMERCIAL#(lf)      ,CONCAT(F.DIM_EMPRESA_ID, ' - ', F.CIDADE) AS EMPRESA#(lf)      ,CONCAT(G.COD_REPRESENTANTE, ' - ', G.REPRESENTANTE) AS REPRESENTANTE#(lf)#(lf)  FROM [idba_komatsu].[dbo].[FATO_PEDIDO_BI] A#(lf)  INNER JOIN DIM_DIVISAO_VENDA_BI B ON A.DIM_DIVISAO_VENDA_ID = B.DIM_DIVISAO_VENDA_ID#(lf)  LEFT JOIN DIM_UNID_NEGOC_BI C ON C.COD_UNID_NEGOC = A.DIM_UNID_NEGOC_ID#(lf)  LEFT JOIN DIM_CLIENTE_BI D ON D.COD_CLIENTE = A.DIM_CLIENTE_ID#(lf)  LEFT JOIN DIM_ITEM_BI E ON E.CD_ITEM = A.DIM_ITEM_ID#(lf)  LEFT JOIN DIM_EMPRESA_BI F ON F.COD_EMPRESA = A.DIM_EMPRESA_ID#(lf)  LEFT JOIN DIM_REPRESENTANTE_BI G ON G.COD_REPRESENTANTE = A.DIM_REPRESENTANTE_ID#(lf)  WHERE B.TP_DIVISAO_VENDA IN ('PEÇAS','PEÇAS ATIVAS','PEÇAS KDB', 'PEÇAS CONTRATO')#(lf)  AND A.POS_PDV <> 'Cancelado'#(lf)  AND A.DT_EMISSAO > '01/01/2022'#(lf)  ORDER BY A.DT_EMISSAO DESC#(lf);"]),
+				    Fonte = Sql.Database("BRPIN-DBS008\PowerBI", "idba_komatsu", [Query="SELECT #(lf)      A.DIM_COND_PAGTO_ID#(lf)      ,A.NR_PEDIDO#(lf)      ,CONCAT(E.DIM_ITEM_ID, ' - ', E.NM_ITEM) AS DIM_ITEM_ID#(lf)      ,A.DT_EMISSAO#(lf)      ,A.DT_ENTREGA#(lf)      ,A.NF_NUM#(lf)      ,A.TIPO#(lf)      ,A.POS_PDV#(lf)      ,A.QTDE#(lf)      ,A.QTDE_ATEND#(lf)      ,A.QTDE - A.QTDE_ATEND AS QTDE_EM_ABERTO#(lf)      ,A.QTDE_CANC#(lf)      ,A.QTDE_SLDO#(lf)      ,A.PRECO_UNIT#(lf)      ,A.VLR_BRUTO#(lf)      ,A.VLR_BRUTO_SICMS#(lf)      ,A.DIM_DIVISAO_VENDA_ID#(lf)      ,A.NF_SERIE#(lf)      ,A.NF_DATA#(lf)      ,A.PRIORIDADE#(lf)      ,A.NR_PEDIDO_CLIENTE#(lf)      ,A.NR_SEQ_PED#(lf)      ,A.NR_SEQ_PED_NF#(lf)      ,A.FATURAMENTO_PARCIAL#(lf)      ,A.VALOR_LIQUIDO_NF#(lf)      ,B.TP_DIVISAO_VENDA#(lf)      ,C.NM_UNID_NEGOC#(lf)      ,CONCAT(A.DIM_EMPRESA_ID, '_', A.DIM_ITEM_ID) AS IdPedidoSaldoEstoque#(lf)      ,CONCAT(A.NR_PEDIDO_CLIENTE, '-', A.NR_SEQ_PED,'-', A.DIM_ITEM_ID) AS ID_PEDIDO_SEQ_ITEM#(lf)      ,CONCAT(D.COD_CLIENTE, ' - ', D.CLIENTE) AS CLIENTE#(lf)      ,E.DESC_C1 AS FAMILIA_COMERCIAL#(lf)      ,CONCAT(F.DIM_EMPRESA_ID, ' - ', F.CIDADE) AS EMPRESA#(lf)      ,F.REGIONAL#(lf)      ,CONCAT(G.COD_REPRESENTANTE, ' - ', G.REPRESENTANTE) AS REPRESENTANTE#(lf)#(lf)  FROM [idba_komatsu].[dbo].[FATO_PEDIDO_BI] A#(lf)  INNER JOIN DIM_DIVISAO_VENDA_BI B ON A.DIM_DIVISAO_VENDA_ID = B.DIM_DIVISAO_VENDA_ID#(lf)  LEFT JOIN DIM_UNID_NEGOC_BI C ON C.COD_UNID_NEGOC = A.DIM_UNID_NEGOC_ID#(lf)  LEFT JOIN DIM_CLIENTE_BI D ON D.COD_CLIENTE = A.DIM_CLIENTE_ID#(lf)  LEFT JOIN DIM_ITEM_BI E ON E.CD_ITEM = A.DIM_ITEM_ID#(lf)  LEFT JOIN DIM_EMPRESA_BI F ON F.COD_EMPRESA = A.DIM_EMPRESA_ID#(lf)  LEFT JOIN DIM_REPRESENTANTE_BI G ON G.COD_REPRESENTANTE = A.DIM_REPRESENTANTE_ID#(lf)  WHERE B.TP_DIVISAO_VENDA IN ('PEÇAS','PEÇAS ATIVAS','PEÇAS KDB', 'PEÇAS CONTRATO')#(lf)  AND A.POS_PDV <> 'Cancelado'#(lf)  AND A.DT_EMISSAO > '01/01/2022'#(lf)  ORDER BY A.DT_EMISSAO DESC#(lf);"]),
 				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{ {"DT_EMISSAO", type date}, {"DT_ENTREGA", type date}, {"NF_DATA", type date}})
 				in
 				    #"Tipo Alterado"
