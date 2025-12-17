@@ -4,7 +4,7 @@
   "position": {
     "x": 10.98188751191611,
     "y": 230.6196377502383,
-    "z": 13000,
+    "z": 11500,
     "height": 373.38417540514774,
     "width": 617.42612011439462,
     "tabOrder": 13000
@@ -1020,13 +1020,8 @@
           "properties": {
             "text": {
               "expr": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Medidas"
-                    }
-                  },
-                  "Property": "Titulo Grafico OTIF - Dinamico"
+                "Literal": {
+                  "Value": "'Análise Temporal'"
                 }
               }
             },

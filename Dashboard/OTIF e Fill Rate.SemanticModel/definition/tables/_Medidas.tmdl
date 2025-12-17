@@ -350,6 +350,20 @@ table _Medidas
 		displayFolder: DINAMICA
 		lineageTag: 55f58052-fae6-4a04-af9e-748bde901f33
 
+	measure 'AindaNoPrazoJaPodeAtender (Dinâmico)' =
+			
+			VAR _TipoVisao = SELECTEDVALUE('Parametro Visao OTIF'[Tipo Visao], "Por Linha")
+			RETURN
+				SWITCH(
+				    _TipoVisao,
+				    "Por Linha", CALCULATE([Qtde Linhas Ainda No Prazo], fPedido[@StatusBI] = "Já Pode Atender"),
+				    "Por Pedido", CALCULATE([Qtde Pedidos Ainda No Prazo], fPedido[@StatusBI] = "Já Pode Atender"),
+				    CALCULATE([Qtde Linhas Ainda No Prazo], fPedido[@StatusBI] = "Já Pode Atender")
+				)
+		formatString: #,0
+		displayFolder: DINAMICA
+		lineageTag: 63a71229-297d-4693-a7ee-2f314f808149
+
 	column Value
 		isHidden
 		formatString: 0
