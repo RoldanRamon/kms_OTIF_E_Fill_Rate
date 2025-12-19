@@ -76,14 +76,6 @@ table fPedido
 
 		annotation UnderlyingDateTimeDataType = Date
 
-	column DIM_DIVISAO_VENDA_ID
-		dataType: string
-		lineageTag: 52e57309-aec6-4411-8a17-dca4df0a86f9
-		summarizeBy: none
-		sourceColumn: DIM_DIVISAO_VENDA_ID
-
-		annotation SummarizationSetBy = Automatic
-
 	column NF_DATA
 		dataType: dateTime
 		formatString: Short Date
@@ -105,28 +97,12 @@ table fPedido
 
 		annotation SummarizationSetBy = Automatic
 
-	column NR_PEDIDO_CLIENTE
-		dataType: string
-		lineageTag: 362afce5-080f-448c-acce-b117b784447c
-		summarizeBy: none
-		sourceColumn: NR_PEDIDO_CLIENTE
-
-		annotation SummarizationSetBy = Automatic
-
 	column NR_SEQ_PED
 		dataType: int64
 		formatString: 0
 		lineageTag: 2462aa95-0935-40af-bf3d-59993bd0e743
 		summarizeBy: sum
 		sourceColumn: NR_SEQ_PED
-
-		annotation SummarizationSetBy = Automatic
-
-	column TP_DIVISAO_VENDA
-		dataType: string
-		lineageTag: 3cf32e0c-8be3-4f81-88a8-159e55e5520e
-		summarizeBy: none
-		sourceColumn: TP_DIVISAO_VENDA
 
 		annotation SummarizationSetBy = Automatic
 
@@ -153,57 +129,11 @@ table fPedido
 
 		annotation SummarizationSetBy = Automatic
 
-	column DIM_COND_PAGTO_ID
-		dataType: string
-		lineageTag: 749630c8-900a-479a-a67c-9780dcf2d83f
-		summarizeBy: none
-		sourceColumn: DIM_COND_PAGTO_ID
-
-		annotation SummarizationSetBy = Automatic
-
-	column TIPO
-		dataType: string
-		lineageTag: 917c0888-38b1-480b-b01e-e6b1c5827a60
-		summarizeBy: none
-		sourceColumn: TIPO
-
-		annotation SummarizationSetBy = Automatic
-
-	column QTDE_CANC
-		dataType: double
-		lineageTag: eeebad80-e8b1-444b-b800-b536e9eb2bf4
-		summarizeBy: sum
-		sourceColumn: QTDE_CANC
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column QTDE_SLDO
-		dataType: double
-		lineageTag: da1a80bd-28c3-4339-9707-f88996b37337
-		summarizeBy: sum
-		sourceColumn: QTDE_SLDO
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column PRECO_UNIT
 		dataType: double
 		lineageTag: 1070c272-e90b-4466-9cd3-9bd04a755140
 		summarizeBy: sum
 		sourceColumn: PRECO_UNIT
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column VLR_BRUTO_SICMS
-		dataType: double
-		lineageTag: bdc1970d-1d32-44d6-8cc7-2acff62f66a2
-		summarizeBy: sum
-		sourceColumn: VLR_BRUTO_SICMS
 
 		annotation SummarizationSetBy = Automatic
 
@@ -225,41 +155,6 @@ table fPedido
 
 		annotation SummarizationSetBy = Automatic
 
-	column NR_SEQ_PED_NF
-		dataType: int64
-		formatString: 0
-		lineageTag: 7aa0ef72-609b-4b14-ad3d-7c18117d1172
-		summarizeBy: sum
-		sourceColumn: NR_SEQ_PED_NF
-
-		annotation SummarizationSetBy = Automatic
-
-	column FATURAMENTO_PARCIAL
-		dataType: string
-		lineageTag: 9ab96b36-fb36-4bce-bf4d-726a0d84dc93
-		summarizeBy: none
-		sourceColumn: FATURAMENTO_PARCIAL
-
-		annotation SummarizationSetBy = Automatic
-
-	column VALOR_LIQUIDO_NF
-		dataType: double
-		lineageTag: 4aaca924-2ba0-4169-b6a1-e629ba122f0e
-		summarizeBy: sum
-		sourceColumn: VALOR_LIQUIDO_NF
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column NM_UNID_NEGOC
-		dataType: string
-		lineageTag: 5ce78953-ca32-4c46-91a1-4a822fba0e66
-		summarizeBy: none
-		sourceColumn: NM_UNID_NEGOC
-
-		annotation SummarizationSetBy = Automatic
-
 	column IdPedidoSaldoEstoque
 		dataType: string
 		lineageTag: 95c34afc-9c2d-4905-93b6-b139454c30d2
@@ -278,17 +173,6 @@ table fPedido
 			            dSaldoEstoqueDiario[periodo] <= fPedido[DT_EMISSAO]
 			        )
 			    )
-			--VAR _PenultimaData =
-			--    CALCULATE (
-			--        MAX ( FSaldoEstoqueDiario[periodo] ),
-			--        FILTER (
-			--            FSaldoEstoqueDiario,
-			--            FSaldoEstoqueDiario[cod-estabel] = fPedido[DIM_EMPRESA_ID]
-			--                && FSaldoEstoqueDiario[it-codigo] = fPedido[DIM_ITEM_ID]
-			--                && FSaldoEstoqueDiario[periodo] < _MaxDate
-			--                && FSaldoEstoqueDiario[periodo] <= fPedido[DT_EMISSAO]
-			--        )
-			--    )
 			VAR _Conta = CALCULATE (
 			        SUM ( dSaldoEstoqueDiario[Quantidade] ),
 			        FILTER (
@@ -503,10 +387,69 @@ table fPedido
 		mode: import
 		source =
 				let
-				    Fonte = Sql.Database("BRPIN-DBS008\PowerBI", "idba_komatsu", [Query="SELECT #(lf)      A.DIM_COND_PAGTO_ID#(lf)      ,A.NR_PEDIDO#(lf)      ,CONCAT(E.DIM_ITEM_ID, ' - ', E.NM_ITEM) AS DIM_ITEM_ID#(lf)      ,A.DT_EMISSAO#(lf)      ,A.DT_ENTREGA#(lf)      ,A.NF_NUM#(lf)      ,A.TIPO#(lf)      ,A.POS_PDV#(lf)      ,A.QTDE#(lf)      ,A.QTDE_ATEND#(lf)      ,A.QTDE - A.QTDE_ATEND AS QTDE_EM_ABERTO#(lf)      ,A.QTDE_CANC#(lf)      ,A.QTDE_SLDO#(lf)      ,A.PRECO_UNIT#(lf)      ,A.VLR_BRUTO#(lf)      ,A.VLR_BRUTO_SICMS#(lf)      ,A.DIM_DIVISAO_VENDA_ID#(lf)      ,A.NF_SERIE#(lf)      ,A.NF_DATA#(lf)      ,A.PRIORIDADE#(lf)      ,A.NR_PEDIDO_CLIENTE#(lf)      ,A.NR_SEQ_PED#(lf)      ,A.NR_SEQ_PED_NF#(lf)      ,A.FATURAMENTO_PARCIAL#(lf)      ,A.VALOR_LIQUIDO_NF#(lf)      ,B.TP_DIVISAO_VENDA#(lf)      ,C.NM_UNID_NEGOC#(lf)      ,CONCAT(A.DIM_EMPRESA_ID, '_', A.DIM_ITEM_ID) AS IdPedidoSaldoEstoque#(lf)      ,CONCAT(A.NR_PEDIDO_CLIENTE, '-', A.NR_SEQ_PED,'-', A.DIM_ITEM_ID) AS ID_PEDIDO_SEQ_ITEM#(lf)      ,CONCAT(D.COD_CLIENTE, ' - ', D.CLIENTE) AS CLIENTE#(lf)      ,E.DESC_C1 AS FAMILIA_COMERCIAL#(lf)      ,CONCAT(F.DIM_EMPRESA_ID, ' - ', F.CIDADE) AS EMPRESA#(lf)      ,F.REGIONAL#(lf)      ,CONCAT(G.COD_REPRESENTANTE, ' - ', G.REPRESENTANTE) AS REPRESENTANTE#(lf)#(lf)  FROM [idba_komatsu].[dbo].[FATO_PEDIDO_BI] A#(lf)  INNER JOIN DIM_DIVISAO_VENDA_BI B ON A.DIM_DIVISAO_VENDA_ID = B.DIM_DIVISAO_VENDA_ID#(lf)  LEFT JOIN DIM_UNID_NEGOC_BI C ON C.COD_UNID_NEGOC = A.DIM_UNID_NEGOC_ID#(lf)  LEFT JOIN DIM_CLIENTE_BI D ON D.COD_CLIENTE = A.DIM_CLIENTE_ID#(lf)  LEFT JOIN DIM_ITEM_BI E ON E.CD_ITEM = A.DIM_ITEM_ID#(lf)  LEFT JOIN DIM_EMPRESA_BI F ON F.COD_EMPRESA = A.DIM_EMPRESA_ID#(lf)  LEFT JOIN DIM_REPRESENTANTE_BI G ON G.COD_REPRESENTANTE = A.DIM_REPRESENTANTE_ID#(lf)  WHERE B.TP_DIVISAO_VENDA IN ('PEÇAS','PEÇAS ATIVAS','PEÇAS KDB', 'PEÇAS CONTRATO')#(lf)  AND A.POS_PDV <> 'Cancelado'#(lf)  AND A.DT_EMISSAO > '01/01/2022'#(lf)  ORDER BY A.DT_EMISSAO DESC#(lf);"]),
-				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{ {"DT_EMISSAO", type date}, {"DT_ENTREGA", type date}, {"NF_DATA", type date}})
+				    // Fonte de dados principal com seleção otimizada de colunas
+				    Fonte = Sql.Database("BRPIN-DBS008\PowerBI", "idba_komatsu", [Query="
+				    -- ETL Otimizado: Seleção apenas de colunas utilizadas em visuais, medidas e relacionamentos
+				    SELECT
+				          -- Identificadores principais (chaves e relacionamentos)
+				          A.NR_PEDIDO,                                          -- Chave para relacionamentos OTIF/FILL_RATE
+				          CONCAT(A.NR_PEDIDO_CLIENTE, '-', A.NR_SEQ_PED,'-', A.DIM_ITEM_ID) AS ID_PEDIDO_SEQ_ITEM, -- Chave para fBaseCarteira
+				          CONCAT(A.DIM_EMPRESA_ID, '_', A.DIM_ITEM_ID) AS IdPedidoSaldoEstoque,                    -- Chave para dSaldoEstoqueDiario
+				
+				          -- Datas (críticas para OTIF)
+				          A.DT_EMISSAO,                                         -- Relacionamento com dCalendario
+				          A.DT_ENTREGA,                                         -- Prazo prometido (essencial para OTIF)
+				          A.NF_DATA,                                            -- Data entrega real (essencial para OTIF)
+				
+				          -- Quantidades (essenciais para Fill Rate)
+				          A.QTDE,                                               -- Quantidade solicitada
+				          A.QTDE_ATEND,                                         -- Quantidade já atendida
+				          A.QTDE - A.QTDE_ATEND AS QTDE_EM_ABERTO,             -- Quantidade pendente (crítica para Fill Rate)
+				
+				          -- Valores financeiros
+				          A.PRECO_UNIT,                                         -- Para cálculos de valor total
+				          A.VLR_BRUTO,                                          -- Para categorização por valor
+				
+				          -- Dimensões analíticas utilizadas em visuais
+				          CONCAT(D.COD_CLIENTE, ' - ', D.CLIENTE) AS CLIENTE,  -- Usado em slicers e análises
+				          E.DESC_C1 AS FAMILIA_COMERCIAL,                      -- Segmentação de produtos
+				          CONCAT(F.DIM_EMPRESA_ID, ' - ', F.CIDADE) AS EMPRESA, -- Análise por filial
+				          F.REGIONAL,                                           -- Análise regional
+				          CONCAT(G.COD_REPRESENTANTE, ' - ', G.REPRESENTANTE) AS REPRESENTANTE, -- Análise de vendas
+				          CONCAT(E.DIM_ITEM_ID, ' - ', E.NM_ITEM) AS DIM_ITEM_ID, -- Identificação do item
+				
+				          -- Campos operacionais utilizados
+				          A.POS_PDV,                                            -- Status operacional (filtro Cancelado)
+				          A.PRIORIDADE,                                         -- Priorização de atendimento
+				          A.NR_SEQ_PED,                                        -- Sequencia do item no pedido
+				
+				          -- Campos de Nota Fiscal (para validação OTIF)
+				          A.NF_NUM,                                            -- Número da nota fiscal
+				          A.NF_SERIE                                           -- Série da nota fiscal
+				
+				      FROM [idba_komatsu].[dbo].[FATO_PEDIDO_BI] A
+				      INNER JOIN DIM_DIVISAO_VENDA_BI B ON A.DIM_DIVISAO_VENDA_ID = B.DIM_DIVISAO_VENDA_ID
+				      LEFT JOIN DIM_CLIENTE_BI D ON D.COD_CLIENTE = A.DIM_CLIENTE_ID
+				      LEFT JOIN DIM_ITEM_BI E ON E.CD_ITEM = A.DIM_ITEM_ID
+				      LEFT JOIN DIM_EMPRESA_BI F ON F.COD_EMPRESA = A.DIM_EMPRESA_ID
+				      LEFT JOIN DIM_REPRESENTANTE_BI G ON G.COD_REPRESENTANTE = A.DIM_REPRESENTANTE_ID
+				
+				      -- Filtros de performance e qualidade dos dados
+				      WHERE B.TP_DIVISAO_VENDA IN ('PEÇAS','PEÇAS ATIVAS','PEÇAS KDB', 'PEÇAS CONTRATO')
+				        AND A.POS_PDV <> 'Cancelado'                          -- Remove pedidos cancelados
+				        AND A.DT_EMISSAO > '01/01/2022'                       -- Janela de análise relevante
+				
+				      ORDER BY A.DT_EMISSAO DESC
+				    "]),
+				
+				    // Transformação de tipos otimizada
+				    #"Tipos Convertidos" = Table.TransformColumnTypes(Fonte,{
+				        {"DT_EMISSAO", type date},
+				        {"DT_ENTREGA", type date},
+				        {"NF_DATA", type date}
+				    })
 				in
-				    #"Tipo Alterado"
+				    #"Tipos Convertidos"
 
 	annotation PBI_ResultType = Table
 

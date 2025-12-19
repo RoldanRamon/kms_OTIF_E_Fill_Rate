@@ -139,6 +139,170 @@ table dCalendario
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'É Hoje?' = IF(dCalendario[Date] = TODAY(), "Sim", "Não")
+		lineageTag: a1b2c3d4-1111-2222-3333-444444444444
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'É Ontem?' = IF(dCalendario[Date] = TODAY() - 1, "Sim", "Não")
+		lineageTag: b2c3d4e5-2222-3333-4444-555555555555
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'É Esta Semana?' =
+			
+			VAR InicioSemana = TODAY() - WEEKDAY(TODAY(), 2) + 1
+			VAR FimSemana = InicioSemana + 6
+			RETURN
+			    IF(dCalendario[Date] >= InicioSemana && dCalendario[Date] <= FimSemana, "Sim", "Não")
+		lineageTag: c3d4e5f6-3333-4444-5555-666666666666
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'É Semana Passada?' =
+			
+			VAR InicioSemanaPassada = TODAY() - WEEKDAY(TODAY(), 2) + 1 - 7
+			VAR FimSemanaPassada = InicioSemanaPassada + 6
+			RETURN
+			    IF(dCalendario[Date] >= InicioSemanaPassada && dCalendario[Date] <= FimSemanaPassada, "Sim", "Não")
+		lineageTag: d4e5f6g7-4444-5555-6666-777777777777
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'É Este Mês?' =
+			
+			IF(
+			    MONTH(dCalendario[Date]) = MONTH(TODAY()) &&
+			    YEAR(dCalendario[Date]) = YEAR(TODAY()),
+			    "Sim",
+			    "Não"
+			)
+		lineageTag: e5f6g7h8-5555-6666-7777-888888888888
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'É Mês Passado?' =
+			
+			VAR MesPassado = EOMONTH(TODAY(), -2) + 1
+			VAR FimMesPassado = EOMONTH(TODAY(), -1)
+			RETURN
+			    IF(
+			        dCalendario[Date] >= MesPassado &&
+			        dCalendario[Date] <= FimMesPassado,
+			        "Sim",
+			        "Não"
+			    )
+		lineageTag: f6g7h8i9-6666-7777-8888-999999999999
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'É Este Ano?' =
+			
+			IF(YEAR(dCalendario[Date]) = YEAR(TODAY()), "Sim", "Não")
+		lineageTag: g7h8i9j0-7777-8888-9999-000000000000
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'É Ano Passado?' =
+			
+			IF(YEAR(dCalendario[Date]) = YEAR(TODAY()) - 1, "Sim", "Não")
+		lineageTag: h8i9j0k1-8888-9999-0000-111111111111
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'É Últimos 7 Dias?' =
+			
+			IF(
+			    dCalendario[Date] >= TODAY() - 6 &&
+			    dCalendario[Date] <= TODAY(),
+			    "Sim",
+			    "Não"
+			)
+		lineageTag: i9j0k1l2-9999-0000-1111-222222222222
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'É Últimos 30 Dias?' =
+			
+			IF(
+			    dCalendario[Date] >= TODAY() - 29 &&
+			    dCalendario[Date] <= TODAY(),
+			    "Sim",
+			    "Não"
+			)
+		lineageTag: j0k1l2m3-0000-1111-2222-333333333333
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'É Últimos 90 Dias?' =
+			
+			IF(
+			    dCalendario[Date] >= TODAY() - 89 &&
+			    dCalendario[Date] <= TODAY(),
+			    "Sim",
+			    "Não"
+			)
+		lineageTag: k1l2m3n4-1111-2222-3333-444444444445
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'É Últimos 6 Meses?' =
+			
+			VAR Inicio6Meses = EOMONTH(TODAY(), -7) + 1
+			RETURN
+			    IF(
+			        dCalendario[Date] >= Inicio6Meses &&
+			        dCalendario[Date] <= TODAY(),
+			        "Sim",
+			        "Não"
+			    )
+		lineageTag: l2m3n4o5-2222-3333-4444-555555555556
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'É Últimos 12 Meses?' =
+			
+			VAR Inicio12Meses = EOMONTH(TODAY(), -13) + 1
+			RETURN
+			    IF(
+			        dCalendario[Date] >= Inicio12Meses &&
+			        dCalendario[Date] <= TODAY(),
+			        "Sim",
+			        "Não"
+			    )
+		lineageTag: m3n4o5p6-3333-4444-5555-666666666667
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Trimestre Atual' =
+			
+			VAR TrimestreHoje = ROUNDUP(MONTH(TODAY()) / 3, 0)
+			VAR TrimestreData = ROUNDUP(MONTH(dCalendario[Date]) / 3, 0)
+			RETURN
+			    IF(
+			        TrimestreData = TrimestreHoje &&
+			        YEAR(dCalendario[Date]) = YEAR(TODAY()),
+			        "Sim",
+			        "Não"
+			    )
+		lineageTag: n4o5p6q7-4444-5555-6666-777777777778
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition dCalendario-dd250671-adc8-4082-9025-7b8e780c6056 = calculated
 		mode: import
 		source = ```

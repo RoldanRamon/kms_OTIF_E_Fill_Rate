@@ -329,6 +329,167 @@ table _Medidas
 		displayFolder: _GERAL
 		lineageTag: e79124f2-fd9d-4af3-9e6d-4c2dc4354274
 
+	measure 'Qual o percentual de OTIF por cliente?' =
+			
+			DIVIDE(
+			    CALCULATE(
+			        [_Qtde Total de Linhas],
+			        fPedido[@OTIF Linha] = "OTIF"
+			    ),
+			    [_Qtde Total de Linhas],
+			    0
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Q&A
+		lineageTag: f4983680-2b41-4bfd-bb0f-f22cc62232a6
+
+	measure 'Quantos pedidos estão atrasados?' =
+			
+			CALCULATE(
+			    [_Qtde Total de Linhas],
+			    fPedido[@OTIF Linha] = "NO-OTIF"
+			)
+		formatString: #,0
+		displayFolder: Q&A
+		lineageTag: a1b2c3d4-5678-90ef-abcd-123456789012
+
+	measure 'Quais clientes VIP têm problemas de estoque?' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(fPedido[CLIENTE]),
+			    fPedido[@Tipo Cliente] = "Cliente VIP",
+			    fPedido[@Status Estoque] IN {"Sem Estoque", "Estoque Crítico (<50%)", "Estoque Limitado (50-79%)"}
+			)
+		formatString: #,0
+		displayFolder: Q&A
+		lineageTag: b2c3d4e5-6789-01fg-bcde-234567890123
+
+	measure 'Qual empresa tem mais pedidos no prazo?' =
+			
+			VAR _MelhorEmpresa =
+			    TOPN(
+			        1,
+			        SUMMARIZE(
+			            fPedido,
+			            fPedido[EMPRESA],
+			            "OTIF_Count", CALCULATE(
+			                [_Qtde Total de Linhas],
+			                fPedido[@OTIF Linha] = "OTIF"
+			            )
+			        ),
+			        [OTIF_Count],
+			        DESC
+			    )
+			RETURN
+			    MAXX(_MelhorEmpresa, [OTIF_Count])
+		formatString: #,0
+		displayFolder: Q&A
+		lineageTag: c3d4e5f6-789a-12gh-cdef-345678901234
+
+	measure 'Qual o fill rate por região?' =
+			
+			DIVIDE(
+			    CALCULATE(
+			        [_Qtde Total de Linhas],
+			        fPedido[@FILL RATE Linha] = "FILL_RATE"
+			    ),
+			    [_Qtde Total de Linhas],
+			    0
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Q&A
+		lineageTag: d4e5f6g7-89ab-23hi-defg-456789012345
+
+	measure 'OTIF dos últimos 6 meses' =
+			
+			CALCULATE(
+			    [% OTIF - Linha],
+			    dCalendario[É Últimos 6 Meses?] = "Sim"
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Q&A Temporal
+		lineageTag: e5f6g7h8-90bc-34ij-efgh-567890123456
+
+	measure 'OTIF da última semana' =
+			
+			CALCULATE(
+			    [% OTIF - Linha],
+			    dCalendario[É Semana Passada?] = "Sim"
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Q&A Temporal
+		lineageTag: f6g7h8i9-01cd-45jk-fghi-678901234567
+
+	measure 'OTIF dos últimos 30 dias' =
+			
+			CALCULATE(
+			    [% OTIF - Linha],
+			    dCalendario[É Últimos 30 Dias?] = "Sim"
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Q&A Temporal
+		lineageTag: g7h8i9j0-12de-56kl-ghij-789012345678
+
+	measure 'OTIF deste mês' =
+			
+			CALCULATE(
+			    [% OTIF - Linha],
+			    dCalendario[É Este Mês?] = "Sim"
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Q&A Temporal
+		lineageTag: h8i9j0k1-23ef-67lm-hijk-890123456789
+
+	measure 'OTIF do mês passado' =
+			
+			CALCULATE(
+			    [% OTIF - Linha],
+			    dCalendario[É Mês Passado?] = "Sim"
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Q&A Temporal
+		lineageTag: i9j0k1l2-34fg-78mn-ijkl-901234567890
+
+	measure 'OTIF deste ano' =
+			
+			CALCULATE(
+			    [% OTIF - Linha],
+			    dCalendario[É Este Ano?] = "Sim"
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Q&A Temporal
+		lineageTag: j0k1l2m3-45gh-89no-jklm-012345678901
+
+	measure 'Fill Rate dos últimos 6 meses' =
+			
+			CALCULATE(
+			    [% FILL_RATE - Linha],
+			    dCalendario[É Últimos 6 Meses?] = "Sim"
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Q&A Temporal
+		lineageTag: k1l2m3n4-56hi-90op-klmn-123456789012
+
+	measure 'Fill Rate da última semana' =
+			
+			CALCULATE(
+			    [% FILL_RATE - Linha],
+			    dCalendario[É Semana Passada?] = "Sim"
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Q&A Temporal
+		lineageTag: l2m3n4o5-67ij-01pq-lmno-234567890123
+
+	measure 'Pedidos atrasados dos últimos 30 dias' =
+			
+			CALCULATE(
+			    [Qtde Linhas NO-OTIF],
+			    dCalendario[É Últimos 30 Dias?] = "Sim"
+			)
+		formatString: #,0
+		displayFolder: Q&A Temporal
+		lineageTag: m3n4o5p6-78jk-12qr-mnop-345678901234
+
 	column Value
 		isHidden
 		formatString: 0
