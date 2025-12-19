@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "63f5de48402f3e37f020",
+  "displayName": "Fill Rate & Análise De Estoque",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "visualInteractions": [
+    {
+      "source": "3f12af414dabab4d3ac2",
+      "target": "e20a4b4068a5114aebd8",
+      "type": "DataFilter"
+    },
+    {
+      "source": "3f12af414dabab4d3ac2",
+      "target": "871afce187628e558f6d",
+      "type": "DataFilter"
+    },
+    {
+      "source": "e20a4b4068a5114aebd8",
+      "target": "3f12af414dabab4d3ac2",
+      "type": "DataFilter"
+    },
+    {
+      "source": "e20a4b4068a5114aebd8",
+      "target": "871afce187628e558f6d",
+      "type": "DataFilter"
+    },
+    {
+      "source": "871afce187628e558f6d",
+      "target": "3f12af414dabab4d3ac2",
+      "type": "DataFilter"
+    },
+    {
+      "source": "871afce187628e558f6d",
+      "target": "e20a4b4068a5114aebd8",
+      "type": "DataFilter"
+    }
+  ]
+}

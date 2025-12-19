@@ -1,0 +1,308 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "7b41d0d5580572cc3c5f",
+  "position": {
+    "x": 12.361720807726075,
+    "y": 751.81738366988577,
+    "z": 14000,
+    "height": 140.4741000877963,
+    "width": 606.84811237928,
+    "tabOrder": 14000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fPedido"
+                    }
+                  },
+                  "Property": "NR_PEDIDO"
+                }
+              },
+              "queryRef": "fPedido.NR_PEDIDO",
+              "nativeQueryRef": "NR_PEDIDO"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fPedido"
+                    }
+                  },
+                  "Property": "POS_PDV"
+                }
+              },
+              "queryRef": "fPedido.POS_PDV",
+              "nativeQueryRef": "POS_PDV"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fPedido"
+                    }
+                  },
+                  "Property": "DIM_ITEM_ID"
+                }
+              },
+              "queryRef": "fPedido.DIM_ITEM_ID",
+              "nativeQueryRef": "DIM_ITEM_ID"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fPedido"
+                    }
+                  },
+                  "Property": "DT_EMISSAO"
+                }
+              },
+              "queryRef": "fPedido.DT_EMISSAO",
+              "nativeQueryRef": "DT_EMISSAO"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Qtde Em Aberto"
+                }
+              },
+              "queryRef": "_Medidas._Qtde Em Aberto",
+              "nativeQueryRef": "EM ABERTO",
+              "displayName": "EM ABERTO"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "_Qtde Estoque No Dia"
+                }
+              },
+              "queryRef": "_Medidas._Qtde Estoque No Dia",
+              "nativeQueryRef": "ESTOQUE NO DIA",
+              "displayName": "ESTOQUE NO DIA"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Dif. Estoque No Dia x Em Aberto"
+                }
+              },
+              "queryRef": "_Medidas._Dif. Estoque No Dia x Em Aberto",
+              "nativeQueryRef": "DIFERENCA",
+              "displayName": "DIFERENCA"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fPedido"
+                    }
+                  },
+                  "Property": "@FILL RATE Linha"
+                }
+              },
+              "queryRef": "fPedido.@FILL RATE Linha",
+              "nativeQueryRef": "ANALISE",
+              "displayName": "ANALISE"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fPedido"
+                    }
+                  },
+                  "Property": "@StatusBI"
+                }
+              },
+              "queryRef": "fPedido.@StatusBI",
+              "nativeQueryRef": "OBS CARTEIRA",
+              "displayName": "OBS CARTEIRA"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "86.33049898601321D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "fPedido.DT_EMISSAO"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "119.29556023148184D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "fPedido.DIM_ITEM_ID"
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Detalhes Linha'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

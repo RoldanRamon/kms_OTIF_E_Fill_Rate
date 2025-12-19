@@ -19,7 +19,6 @@ ref table Analise_OTIF_Pedido
 ref table dSaldoEstoqueDiario
 ref table Analise_FILL_RATE_Pedido
 ref table fBaseCarteira
-ref table 'Parametro Visao OTIF'
 
 ref cultureInfo pt-BR
 

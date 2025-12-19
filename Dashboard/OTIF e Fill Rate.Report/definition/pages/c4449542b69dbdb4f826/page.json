@@ -1,0 +1,85 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "c4449542b69dbdb4f826",
+  "displayName": "Fill Rate - Pedido",
+  "displayOption": "FitToPage",
+  "height": 900,
+  "width": 1280,
+  "objects": {
+    "outspacePane": [
+      {
+        "properties": {
+          "width": {
+            "expr": {
+              "Literal": {
+                "Value": "188L"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visualInteractions": [
+    {
+      "source": "8ad1c7eedd0e2f502f12",
+      "target": "a097f368c4194b6c86b9",
+      "type": "DataFilter"
+    },
+    {
+      "source": "8ad1c7eedd0e2f502f12",
+      "target": "bf91f633e8688c1e5f5d",
+      "type": "DataFilter"
+    },
+    {
+      "source": "8ad1c7eedd0e2f502f12",
+      "target": "014eb5057cc652b3df20",
+      "type": "DataFilter"
+    },
+    {
+      "source": "a097f368c4194b6c86b9",
+      "target": "8ad1c7eedd0e2f502f12",
+      "type": "DataFilter"
+    },
+    {
+      "source": "a097f368c4194b6c86b9",
+      "target": "014eb5057cc652b3df20",
+      "type": "DataFilter"
+    },
+    {
+      "source": "a097f368c4194b6c86b9",
+      "target": "bf91f633e8688c1e5f5d",
+      "type": "DataFilter"
+    },
+    {
+      "source": "014eb5057cc652b3df20",
+      "target": "8ad1c7eedd0e2f502f12",
+      "type": "DataFilter"
+    },
+    {
+      "source": "014eb5057cc652b3df20",
+      "target": "a097f368c4194b6c86b9",
+      "type": "DataFilter"
+    },
+    {
+      "source": "014eb5057cc652b3df20",
+      "target": "bf91f633e8688c1e5f5d",
+      "type": "DataFilter"
+    },
+    {
+      "source": "bf91f633e8688c1e5f5d",
+      "target": "014eb5057cc652b3df20",
+      "type": "DataFilter"
+    },
+    {
+      "source": "bf91f633e8688c1e5f5d",
+      "target": "a097f368c4194b6c86b9",
+      "type": "DataFilter"
+    },
+    {
+      "source": "bf91f633e8688c1e5f5d",
+      "target": "8ad1c7eedd0e2f502f12",
+      "type": "DataFilter"
+    }
+  ]
+}

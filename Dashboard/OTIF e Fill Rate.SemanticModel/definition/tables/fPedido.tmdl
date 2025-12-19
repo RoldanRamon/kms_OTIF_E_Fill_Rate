@@ -484,6 +484,21 @@ table fPedido
 
 		annotation SummarizationSetBy = Automatic
 
+	column '@Estoque Ou Já Pode Atender' =
+			
+			IF(fPedido[@StatusBI] = "Já Pode Aender" || fPedido[@Status Estoque] = "Estoque Suficiente", "Atendimento Imediato", "Sem Atendimento Imediato")
+		lineageTag: e8839c39-d1e9-4e00-9ed6-13386e567339
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column '@Qtde Dias Desde Criação' = DATEDIFF(fPedido[DT_EMISSAO], TODAY(), DAY)
+		formatString: 0
+		lineageTag: eecff70d-aa31-43e6-9506-8e0417a8d560
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
 	partition fPedido-24034e89-6c6d-42ea-a97d-3af7c3cf61e1 = m
 		mode: import
 		source =

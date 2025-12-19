@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.1.0/schema.json",
   "themeCollection": {
     "baseTheme": {
       "name": "CY25SU11",
@@ -48,17 +48,6 @@
   },
   "resourcePackages": [
     {
-      "name": "SharedResources",
-      "type": "SharedResources",
-      "items": [
-        {
-          "name": "CY25SU11",
-          "path": "BaseThemes/CY25SU11.json",
-          "type": "BaseTheme"
-        }
-      ]
-    },
-    {
       "name": "RegisteredResources",
       "type": "RegisteredResources",
       "items": [
@@ -68,8 +57,8 @@
           "type": "Image"
         },
         {
-          "name": "Komastsu_Logo25786403134221747.png",
-          "path": "Komastsu_Logo25786403134221747.png",
+          "name": "Horarios_De_Atualizacao8288698170432751.png",
+          "path": "Horarios_De_Atualizacao8288698170432751.png",
           "type": "Image"
         },
         {
@@ -78,9 +67,20 @@
           "type": "Image"
         },
         {
-          "name": "Horarios_De_Atualizacao8288698170432751.png",
-          "path": "Horarios_De_Atualizacao8288698170432751.png",
+          "name": "Komastsu_Logo25786403134221747.png",
+          "path": "Komastsu_Logo25786403134221747.png",
           "type": "Image"
+        }
+      ]
+    },
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY25SU11",
+          "path": "BaseThemes/CY25SU11.json",
+          "type": "BaseTheme"
         }
       ]
     }
