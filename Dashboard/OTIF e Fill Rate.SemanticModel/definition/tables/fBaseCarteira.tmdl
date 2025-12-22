@@ -1,6 +1,30 @@
 table fBaseCarteira
 	lineageTag: c9eb5820-b837-42c1-8379-753a4a9d901c
 
+	column ID_PEDIDO_SEQ_ITEM
+		dataType: string
+		lineageTag: c9d94030-2348-4736-a0b8-542ef35013a6
+		summarizeBy: none
+		sourceColumn: ID_PEDIDO_SEQ_ITEM
+
+		annotation SummarizationSetBy = Automatic
+
+	column STATUS_BI
+		dataType: string
+		lineageTag: d88255f0-48cd-4229-82a8-8a0e995ed24a
+		summarizeBy: none
+		sourceColumn: STATUS_BI
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo.Atend'
+		dataType: string
+		lineageTag: cf38c44c-0757-43a9-9630-90929f74a4a0
+		summarizeBy: none
+		sourceColumn: Tipo.Atend
+
+		annotation SummarizationSetBy = Automatic
+
 	column Clas
 		dataType: string
 		lineageTag: 3a00b945-aed7-4e79-97c3-1c13bdc37ff8
@@ -35,22 +59,6 @@ table fBaseCarteira
 		lineageTag: 6c75061f-f096-4c40-acd4-b857d843e42a
 		summarizeBy: none
 		sourceColumn: Observacao
-
-		annotation SummarizationSetBy = Automatic
-
-	column ID_PEDIDO_SEQ_ITEM
-		dataType: string
-		lineageTag: c9d94030-2348-4736-a0b8-542ef35013a6
-		summarizeBy: none
-		sourceColumn: ID_PEDIDO_SEQ_ITEM
-
-		annotation SummarizationSetBy = Automatic
-
-	column STATUS_BI
-		dataType: string
-		lineageTag: d88255f0-48cd-4229-82a8-8a0e995ed24a
-		summarizeBy: none
-		sourceColumn: STATUS_BI
 
 		annotation SummarizationSetBy = Automatic
 
@@ -283,14 +291,6 @@ table fBaseCarteira
 		lineageTag: 842743c5-68a9-44d0-a195-75095f435bb3
 		summarizeBy: none
 		sourceColumn: Qt.Possiv.Imediat
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'Tipo.Atend'
-		dataType: string
-		lineageTag: cf38c44c-0757-43a9-9630-90929f74a4a0
-		summarizeBy: none
-		sourceColumn: Tipo.Atend
 
 		annotation SummarizationSetBy = Automatic
 
@@ -608,7 +608,7 @@ table fBaseCarteira
 				in
 				    #"Texto Inserido Entre os Delimitadores"
 
-	annotation PBI_NavigationStepName = Navegação
-
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegação
 

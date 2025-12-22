@@ -22,12 +22,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "f pedido": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "fPedido": {
 			            "Type": "Noun",
 			            "State": "Generated",
@@ -54,37 +48,20 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "nr pedido": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Pedido": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "Pedido": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
 			          "NR_PEDIDO": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Pedido": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -104,12 +81,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "dt emissao": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "Data Emissão": {
 			            "State": "Suggested",
 			            "Source": {
@@ -118,17 +89,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.855,
 			            "LastModified": "2025-12-19T16:49:43.7003739Z"
-			          }
-			        },
-			        {
-			          "Data Emissão": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.855
 			          }
 			        },
 			        {
@@ -143,17 +103,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Emissão": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.855
-			          }
-			        },
-			        {
 			          "Data": {
 			            "State": "Suggested",
 			            "Source": {
@@ -162,17 +111,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.81,
 			            "LastModified": "2025-12-19T16:49:43.7003739Z"
-			          }
-			        },
-			        {
-			          "Data": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.81
 			          }
 			        },
 			        {
@@ -187,17 +125,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Dt Implantação": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.81
-			          }
-			        },
-			        {
 			          "Data Implantação": {
 			            "State": "Suggested",
 			            "Source": {
@@ -206,17 +133,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.81,
 			            "LastModified": "2025-12-19T16:49:43.7003739Z"
-			          }
-			        },
-			        {
-			          "Data Implantação": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.81
 			          }
 			        },
 			        {
@@ -231,17 +147,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Dt Emissão": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.81
-			          }
-			        },
-			        {
 			          "Data Pedido": {
 			            "State": "Suggested",
 			            "Source": {
@@ -250,17 +155,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.72,
 			            "LastModified": "2025-12-19T16:49:43.7003739Z"
-			          }
-			        },
-			        {
-			          "Data Pedido": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
 			          }
 			        },
 			        {
@@ -275,17 +169,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Dt Emiss.": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
-			          }
-			        },
-			        {
 			          "DT_GERACAO": {
 			            "State": "Suggested",
 			            "Source": {
@@ -297,17 +180,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "DT_GERACAO": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
-			          }
-			        },
-			        {
 			          "EMISSAO": {
 			            "State": "Suggested",
 			            "Source": {
@@ -316,17 +188,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.72,
 			            "LastModified": "2025-12-19T16:49:43.7003739Z"
-			          }
-			        },
-			        {
-			          "EMISSAO": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
 			          }
 			        },
 			        {
@@ -338,13 +199,6 @@ cultureInfo pt-BR
 			        },
 			        {
 			          "date": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        },
-			        {
-			          "date": {
-			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.7
 			          }
@@ -367,12 +221,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "pos pdv": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "Situação": {
 			            "State": "Suggested",
 			            "Source": {
@@ -381,17 +229,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.855,
 			            "LastModified": "2025-12-19T16:49:43.7003739Z"
-			          }
-			        },
-			        {
-			          "Situação": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.855
 			          }
 			        },
 			        {
@@ -406,17 +243,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Situação do Pedido": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.81
-			          }
-			        },
-			        {
 			          "Status": {
 			            "State": "Suggested",
 			            "Source": {
@@ -428,17 +254,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Status": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
-			          }
-			        },
-			        {
 			          "POS_PDV": {
 			            "Type": "Noun",
 			            "State": "Generated",
@@ -447,13 +262,6 @@ cultureInfo pt-BR
 			        },
 			        {
 			          "pdv": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "pdv": {
-			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -475,12 +283,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "qtde": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "Qtde Solicitada": {
 			            "State": "Suggested",
 			            "Source": {
@@ -492,17 +294,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Qtde Solicitada": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.81
-			          }
-			        },
-			        {
 			          "Quantidade": {
 			            "State": "Suggested",
 			            "Source": {
@@ -511,17 +302,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.8,
 			            "LastModified": "2025-12-19T16:49:43.7003739Z"
-			          }
-			        },
-			        {
-			          "Quantidade": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.8
 			          }
 			        }
 			      ]
@@ -541,12 +321,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "qtde atend": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "Qtde Atendida": {
 			            "State": "Suggested",
 			            "Source": {
@@ -555,17 +329,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.81,
 			            "LastModified": "2025-12-19T16:49:43.7003739Z"
-			          }
-			        },
-			        {
-			          "Qtde Atendida": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.81
 			          }
 			        },
 			        {
@@ -588,12 +351,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "vlr bruto": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "vlr bruto": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        },
@@ -621,12 +378,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "dt entrega": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "Entrega": {
 			            "State": "Suggested",
 			            "Source": {
@@ -638,17 +389,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Entrega": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.855
-			          }
-			        },
-			        {
 			          "Data Prevista": {
 			            "State": "Suggested",
 			            "Source": {
@@ -657,17 +397,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.855,
 			            "LastModified": "2025-12-19T16:49:43.716Z"
-			          }
-			        },
-			        {
-			          "Data Prevista": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.855
 			          }
 			        },
 			        {
@@ -682,17 +411,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Data de Entrega": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.81
-			          }
-			        },
-			        {
 			          "Delivery Date": {
 			            "State": "Suggested",
 			            "Source": {
@@ -701,17 +419,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.72,
 			            "LastModified": "2025-12-19T16:49:43.716Z"
-			          }
-			        },
-			        {
-			          "Delivery Date": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
 			          }
 			        },
 			        {
@@ -726,17 +433,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Data Entrega": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
-			          }
-			        },
-			        {
 			          "Delivery": {
 			            "State": "Suggested",
 			            "Source": {
@@ -748,17 +444,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Delivery": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
-			          }
-			        },
-			        {
 			          "Dt Delivery": {
 			            "State": "Suggested",
 			            "Source": {
@@ -767,17 +452,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.72,
 			            "LastModified": "2025-12-19T16:49:43.716Z"
-			          }
-			        },
-			        {
-			          "Dt Delivery": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
 			          }
 			        },
 			        {
@@ -792,17 +466,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "DT Delivery Sale": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.576
-			          }
-			        },
-			        {
 			          "DT_ENTREGA": {
 			            "Type": "Noun",
 			            "State": "Generated",
@@ -811,13 +474,6 @@ cultureInfo pt-BR
 			        },
 			        {
 			          "date": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        },
-			        {
-			          "date": {
-			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.7
 			          }
@@ -840,12 +496,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "nf data": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "Ult Atend.": {
 			            "State": "Suggested",
 			            "Source": {
@@ -857,17 +507,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Ult Atend.": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.855
-			          }
-			        },
-			        {
 			          "Data Entrega": {
 			            "State": "Suggested",
 			            "Source": {
@@ -876,17 +515,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.855,
 			            "LastModified": "2025-12-19T16:49:43.716Z"
-			          }
-			        },
-			        {
-			          "Data Entrega": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.855
 			          }
 			        },
 			        {
@@ -901,17 +529,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Último Fat.": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.81
-			          }
-			        },
-			        {
 			          "NF_DATA": {
 			            "Type": "Noun",
 			            "State": "Generated",
@@ -920,13 +537,6 @@ cultureInfo pt-BR
 			        },
 			        {
 			          "date": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        },
-			        {
-			          "date": {
-			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.7
 			          }
@@ -1019,12 +629,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "prioridade": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "priority": {
 			            "State": "Suggested",
 			            "Source": {
@@ -1036,17 +640,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "priority": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.855
-			          }
-			        },
-			        {
 			          "Tipo": {
 			            "State": "Suggested",
 			            "Source": {
@@ -1055,17 +648,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.81,
 			            "LastModified": "2025-12-19T16:49:43.716Z"
-			          }
-			        },
-			        {
-			          "Tipo": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.81
 			          }
 			        }
 			      ]
@@ -1085,12 +667,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "nr seq ped": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "Seq": {
 			            "State": "Suggested",
 			            "Source": {
@@ -1102,17 +678,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Seq": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.855
-			          }
-			        },
-			        {
 			          "Seq Interna": {
 			            "State": "Suggested",
 			            "Source": {
@@ -1124,17 +689,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Seq Interna": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.81
-			          }
-			        },
-			        {
 			          "Nr Seq": {
 			            "State": "Suggested",
 			            "Source": {
@@ -1143,17 +697,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.81,
 			            "LastModified": "2025-12-19T16:49:43.716Z"
-			          }
-			        },
-			        {
-			          "Nr Seq": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.81
 			          }
 			        },
 			        {
@@ -1180,24 +723,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "@OTIF linha": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "ANALISE": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "ANALISE": {
-			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -1223,12 +749,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "preco unit": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "Vlr Unit": {
 			            "State": "Suggested",
 			            "Source": {
@@ -1237,17 +757,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.72,
 			            "LastModified": "2025-12-19T16:49:43.7316261Z"
-			          }
-			        },
-			        {
-			          "Vlr Unit": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
 			          }
 			        },
 			        {
@@ -1364,12 +873,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "nf serie": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "NF_SERIE": {
 			            "Type": "Noun",
 			            "State": "Generated",
@@ -1393,12 +896,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "nf num": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "Nr Nota Fiscal": {
 			            "State": "Suggested",
 			            "Source": {
@@ -1407,17 +904,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.81,
 			            "LastModified": "2025-12-19T16:49:43.7316261Z"
-			          }
-			        },
-			        {
-			          "Nr Nota Fiscal": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.81
 			          }
 			        },
 			        {
@@ -1464,12 +950,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "d calendario": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "MyCalendar": {
 			            "State": "Suggested",
 			            "Source": {
@@ -1478,17 +958,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.95,
 			            "LastModified": "2025-12-19T16:49:43.7316261Z"
-			          }
-			        },
-			        {
-			          "MyCalendar": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.95
 			          }
 			        },
 			        {
@@ -1515,12 +984,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "date": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "Emissão": {
 			            "State": "Suggested",
 			            "Source": {
@@ -1529,17 +992,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.855,
 			            "LastModified": "2025-12-19T16:49:43.7316261Z"
-			          }
-			        },
-			        {
-			          "Emissão": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.855
 			          }
 			        },
 			        {
@@ -1554,17 +1006,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Período": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.812
-			          }
-			        },
-			        {
 			          "Comparison Date": {
 			            "State": "Suggested",
 			            "Source": {
@@ -1576,17 +1017,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Comparison Date": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
-			          }
-			        },
-			        {
 			          "Custom Date Slicer": {
 			            "State": "Suggested",
 			            "Source": {
@@ -1595,17 +1025,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.684,
 			            "LastModified": "2025-12-19T16:49:43.7316261Z"
-			          }
-			        },
-			        {
-			          "Custom Date Slicer": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.684
 			          }
 			        },
 			        {
@@ -1644,12 +1063,6 @@ cultureInfo pt-BR
 			          "dia me": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "dia me": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -1668,12 +1081,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "me": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "Mê": {
 			            "State": "Suggested",
 			            "Source": {
@@ -1682,17 +1089,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.95,
 			            "LastModified": "2025-12-19T16:49:43.7472503Z"
-			          }
-			        },
-			        {
-			          "Mê": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.95
 			          }
 			        }
 			      ]
@@ -1712,12 +1108,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "mê": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "me": {
 			            "State": "Suggested",
 			            "Source": {
@@ -1729,17 +1119,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "me": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.8
-			          }
-			        },
-			        {
 			          "month": {
 			            "State": "Suggested",
 			            "Source": {
@@ -1748,17 +1127,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.8,
 			            "LastModified": "2025-12-19T16:49:43.7472503Z"
-			          }
-			        },
-			        {
-			          "month": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.8
 			          }
 			        }
 			      ]
@@ -1778,12 +1146,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "ano fiscal": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "Fiscal Year": {
 			            "State": "Suggested",
 			            "Source": {
@@ -1792,17 +1154,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.855,
 			            "LastModified": "2025-12-19T16:49:43.7472503Z"
-			          }
-			        },
-			        {
-			          "Fiscal Year": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.855
 			          }
 			        },
 			        {
@@ -1817,17 +1168,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Ano": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.855
-			          }
-			        },
-			        {
 			          "Year": {
 			            "State": "Suggested",
 			            "Source": {
@@ -1836,17 +1176,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.855,
 			            "LastModified": "2025-12-19T16:49:43.7472503Z"
-			          }
-			        },
-			        {
-			          "Year": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.855
 			          }
 			        }
 			      ]
@@ -1864,12 +1193,6 @@ cultureInfo pt-BR
 			          "ord ano fiscal": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "ord ano fiscal": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -1884,12 +1207,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "inicio do me": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "inicio do me": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        },
@@ -1915,12 +1232,6 @@ cultureInfo pt-BR
 			          "_medida": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "_medida": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -1938,12 +1249,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "value": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "value": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        },
@@ -2064,33 +1369,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "_qtde total de linhas": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Total de Linhas": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "Total de Linhas": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
 			          "_qtde aggregate de linha": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -2109,6 +1387,16 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.605
 			          }
+			        },
+			        {
+			          "Total de Linhas": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -2123,12 +1411,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "qtde linhas NO-OTIF": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "qtde linhas NO-OTIF": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        },
@@ -2183,35 +1465,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "NO-OTIF": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "NO-OTIF": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
 			          "qtde linhas NO OTIF": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "qtde linhas NO OTIF": {
-			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -2235,6 +1489,16 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.599
 			          }
+			        },
+			        {
+			          "NO-OTIF": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -2251,23 +1515,8 @@ cultureInfo pt-BR
 			          "% otif": {}
 			        },
 			        {
-			          "% otif": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "%OTIF Pedido": {
 			            "LastModified": "2025-12-16T16:23:54.526Z"
-			          }
-			        },
-			        {
-			          "%OTIF Pedido": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Source": {
-			              "Type": "User"
-			            }
 			          }
 			        },
 			        {
@@ -2324,35 +1573,13 @@ cultureInfo pt-BR
 			          "% OTIF - linha": {}
 			        },
 			        {
-			          "% OTIF - linha": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "% OTIF linha": {
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "% OTIF linha": {
-			            "Type": "Noun",
-			            "State": "Generated",
 			            "Weight": 0.97
 			          }
 			        },
 			        {
 			          "percentual de otif": {
 			            "LastModified": "2025-12-19T15:07:53.639Z"
-			          }
-			        },
-			        {
-			          "percentual de otif": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Source": {
-			              "Type": "User"
-			            }
 			          }
 			        },
 			        {
@@ -2452,12 +1679,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "% NO-OTIF - linha": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "percentual de problemas": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -2508,35 +1729,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "% NO-OTIF": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "% NO-OTIF": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
 			          "% NO OTIF linha": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "% NO OTIF linha": {
-			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -2570,6 +1763,16 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.599
 			          }
+			        },
+			        {
+			          "% NO-OTIF": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -2588,62 +1791,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "% ainda no prazo - linha": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "%Ainda No Prazo": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "%Ainda No Prazo": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "% Ainda No Prazo": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "% Ainda No Prazo": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
 			          "% ainda no prazo linha": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "% ainda no prazo linha": {
-			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -2677,6 +1825,26 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.605
 			          }
+			        },
+			        {
+			          "%Ainda No Prazo": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "% Ainda No Prazo": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -2695,12 +1863,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "_(r$) total pedidos": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "(R$) Total": {
 			            "State": "Suggested",
 			            "Source": {
@@ -2712,17 +1874,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "(R$) Total": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.855
-			          }
-			        },
-			        {
 			          "(R$) Pedidos": {
 			            "State": "Suggested",
 			            "Source": {
@@ -2733,29 +1884,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "(R$) Pedidos": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
 			          "(R$) Total Pedidos": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "(R$) Total Pedidos": {
-			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -2781,24 +1910,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "qtde pedidos OTIF": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "OTIF": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "OTIF": {
-			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -2824,41 +1936,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "qtde pedidos NO-OTIF": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "NO-OTIF": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "NO-OTIF": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
 			          "qtde pedidos NO OTIF": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "qtde pedidos NO OTIF": {
-			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -2882,6 +1960,16 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.599
 			          }
+			        },
+			        {
+			          "NO-OTIF": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -2900,33 +1988,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "qtde pedidos ainda no prazo": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Ainda No Prazo": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "Ainda No Prazo": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
 			          "qtde pedido ainda number prazo": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -2934,6 +1995,16 @@ cultureInfo pt-BR
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "Ainda No Prazo": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -2950,33 +2021,6 @@ cultureInfo pt-BR
 			        {
 			          "% otif pedido": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "% otif pedido": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "% OTIF": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "% OTIF": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        },
 			        {
@@ -2998,6 +2042,16 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.591
 			          }
+			        },
+			        {
+			          "% OTIF": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -3016,41 +2070,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "% no-otif pedido": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "% NO-OTIF": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "% NO-OTIF": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
 			          "% no otif pedido": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "% no otif pedido": {
-			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -3114,6 +2134,16 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.599
 			          }
+			        },
+			        {
+			          "% NO-OTIF": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -3129,33 +2159,6 @@ cultureInfo pt-BR
 			        {
 			          "% ainda no prazo pedido": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "% ainda no prazo pedido": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "%Ainda No Prazo": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "%Ainda No Prazo": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        },
 			        {
@@ -3187,6 +2190,16 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.605
 			          }
+			        },
+			        {
+			          "%Ainda No Prazo": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -3200,12 +2213,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "analise OTIF pedido": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "analise OTIF pedido": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        },
@@ -3233,12 +2240,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "nr pedido": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "Pedido Komatsu": {
 			            "State": "Suggested",
 			            "Source": {
@@ -3247,17 +2248,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.72,
 			            "LastModified": "2025-12-19T16:49:43.7941306Z"
-			          }
-			        },
-			        {
-			          "Pedido Komatsu": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
 			          }
 			        },
 			        {
@@ -3272,17 +2262,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Pedido": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
-			          }
-			        },
-			        {
 			          "Order Sale": {
 			            "State": "Suggested",
 			            "Source": {
@@ -3294,17 +2273,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Order Sale": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.576
-			          }
-			        },
-			        {
 			          "Nr Sale": {
 			            "State": "Suggested",
 			            "Source": {
@@ -3313,17 +2281,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.576,
 			            "LastModified": "2025-12-19T16:49:43.7941306Z"
-			          }
-			        },
-			        {
-			          "Nr Sale": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.576
 			          }
 			        },
 			        {
@@ -3350,12 +2307,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "qtde linha": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "Total": {
 			            "State": "Suggested",
 			            "Source": {
@@ -3364,17 +2315,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.72,
 			            "LastModified": "2025-12-19T16:49:43.7941306Z"
-			          }
-			        },
-			        {
-			          "Total": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
 			          }
 			        },
 			        {
@@ -3389,17 +2329,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Qtde Linhas Venda": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
-			          }
-			        },
-			        {
 			          "Linhas Venda": {
 			            "State": "Suggested",
 			            "Source": {
@@ -3411,14 +2340,13 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Linhas Venda": {
-			            "Type": "Noun",
+			          "QTDE LINHAS": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
+			              "Agent": "PowerBI.VisualColumnRename"
 			            },
-			            "Weight": 0.72
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -3438,12 +2366,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "otif": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "Delivery Status": {
 			            "State": "Suggested",
 			            "Source": {
@@ -3455,17 +2377,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Delivery Status": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
-			          }
-			        },
-			        {
 			          "Resultado": {
 			            "State": "Suggested",
 			            "Source": {
@@ -3474,17 +2385,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.72,
 			            "LastModified": "2025-12-19T16:49:43.7941306Z"
-			          }
-			        },
-			        {
-			          "Resultado": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
 			          }
 			        }
 			      ]
@@ -3504,20 +2404,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "no-otif": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "no otif": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "no otif": {
-			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -3559,12 +2446,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "ainda no prazo": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "ainda number prazo": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -3591,24 +2472,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "@OTIF pedido": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "ANALISE": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "ANALISE": {
-			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -3630,12 +2494,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "id pedido saldo estoque": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "id pedido saldo estoque": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        },
@@ -3703,12 +2561,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "@qtde estoque no dia": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "@qtde estoque number dia": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -3735,12 +2587,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "@FILL RATE linha": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "@FILL RATE": {
 			            "State": "Suggested",
 			            "Source": {
@@ -3751,29 +2597,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "@FILL RATE": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
 			          "ANALISE": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "ANALISE": {
-			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -3799,12 +2623,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "qtde em aberto": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "EM ABERTO": {
 			            "State": "Suggested",
 			            "Source": {
@@ -3813,17 +2631,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.72,
 			            "LastModified": "2025-12-19T16:49:43.8253831Z"
-			          }
-			        },
-			        {
-			          "EM ABERTO": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
 			          }
 			        },
 			        {
@@ -3850,24 +2657,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "qtde linhas FILL_RATE": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "FILL_RATE": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "FILL_RATE": {
-			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -3893,24 +2683,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "qtde pedidos FILL_RATE": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "FILL_RATE": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "FILL_RATE": {
-			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -3936,24 +2709,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "qtde linhas NO-FILL_RATE": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "NO-FILL_RATE": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "NO-FILL_RATE": {
-			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -3979,41 +2735,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "% FILL_RATE - linha": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "% FILL_RATE": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "% FILL_RATE": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
 			          "% FILL_RATE linha": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "% FILL_RATE linha": {
-			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -4057,6 +2779,16 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.591
 			          }
+			        },
+			        {
+			          "% FILL_RATE": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -4075,20 +2807,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "% NO-FILL_RATE - linha": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "% NO-FILL_RATE linha": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "% NO-FILL_RATE linha": {
-			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -4150,24 +2869,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "qtde pedidos NO-FILL_RATE": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "NO-FILL_RATE": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "NO-FILL_RATE": {
-			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -4193,33 +2895,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "% no-fill_rate pedido": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "% NO-FILL_RATE": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "% NO-FILL_RATE": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
 			          "percentage no-fill_rate pedido": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -4238,6 +2913,16 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.591
 			          }
+			        },
+			        {
+			          "% NO-FILL_RATE": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -4253,33 +2938,6 @@ cultureInfo pt-BR
 			        {
 			          "% fill_rate pedido": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "% fill_rate pedido": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "% FILL_RATE": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "% FILL_RATE": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        },
 			        {
@@ -4301,6 +2959,16 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.591
 			          }
+			        },
+			        {
+			          "% FILL_RATE": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -4314,12 +2982,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "d saldo estoque diario": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "d saldo estoque diario": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        },
@@ -4347,20 +3009,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "periodo": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "date": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        },
-			        {
-			          "date": {
-			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.7
 			          }
@@ -4382,12 +3031,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "id pedido saldo estoque": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "id pedido saldo estoque": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        },
@@ -4453,12 +3096,6 @@ cultureInfo pt-BR
 			          "quantidade": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "quantidade": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -4472,12 +3109,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "analise FILL RATE pedido": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "analise FILL RATE pedido": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        },
@@ -4505,12 +3136,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "nr pedido": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "Pedido Komatsu": {
 			            "State": "Suggested",
 			            "Source": {
@@ -4519,17 +3144,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.72,
 			            "LastModified": "2025-12-19T16:49:43.8722596Z"
-			          }
-			        },
-			        {
-			          "Pedido Komatsu": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
 			          }
 			        },
 			        {
@@ -4544,17 +3158,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Pedido": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
-			          }
-			        },
-			        {
 			          "Order Sale": {
 			            "State": "Suggested",
 			            "Source": {
@@ -4566,17 +3169,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Order Sale": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.576
-			          }
-			        },
-			        {
 			          "Nr Sale": {
 			            "State": "Suggested",
 			            "Source": {
@@ -4585,17 +3177,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.576,
 			            "LastModified": "2025-12-19T16:49:43.8722596Z"
-			          }
-			        },
-			        {
-			          "Nr Sale": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.576
 			          }
 			        },
 			        {
@@ -4622,12 +3203,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "qtde linha": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "Total": {
 			            "State": "Suggested",
 			            "Source": {
@@ -4636,17 +3211,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.72,
 			            "LastModified": "2025-12-19T16:49:43.8722596Z"
-			          }
-			        },
-			        {
-			          "Total": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
 			          }
 			        },
 			        {
@@ -4661,17 +3225,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Qtde Linhas Venda": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
-			          }
-			        },
-			        {
 			          "Linhas Venda": {
 			            "State": "Suggested",
 			            "Source": {
@@ -4680,17 +3233,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.72,
 			            "LastModified": "2025-12-19T16:49:43.8722596Z"
-			          }
-			        },
-			        {
-			          "Linhas Venda": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
 			          }
 			        }
 			      ]
@@ -4710,12 +3252,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "fill rate": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "FILL_RATE": {
 			            "Type": "Noun",
 			            "State": "Generated",
@@ -4724,13 +3260,6 @@ cultureInfo pt-BR
 			        },
 			        {
 			          "rate": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "rate": {
-			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -4852,12 +3381,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "no fill rate": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "NO-FILL_RATE": {
 			            "Type": "Noun",
 			            "State": "Generated",
@@ -4866,13 +3389,6 @@ cultureInfo pt-BR
 			        },
 			        {
 			          "rate": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "rate": {
-			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -4994,24 +3510,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "@FILL_RATE pedido": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "ANALISE": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "ANALISE": {
-			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -5037,9 +3536,9 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "_qtde pedidos (OTIF)": {
-			            "Type": "Noun",
-			            "State": "Generated"
+			          "_qtde pedidos": {
+			            "State": "Generated",
+			            "Weight": 0.75
 			          }
 			        },
 			        {
@@ -5050,30 +3549,6 @@ cultureInfo pt-BR
 			              "Agent": "PowerBI.VisualColumnRename"
 			            },
 			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "Pedidos": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "_qtde pedidos": {
-			            "State": "Generated",
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "_qtde pedidos": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.75
 			          }
 			        }
 			      ]
@@ -5093,54 +3568,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "_qtde estoque no dia": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "ESTOQUE NO DIA": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "ESTOQUE NO DIA": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "Qtde Estoque No Dia": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "Qtde Estoque No Dia": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
 			          "_qtde estoque number dia": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -5148,6 +3575,26 @@ cultureInfo pt-BR
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "ESTOQUE NO DIA": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Qtde Estoque No Dia": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -5167,24 +3614,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "qtde em aberto": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "EM ABERTO": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "EM ABERTO": {
-			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -5210,24 +3640,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "dif. estoque no dia x em aberto": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "DIFERENCA": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "DIFERENCA": {
-			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -5252,12 +3665,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "id pedido seq item": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "id pedido seq item": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        },
@@ -5385,12 +3792,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "@observacao": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "OBS CARTEIRA": {
 			            "State": "Suggested",
 			            "Source": {
@@ -5398,28 +3799,6 @@ cultureInfo pt-BR
 			              "Agent": "PowerBI.VisualColumnRename"
 			            },
 			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "OBS CARTEIRA": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "OB CARTEIRA": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.70200000000000007
 			          }
 			        }
 			      ]
@@ -5434,12 +3813,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "f base carteira": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "f base carteira": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        },
@@ -5465,12 +3838,6 @@ cultureInfo pt-BR
 			          "cla": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "cla": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -5489,12 +3856,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "descricao": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "Cancelamento": {
 			            "State": "Suggested",
 			            "Source": {
@@ -5503,17 +3864,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.8,
 			            "LastModified": "2025-12-19T16:49:43.919139Z"
-			          }
-			        },
-			        {
-			          "Cancelamento": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.8
 			          }
 			        },
 			        {
@@ -5528,17 +3878,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Desc Cancelamento": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.8
-			          }
-			        },
-			        {
 			          "Descrição de Cancelamento": {
 			            "State": "Suggested",
 			            "Source": {
@@ -5550,17 +3889,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Descrição de Cancelamento": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.8
-			          }
-			        },
-			        {
 			          "Nome da Máquina": {
 			            "State": "Suggested",
 			            "Source": {
@@ -5569,17 +3897,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.72,
 			            "LastModified": "2025-12-19T16:49:43.919139Z"
-			          }
-			        },
-			        {
-			          "Nome da Máquina": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
 			          }
 			        },
 			        {
@@ -5594,17 +3911,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Forn": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
-			          }
-			        },
-			        {
 			          "Status": {
 			            "State": "Suggested",
 			            "Source": {
@@ -5613,17 +3919,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.72,
 			            "LastModified": "2025-12-19T16:49:43.919139Z"
-			          }
-			        },
-			        {
-			          "Status": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
 			          }
 			        },
 			        {
@@ -5638,17 +3933,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Dado": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
-			          }
-			        },
-			        {
 			          "Descrição do Cancelamento": {
 			            "State": "Suggested",
 			            "Source": {
@@ -5657,17 +3941,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.72,
 			            "LastModified": "2025-12-19T16:49:43.919139Z"
-			          }
-			        },
-			        {
-			          "Descrição do Cancelamento": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
 			          }
 			        },
 			        {
@@ -5679,17 +3952,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.684,
 			            "LastModified": "2025-12-19T16:49:43.919139Z"
-			          }
-			        },
-			        {
-			          "Fornecedor": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.684
 			          }
 			        }
 			      ]
@@ -5709,12 +3971,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "dt.entrega": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "Entrega": {
 			            "State": "Suggested",
 			            "Source": {
@@ -5726,25 +3982,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Entrega": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.855
-			          }
-			        },
-			        {
 			          "date": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        },
-			        {
-			          "date": {
-			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.7
 			          }
@@ -5765,12 +4003,6 @@ cultureInfo pt-BR
 			          "observacao": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "observacao": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -5785,12 +4017,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "id pedido seq item": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "id pedido seq item": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        },
@@ -5918,12 +4144,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "status bi": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "Observação Atendimento": {
 			            "State": "Suggested",
 			            "Source": {
@@ -5935,17 +4155,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Observação Atendimento": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.855
-			          }
-			        },
-			        {
 			          "Observação Atend.": {
 			            "State": "Suggested",
 			            "Source": {
@@ -5954,17 +4163,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.855,
 			            "LastModified": "2025-12-19T16:49:43.9347643Z"
-			          }
-			        },
-			        {
-			          "Observação Atend.": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.855
 			          }
 			        },
 			        {
@@ -6091,12 +4289,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "tipo atendimento princ/alt": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "Princ/Alt": {
 			            "State": "Suggested",
 			            "Source": {
@@ -6108,25 +4300,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Princ/Alt": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.855
-			          }
-			        },
-			        {
 			          "tipo atendimento princ": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "tipo atendimento princ": {
-			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -6138,21 +4312,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "tipo atendimento princ alt": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "alt": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "alt": {
-			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -6174,12 +4334,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "estab atendimento": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "Estab Atend.": {
 			            "State": "Suggested",
 			            "Source": {
@@ -6191,17 +4345,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Estab Atend.": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.855
-			          }
-			        },
-			        {
 			          "Filial Atend.": {
 			            "State": "Suggested",
 			            "Source": {
@@ -6210,17 +4353,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.855,
 			            "LastModified": "2025-12-19T16:49:43.9347643Z"
-			          }
-			        },
-			        {
-			          "Filial Atend.": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.855
 			          }
 			        }
 			      ]
@@ -6236,12 +4368,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "cod.est": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "cod.est": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        }
@@ -6262,20 +4388,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "tipo.ped/cot": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "tipo.ped": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "tipo.ped": {
-			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -6287,21 +4400,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "tipo.ped cot": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "cot": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "cot": {
-			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -6411,12 +4510,6 @@ cultureInfo pt-BR
 			          "nome.cliente": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "nome.cliente": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -6431,12 +4524,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "ped.interno": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "ped.interno": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        }
@@ -6455,12 +4542,6 @@ cultureInfo pt-BR
 			          "seq.interna": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "seq.interna": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -6475,12 +4556,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "cod.entrega": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "cod.entrega": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        }
@@ -6499,12 +4574,6 @@ cultureInfo pt-BR
 			          "ped.cliente": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "ped.cliente": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -6519,12 +4588,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "tipo.fatur": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "tipo.fatur": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        }
@@ -6543,12 +4606,6 @@ cultureInfo pt-BR
 			          "seq.cliente": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "seq.cliente": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -6563,12 +4620,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "item.altern": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "item.altern": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        },
@@ -6659,12 +4710,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "cod.item": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "cod. product": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -6747,12 +4792,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "item.cliente": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "item.cliente": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        },
@@ -6843,20 +4882,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "dt.cotação": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "date": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        },
-			        {
-			          "date": {
-			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.7
 			          }
@@ -6877,12 +4903,6 @@ cultureInfo pt-BR
 			          "Nr.DD.cotação": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "Nr.DD.cotação": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -6901,20 +4921,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "dt.aprovação": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "date": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        },
-			        {
-			          "date": {
-			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.7
 			          }
@@ -6935,12 +4942,6 @@ cultureInfo pt-BR
 			          "Nr.DD.aprovação": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "Nr.DD.aprovação": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -6957,12 +4958,6 @@ cultureInfo pt-BR
 			          "Nr.DD.atraso": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "Nr.DD.atraso": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -6977,12 +4972,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "tipo.prior": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "tipo.prior": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        }
@@ -7003,12 +4992,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "qt.sld.ped": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "Qt Saldo Pedido": {
 			            "State": "Suggested",
 			            "Source": {
@@ -7017,17 +5000,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.855,
 			            "LastModified": "2025-12-19T16:49:43.9816456Z"
-			          }
-			        },
-			        {
-			          "Qt Saldo Pedido": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.855
 			          }
 			        }
 			      ]
@@ -7043,12 +5015,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "qt.alocada": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "qt.alocada": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        }
@@ -7067,12 +5033,6 @@ cultureInfo pt-BR
 			          "sld.atender": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "sld.atender": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -7089,12 +5049,6 @@ cultureInfo pt-BR
 			          "sld.dep.filial": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "sld.dep.filial": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -7109,12 +5063,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "qt.sep+tra": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "qt.sep+tra": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        }
@@ -7135,12 +5083,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "S ld/ aloc matriz": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "SLd/Aloc.Matriz": {
 			            "Type": "Noun",
 			            "State": "Generated",
@@ -7154,21 +5096,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "S ld": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "ld": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "ld": {
-			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -7180,21 +5108,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "S ld aloc matriz": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "aloc matriz": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "aloc matriz": {
-			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -7214,12 +5128,6 @@ cultureInfo pt-BR
 			          "qt.possiv.imediat": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "qt.possiv.imediat": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -7234,12 +5142,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "tipo.atend": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "tipo.atend": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        }
@@ -7260,20 +5162,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "prev.dt.entrega": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "date": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        },
-			        {
-			          "date": {
-			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.7
 			          }
@@ -7292,12 +5181,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "vl.unit": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "vl.unit": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        },
@@ -7408,12 +5291,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "vl.total": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "vl. aggregate": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -7448,12 +5325,6 @@ cultureInfo pt-BR
 			          "vl.unit.tab": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "vl.unit.tab": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -7470,12 +5341,6 @@ cultureInfo pt-BR
 			          "vl.tot.tab": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "vl.tot.tab": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -7490,12 +5355,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "vl.tab.item.alter": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "vl.tab.item.alter": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        },
@@ -7584,12 +5443,6 @@ cultureInfo pt-BR
 			          "%dif.item.alter": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "%dif.item.alter": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -7604,12 +5457,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "custo.it.ped": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "custo.it.ped": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        }
@@ -7628,12 +5475,6 @@ cultureInfo pt-BR
 			          "Custo.it.altern": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "Custo.it.altern": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -7648,12 +5489,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "f.up.seq": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "f.up.seq": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        }
@@ -7672,12 +5507,6 @@ cultureInfo pt-BR
 			          "f.up.dt": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "f.up.dt": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -7692,12 +5521,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "f.up.ob": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "f.up.ob": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        },
@@ -7723,12 +5546,6 @@ cultureInfo pt-BR
 			          "canal.venda": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "canal.venda": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -7743,12 +5560,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "import.qt": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "import.qt": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        }
@@ -7767,12 +5578,6 @@ cultureInfo pt-BR
 			          "import.modal": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "import.modal": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -7787,12 +5592,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "qt.ped": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "qt.ped": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        }
@@ -7811,12 +5610,6 @@ cultureInfo pt-BR
 			          "qt.OC": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "qt.OC": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -7831,12 +5624,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "dt.acomp": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "dt.acomp": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        }
@@ -7855,12 +5642,6 @@ cultureInfo pt-BR
 			          "status.ped": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "status.ped": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -7875,12 +5656,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "obs.acomp": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "obs.acomp": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        },
@@ -7906,12 +5681,6 @@ cultureInfo pt-BR
 			          "parcela.OC": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "parcela.OC": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -7926,12 +5695,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "%pis": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "%pis": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        },
@@ -7972,12 +5735,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "%cofin": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "percentage cofin": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -8012,12 +5769,6 @@ cultureInfo pt-BR
 			          "vl.unit.sem.imp": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "vl.unit.sem.imp": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -8034,12 +5785,6 @@ cultureInfo pt-BR
 			          "vl.tot.sem.imp": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "vl.tot.sem.imp": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -8054,12 +5799,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "qt.pedida": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "qt.pedida": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        }
@@ -8080,20 +5819,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "dt.implant": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "date": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        },
-			        {
-			          "date": {
-			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.7
 			          }
@@ -8176,12 +5902,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "usuário.implant": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "usuário. scion": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -8256,12 +5976,6 @@ cultureInfo pt-BR
 			          "contato.ped": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "contato.ped": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -8276,12 +5990,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "observacoes.ped": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "observacoes.ped": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        }
@@ -8300,12 +6008,6 @@ cultureInfo pt-BR
 			          "romaneio.ped": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "romaneio.ped": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -8322,12 +6024,6 @@ cultureInfo pt-BR
 			          "critico.ped": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "critico.ped": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -8342,12 +6038,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "atendimento OC OF": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "atendimento OC OF": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        },
@@ -8375,12 +6065,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "ano": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "Ano/Mês/Cliente/notum": {
 			            "State": "Suggested",
 			            "Source": {
@@ -8389,17 +6073,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.812,
 			            "LastModified": "2025-12-19T16:49:44.1066529Z"
-			          }
-			        },
-			        {
-			          "Ano/Mês/Cliente/notum": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.812
 			          }
 			        },
 			        {
@@ -8430,12 +6103,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "ord mês e ano": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "ord mê e ano": {
 			            "Type": "Noun",
 			            "State": "Generated",
@@ -8457,12 +6124,6 @@ cultureInfo pt-BR
 			          "ano e mê": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "ano e mê": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -8481,12 +6142,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "@StatusBI": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "OBS CARTEIRA": {
 			            "State": "Suggested",
 			            "Source": {
@@ -8494,28 +6149,6 @@ cultureInfo pt-BR
 			              "Agent": "PowerBI.VisualColumnRename"
 			            },
 			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "OBS CARTEIRA": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "OB CARTEIRA": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.70200000000000007
 			          }
 			        }
 			      ]
@@ -8535,33 +6168,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "qtde linhas ainda no prazo": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Ainda No Prazo": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "Ainda No Prazo": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
 			          "qtde linha ainda number prazo": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -8569,6 +6175,16 @@ cultureInfo pt-BR
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "Ainda No Prazo": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -8588,24 +6204,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "qtde linhas OTIF": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "OTIF": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "OTIF": {
-			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -8631,37 +6230,20 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "familia comercial": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Familia": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "Familia": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
 			          "FAMILIA_COMERCIAL": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Familia": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -8687,28 +6269,8 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Customer": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
-			          }
-			        },
-			        {
 			          "Cliente": {
 			            "LastModified": "2025-12-19T17:21:05.079Z"
-			          }
-			        },
-			        {
-			          "Cliente": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Source": {
-			              "Type": "User"
-			            }
 			          }
 			        }
 			      ]
@@ -8724,12 +6286,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "empresa": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "empresa": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        }
@@ -8750,12 +6306,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "representante": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "Representante Pedido": {
 			            "State": "Suggested",
 			            "Source": {
@@ -8767,17 +6317,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Representante Pedido": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
-			          }
-			        },
-			        {
 			          "Vendedor": {
 			            "State": "Suggested",
 			            "Source": {
@@ -8786,17 +6325,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.72,
 			            "LastModified": "2025-12-19T16:49:44.1222771Z"
-			          }
-			        },
-			        {
-			          "Vendedor": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
 			          }
 			        }
 			      ]
@@ -8816,12 +6344,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "dim item id": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "Machine": {
 			            "State": "Suggested",
 			            "Source": {
@@ -8830,17 +6352,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.72,
 			            "LastModified": "2025-12-19T16:49:44.1222771Z"
-			          }
-			        },
-			        {
-			          "Machine": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
 			          }
 			        },
 			        {
@@ -8855,17 +6366,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Código Substituível": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
-			          }
-			        },
-			        {
 			          "Máquina": {
 			            "State": "Suggested",
 			            "Source": {
@@ -8874,17 +6374,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.72,
 			            "LastModified": "2025-12-19T16:49:44.1222771Z"
-			          }
-			        },
-			        {
-			          "Máquina": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
 			          }
 			        },
 			        {
@@ -8899,17 +6388,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Código ITEM": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
-			          }
-			        },
-			        {
 			          "Cód Alternativo": {
 			            "State": "Suggested",
 			            "Source": {
@@ -8921,17 +6399,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Cód Alternativo": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
-			          }
-			        },
-			        {
 			          "EQ": {
 			            "State": "Suggested",
 			            "Source": {
@@ -8940,17 +6407,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.72,
 			            "LastModified": "2025-12-19T16:49:44.1222771Z"
-			          }
-			        },
-			        {
-			          "EQ": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.72
 			          }
 			        },
 			        {
@@ -8962,17 +6418,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.576,
 			            "LastModified": "2025-12-19T16:49:44.1222771Z"
-			          }
-			        },
-			        {
-			          "Código": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.576
 			          }
 			        },
 			        {
@@ -8989,34 +6434,13 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "item": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "dim item": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
 			        },
 			        {
-			          "dim item": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "item id": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "item id": {
-			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -9136,12 +6560,6 @@ cultureInfo pt-BR
 			          "@categoria valor pedido": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "@categoria valor pedido": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -9156,12 +6574,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "@status estoque": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "@status estoque": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        },
@@ -9280,12 +6692,6 @@ cultureInfo pt-BR
 			          "@tipo cliente": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "@tipo cliente": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -9302,12 +6708,6 @@ cultureInfo pt-BR
 			          "regional": {}
 			        },
 			        {
-			          "regional": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "Área Geográfica": {
 			            "State": "Suggested",
 			            "Source": {
@@ -9319,28 +6719,8 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Área Geográfica": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.OrganizationLsdlSharing"
-			            },
-			            "Weight": 0.8
-			          }
-			        },
-			        {
 			          "região": {
 			            "LastModified": "2025-12-19T17:21:27.694Z"
-			          }
-			        },
-			        {
-			          "região": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Source": {
-			              "Type": "User"
-			            }
 			          }
 			        },
 			        {
@@ -9400,12 +6780,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "@faixa qtde itens pedido": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "@faixa qtde iten pedido": {
 			            "Type": "Noun",
 			            "State": "Generated",
@@ -9427,12 +6801,6 @@ cultureInfo pt-BR
 			          "qtde linhas ainda no prazo e ja pode atender": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "qtde linhas ainda no prazo e ja pode atender": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -9451,20 +6819,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "empresas que representam 80% linhas NO-FILL RATE": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "empresas que representam 80% linhas NO FILL RATE": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "empresas que representam 80% linhas NO FILL RATE": {
-			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -9486,20 +6841,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "empresa com mais linhas NO-fill rate": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "empresa com mais linhas NO fill rate": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "empresa com mais linhas NO fill rate": {
-			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -9517,12 +6859,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "empresa com mais linhas ainda no prazo": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "empresa com mais linhas ainda no prazo": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        }
@@ -9543,20 +6879,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "qtde clientes NO-OTIF": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "qtde clientes NO OTIF": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "qtde clientes NO OTIF": {
-			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -9598,20 +6921,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "cliente com mais linhas NO-OTIF": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "cliente com mais linhas NO OTIF": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "cliente com mais linhas NO OTIF": {
-			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -9633,20 +6943,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "_qtde pedidos (FILL_RATE)": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "_qtde pedidos": {
-			            "State": "Generated",
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "_qtde pedidos": {
-			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.75
 			          }
@@ -9666,12 +6963,6 @@ cultureInfo pt-BR
 			          "@estoque ou já pode atender": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "@estoque ou já pode atender": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -9686,12 +6977,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "@qtde dias desde criação": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "@qtde dias desde criação": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        }
@@ -9710,12 +6995,6 @@ cultureInfo pt-BR
 			          "é hoje?": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "é hoje?": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -9730,12 +7009,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "é ontem?": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "é ontem?": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        }
@@ -9754,12 +7027,6 @@ cultureInfo pt-BR
 			          "é esta semana?": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "é esta semana?": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -9776,12 +7043,6 @@ cultureInfo pt-BR
 			          "é semana passada?": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "é semana passada?": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -9796,12 +7057,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "é este mês?": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "é este mês?": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        },
@@ -9829,12 +7084,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "é mês passado?": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "é mê passado?": {
 			            "Type": "Noun",
 			            "State": "Generated",
@@ -9856,12 +7105,6 @@ cultureInfo pt-BR
 			          "é este ano?": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "é este ano?": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -9878,12 +7121,6 @@ cultureInfo pt-BR
 			          "é ano passado?": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "é ano passado?": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -9898,12 +7135,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "é últimos 7 dias?": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "é últimos 7 dias?": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        },
@@ -9931,12 +7162,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "é últimos 30 dias?": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "é último 30 dias?": {
 			            "Type": "Noun",
 			            "State": "Generated",
@@ -9956,12 +7181,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "é últimos 90 dias?": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "é últimos 90 dias?": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        },
@@ -9989,12 +7208,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "é últimos 6 meses?": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "é último 6 mese?": {
 			            "Type": "Noun",
 			            "State": "Generated",
@@ -10014,12 +7227,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "é últimos 12 meses?": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "é últimos 12 meses?": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        },
@@ -10045,12 +7252,6 @@ cultureInfo pt-BR
 			          "trimestre atual": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "trimestre atual": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -10065,12 +7266,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "qual o percentual de OTIF por cliente?": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "qual o percentual de OTIF por cliente?": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        }
@@ -10089,12 +7284,6 @@ cultureInfo pt-BR
 			          "quantos pedidos estão atrasados?": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "quantos pedidos estão atrasados?": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -10109,12 +7298,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "quais clientes VIP têm problemas de estoque?": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "quais clientes VIP têm problemas de estoque?": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        }
@@ -10133,12 +7316,6 @@ cultureInfo pt-BR
 			          "qual empresa tem mais pedidos no prazo?": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "qual empresa tem mais pedidos no prazo?": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -10153,12 +7330,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "qual o fill rate por região?": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "qual o fill rate por região?": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        }
@@ -10177,12 +7348,6 @@ cultureInfo pt-BR
 			          "OTIF dos últimos 6 meses": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "OTIF dos últimos 6 meses": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -10197,12 +7362,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "OTIF da última semana": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "OTIF da última semana": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        }
@@ -10221,12 +7380,6 @@ cultureInfo pt-BR
 			          "OTIF dos últimos 30 dias": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "OTIF dos últimos 30 dias": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -10241,12 +7394,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "OTIF deste mês": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "OTIF deste mês": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        }
@@ -10265,12 +7412,6 @@ cultureInfo pt-BR
 			          "OTIF do mês passado": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "OTIF do mês passado": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -10285,12 +7426,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "OTIF deste ano": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "OTIF deste ano": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        }
@@ -10309,12 +7444,6 @@ cultureInfo pt-BR
 			          "fill rate dos últimos 6 meses": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "fill rate dos últimos 6 meses": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -10331,12 +7460,6 @@ cultureInfo pt-BR
 			          "fill rate da última semana": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "fill rate da última semana": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
 			        }
 			      ]
 			    },
@@ -10351,12 +7474,6 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "pedidos atrasados dos últimos 30 dias": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "pedidos atrasados dos últimos 30 dias": {
-			            "Type": "Noun",
 			            "State": "Generated"
 			          }
 			        }

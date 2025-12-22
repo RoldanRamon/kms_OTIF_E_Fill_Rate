@@ -101,6 +101,20 @@
             },
             {
               "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fPedido"
+                    }
+                  },
+                  "Property": "DT_ENTREGA"
+                }
+              },
+              "queryRef": "fPedido.DT_ENTREGA",
+              "nativeQueryRef": "DT_ENTREGA"
+            },
+            {
+              "field": {
                 "Measure": {
                   "Expression": {
                     "SourceRef": {

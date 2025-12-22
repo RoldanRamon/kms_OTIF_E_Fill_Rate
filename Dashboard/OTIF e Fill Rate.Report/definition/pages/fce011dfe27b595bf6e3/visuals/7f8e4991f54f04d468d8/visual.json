@@ -13,6 +13,25 @@
     "visualType": "scatterChart",
     "query": {
       "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fPedido"
+                    }
+                  },
+                  "Property": "@Qtde Dias Desde Criação"
+                }
+              },
+              "queryRef": "fPedido.@Qtde Dias Desde Criação",
+              "nativeQueryRef": "@Qtde Dias Desde Criação",
+              "active": true
+            }
+          ]
+        },
         "Series": {
           "projections": [
             {
