@@ -1,13 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "000a325b9a75a86aaaae",
   "position": {
     "x": 12.361720807726075,
     "y": 243.86303775241439,
     "z": 2000,
     "height": 278.70061457418785,
-    "width": 606.84811237928,
-    "tabOrder": 0
+    "width": 606.84811237928
   },
   "visual": {
     "visualType": "lineStackedColumnComboChart",

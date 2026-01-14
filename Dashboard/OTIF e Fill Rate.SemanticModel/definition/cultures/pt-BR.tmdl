@@ -7478,55 +7478,42 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
+			    },
+			    "f_pedido.grupo_estoque": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fPedido",
+			          "ConceptualProperty": "GRUPO_ESTOQUE"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "grupo estoque": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "GRUPO_ESTOQUE": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Grupo De Estoque": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "f_pedido_has_f_base_carteira": {
-			      "Binding": {
-			        "ConceptualEntity": "fPedido"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "f_pedido": {
-			          "Target": {
-			            "Entity": "f_pedido"
-			          }
-			        },
-			        "f_base_carteira": {
-			          "Target": {
-			            "Entity": "f_base_carteira"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "f_pedido"
-			            },
-			            "Object": {
-			              "Role": "f_base_carteira"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "f_pedidos_have_f_base_carteiras"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "f_base_carteira"
-			            },
-			            "Object": {
-			              "Role": "f_pedido"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "f_base_carteiras_have_f_pedidos"
-			        }
-			      ]
-			    },
 			    "f_pedido_has_analise_FILL_RATE_pedido": {
 			      "Binding": {
 			        "ConceptualEntity": "fPedido"
@@ -7669,6 +7656,39 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "d_calendarios_have_f_pedidos"
+			        }
+			      ]
+			    },
+			    "f_pedido_has_grupo_estoque": {
+			      "Binding": {
+			        "ConceptualEntity": "fPedido"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_pedido": {
+			          "Target": {
+			            "Entity": "f_pedido"
+			          }
+			        },
+			        "f_pedido.grupo_estoque": {
+			          "Target": {
+			            "Entity": "f_pedido.grupo_estoque"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_pedido"
+			            },
+			            "Object": {
+			              "Role": "f_pedido.grupo_estoque"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_pedidos_have_grupo_estoques"
 			        }
 			      ]
 			    },
@@ -13702,6 +13722,52 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "f_pedidos_have_dt_emissaos"
+			        }
+			      ]
+			    },
+			    "f_pedido_has_f_base_carteira": {
+			      "Binding": {
+			        "ConceptualEntity": "fPedido"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_pedido": {
+			          "Target": {
+			            "Entity": "f_pedido"
+			          }
+			        },
+			        "f_base_carteira": {
+			          "Target": {
+			            "Entity": "f_base_carteira"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_pedido"
+			            },
+			            "Object": {
+			              "Role": "f_base_carteira"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_pedidos_have_f_base_carteiras"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_base_carteira"
+			            },
+			            "Object": {
+			              "Role": "f_pedido"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_base_carteiras_have_f_pedidos"
 			        }
 			      ]
 			    },

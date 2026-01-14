@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "905204e13ff209c60070",
   "position": {
     "x": 640.5618964003512,
@@ -71,21 +71,6 @@
                       "Entity": "fPedido"
                     }
                   },
-                  "Property": "DIM_ITEM_ID"
-                }
-              },
-              "queryRef": "fPedido.DIM_ITEM_ID",
-              "nativeQueryRef": "Item",
-              "displayName": "Item"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "fPedido"
-                    }
-                  },
                   "Property": "FAMILIA_COMERCIAL"
                 }
               },
@@ -122,6 +107,36 @@
               "queryRef": "fPedido.EMPRESA",
               "nativeQueryRef": "Empresa",
               "displayName": "Empresa"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fPedido"
+                    }
+                  },
+                  "Property": "DIM_ITEM_ID"
+                }
+              },
+              "queryRef": "fPedido.DIM_ITEM_ID",
+              "nativeQueryRef": "Item",
+              "displayName": "Item"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fPedido"
+                    }
+                  },
+                  "Property": "GRUPO_ESTOQUE"
+                }
+              },
+              "queryRef": "fPedido.GRUPO_ESTOQUE",
+              "nativeQueryRef": "Grupo De Estoque",
+              "displayName": "Grupo De Estoque"
             }
           ]
         }

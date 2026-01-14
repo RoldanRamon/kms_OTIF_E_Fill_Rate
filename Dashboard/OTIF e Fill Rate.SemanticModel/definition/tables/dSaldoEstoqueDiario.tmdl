@@ -34,7 +34,7 @@ table dSaldoEstoqueDiario
 		mode: import
 		source =
 				let
-				    Fonte = Sql.Database("BRPIN-DBS008\PowerBI", "idba_komatsu", [Query="#(tab)select distinct#(lf)#(tab)periodo#(lf)#(tab),concat([cod-estabel], '_', [it-codigo]) as IdPedidoSaldoEstoque#(lf)#(tab),sum(quantidade) as quantidade#(lf)#(lf)#(tab)from FATO_SALDO_ESTOQUE_DIARIO#(lf)#(tab)where periodo >= '2022-01-01'#(lf)#(tab)group by periodo, [cod-estabel], [it-codigo]#(lf)#(tab)order by periodo desc#(lf)#(tab);"]),
+				    Fonte = Sql.Database("BRPIN-DBS008\PowerBI", "idba_komatsu", [Query="#(tab)select distinct#(lf)#(tab)periodo#(lf)#(tab),concat([cod-estabel], '_', [it-codigo]) as IdPedidoSaldoEstoque#(lf)#(tab),sum(quantidade) as quantidade#(lf)#(lf)#(tab)from FATO_SALDO_ESTOQUE_DIARIO#(lf)#(tab)where periodo >= '2024-01-01'#(lf)#(tab)group by periodo, [cod-estabel], [it-codigo]#(lf)#(tab)order by periodo desc#(lf)#(tab);"]),
 				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"periodo", type date}})
 				in
 				    #"Tipo Alterado"

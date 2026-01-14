@@ -383,64 +383,20 @@ table fPedido
 
 		annotation SummarizationSetBy = Automatic
 
+	column GRUPO_ESTOQUE
+		dataType: string
+		lineageTag: 8325a41c-7919-4339-a639-a8b9ebfc3cca
+		summarizeBy: none
+		sourceColumn: GRUPO_ESTOQUE
+
+		annotation SummarizationSetBy = Automatic
+
 	partition fPedido-24034e89-6c6d-42ea-a97d-3af7c3cf61e1 = m
 		mode: import
 		source =
 				let
 				    // Fonte de dados principal com seleção otimizada de colunas
-				    Fonte = Sql.Database("BRPIN-DBS008\PowerBI", "idba_komatsu", [Query="
-				    -- ETL Otimizado: Seleção apenas de colunas utilizadas em visuais, medidas e relacionamentos
-				    SELECT
-				          -- Identificadores principais (chaves e relacionamentos)
-				          A.NR_PEDIDO,                                          -- Chave para relacionamentos OTIF/FILL_RATE
-				          CONCAT(A.NR_PEDIDO_CLIENTE, '-', A.NR_SEQ_PED,'-', A.DIM_ITEM_ID) AS ID_PEDIDO_SEQ_ITEM, -- Chave para fBaseCarteira
-				          CONCAT(A.DIM_EMPRESA_ID, '_', A.DIM_ITEM_ID) AS IdPedidoSaldoEstoque,                    -- Chave para dSaldoEstoqueDiario
-				
-				          -- Datas (críticas para OTIF)
-				          A.DT_EMISSAO,                                         -- Relacionamento com dCalendario
-				          A.DT_ENTREGA,                                         -- Prazo prometido (essencial para OTIF)
-				          A.NF_DATA,                                            -- Data entrega real (essencial para OTIF)
-				
-				          -- Quantidades (essenciais para Fill Rate)
-				          A.QTDE,                                               -- Quantidade solicitada
-				          A.QTDE_ATEND,                                         -- Quantidade já atendida
-				          A.QTDE - A.QTDE_ATEND AS QTDE_EM_ABERTO,             -- Quantidade pendente (crítica para Fill Rate)
-				
-				          -- Valores financeiros
-				          A.PRECO_UNIT,                                         -- Para cálculos de valor total
-				          A.VLR_BRUTO,                                          -- Para categorização por valor
-				
-				          -- Dimensões analíticas utilizadas em visuais
-				          CONCAT(D.COD_CLIENTE, ' - ', D.CLIENTE) AS CLIENTE,  -- Usado em slicers e análises
-				          E.DESC_C1 AS FAMILIA_COMERCIAL,                      -- Segmentação de produtos
-				          CONCAT(F.DIM_EMPRESA_ID, ' - ', F.CIDADE) AS EMPRESA, -- Análise por filial
-				          F.REGIONAL,                                           -- Análise regional
-				          CONCAT(G.COD_REPRESENTANTE, ' - ', G.REPRESENTANTE) AS REPRESENTANTE, -- Análise de vendas
-				          CONCAT(E.DIM_ITEM_ID, ' - ', E.NM_ITEM) AS DIM_ITEM_ID, -- Identificação do item
-				
-				          -- Campos operacionais utilizados
-				          A.POS_PDV,                                            -- Status operacional (filtro Cancelado)
-				          A.PRIORIDADE,                                         -- Priorização de atendimento
-				          A.NR_SEQ_PED,                                        -- Sequencia do item no pedido
-				
-				          -- Campos de Nota Fiscal (para validação OTIF)
-				          A.NF_NUM,                                            -- Número da nota fiscal
-				          A.NF_SERIE                                           -- Série da nota fiscal
-				
-				      FROM [idba_komatsu].[dbo].[FATO_PEDIDO_BI] A
-				      INNER JOIN DIM_DIVISAO_VENDA_BI B ON A.DIM_DIVISAO_VENDA_ID = B.DIM_DIVISAO_VENDA_ID
-				      LEFT JOIN DIM_CLIENTE_BI D ON D.COD_CLIENTE = A.DIM_CLIENTE_ID
-				      LEFT JOIN DIM_ITEM_BI E ON E.CD_ITEM = A.DIM_ITEM_ID
-				      LEFT JOIN DIM_EMPRESA_BI F ON F.COD_EMPRESA = A.DIM_EMPRESA_ID
-				      LEFT JOIN DIM_REPRESENTANTE_BI G ON G.COD_REPRESENTANTE = A.DIM_REPRESENTANTE_ID
-				
-				      -- Filtros de performance e qualidade dos dados
-				      WHERE B.TP_DIVISAO_VENDA IN ('PEÇAS','PEÇAS ATIVAS','PEÇAS KDB', 'PEÇAS CONTRATO')
-				        AND A.POS_PDV <> 'Cancelado'                          -- Remove pedidos cancelados
-				        AND A.DT_EMISSAO > '01/01/2022'                       -- Janela de análise relevante
-				
-				      ORDER BY A.DT_EMISSAO DESC
-				    "]),
+				    Fonte = Sql.Database("BRPIN-DBS008\PowerBI", "idba_komatsu", [Query="    -- ETL Otimizado: Seleção apenas de colunas utilizadas em visuais, medidas e relacionamentos#(lf)    SELECT#(lf)          -- Identificadores principais (chaves e relacionamentos)#(lf)          A.NR_PEDIDO,                                          -- Chave para relacionamentos OTIF/FILL_RATE#(lf)          CONCAT(A.NR_PEDIDO_CLIENTE, '-', A.NR_SEQ_PED,'-', A.DIM_ITEM_ID) AS ID_PEDIDO_SEQ_ITEM, -- Chave para fBaseCarteira#(lf)          CONCAT(A.DIM_EMPRESA_ID, '_', A.DIM_ITEM_ID) AS IdPedidoSaldoEstoque,                    -- Chave para dSaldoEstoqueDiario#(lf)#(lf)          -- Datas (críticas para OTIF)#(lf)          A.DT_EMISSAO,                                         -- Relacionamento com dCalendario#(lf)          A.DT_ENTREGA,                                         -- Prazo prometido (essencial para OTIF)#(lf)          A.NF_DATA,                                            -- Data entrega real (essencial para OTIF)#(lf)#(lf)          -- Quantidades (essenciais para Fill Rate)#(lf)          A.QTDE,                                               -- Quantidade solicitada#(lf)          A.QTDE_ATEND,                                         -- Quantidade já atendida#(lf)          A.QTDE - A.QTDE_ATEND AS QTDE_EM_ABERTO,             -- Quantidade pendente (crítica para Fill Rate)#(lf)#(lf)          -- Valores financeiros#(lf)          A.PRECO_UNIT,                                         -- Para cálculos de valor total#(lf)          A.VLR_BRUTO,                                          -- Para categorização por valor#(lf)#(lf)          -- Dimensões analíticas utilizadas em visuais#(lf)          CONCAT(D.COD_CLIENTE, ' - ', D.CLIENTE) AS CLIENTE,  -- Usado em slicers e análises#(lf)          E.DESC_C1 AS FAMILIA_COMERCIAL,                      -- Segmentação de produtos#(lf)          CONCAT(F.DIM_EMPRESA_ID, ' - ', F.CIDADE) AS EMPRESA, -- Análise por filial#(lf)          F.REGIONAL,                                           -- Análise regional#(lf)          CONCAT(G.COD_REPRESENTANTE, ' - ', G.REPRESENTANTE) AS REPRESENTANTE, -- Análise de vendas#(lf)          CONCAT(E.DIM_ITEM_ID, ' - ', E.NM_ITEM) AS DIM_ITEM_ID, -- Identificação do item#(lf)#(lf)          -- Campos operacionais utilizados#(lf)          A.POS_PDV,                                            -- Status operacional (filtro Cancelado)#(lf)          A.PRIORIDADE,                                         -- Priorização de atendimento#(lf)          A.NR_SEQ_PED,                                        -- Sequencia do item no pedido#(lf)#(lf)          -- Campos de Nota Fiscal (para validação OTIF)#(lf)          A.NF_NUM,                                            -- Número da nota fiscal#(lf)          A.NF_SERIE,                                           -- Série da nota fiscal#(lf)          CONCAT(E.COD_C4,' - ',E.DESC_C4) AS GRUPO_ESTOQUE      -- Código e descrição do grupo de estoque para saber se é nacional ou importado#(lf)#(lf)      FROM [idba_komatsu].[dbo].[FATO_PEDIDO_BI] A#(lf)      INNER JOIN DIM_DIVISAO_VENDA_BI B ON A.DIM_DIVISAO_VENDA_ID = B.DIM_DIVISAO_VENDA_ID#(lf)      LEFT JOIN DIM_CLIENTE_BI D ON D.COD_CLIENTE = A.DIM_CLIENTE_ID#(lf)      LEFT JOIN DIM_ITEM_BI E ON E.CD_ITEM = A.DIM_ITEM_ID#(lf)      LEFT JOIN DIM_EMPRESA_BI F ON F.COD_EMPRESA = A.DIM_EMPRESA_ID#(lf)      LEFT JOIN DIM_REPRESENTANTE_BI G ON G.COD_REPRESENTANTE = A.DIM_REPRESENTANTE_ID#(lf)#(lf)      -- Filtros de performance e qualidade dos dados#(lf)      WHERE B.TP_DIVISAO_VENDA IN ('PEÇAS','PEÇAS ATIVAS','PEÇAS KDB', 'PEÇAS CONTRATO')#(lf)        AND A.POS_PDV <> 'Cancelado'                          -- Remove pedidos cancelados#(lf)        AND A.DT_EMISSAO > '01/01/2024'                       -- Janela de análise relevante#(lf)#(lf)      ORDER BY A.DT_EMISSAO DESC"]),
 				
 				    // Transformação de tipos otimizada
 				    #"Tipos Convertidos" = Table.TransformColumnTypes(Fonte,{
@@ -451,7 +407,7 @@ table fPedido
 				in
 				    #"Tipos Convertidos"
 
-	annotation PBI_ResultType = Table
+	annotation PBI_ResultType = Exception
 
 	annotation PBI_NavigationStepName = Navegação
 

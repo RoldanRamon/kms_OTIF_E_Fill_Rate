@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.0.0/schema.json",
   "themeCollection": {
     "baseTheme": {
       "name": "CY25SU11",
@@ -54,21 +54,6 @@
         {
           "name": "Capa37338362014893844.png",
           "path": "Capa37338362014893844.png",
-          "type": "Image"
-        },
-        {
-          "name": "Horarios_De_Atualizacao8288698170432751.png",
-          "path": "Horarios_De_Atualizacao8288698170432751.png",
-          "type": "Image"
-        },
-        {
-          "name": "Komastsu_Logo24811854858773863.png",
-          "path": "Komastsu_Logo24811854858773863.png",
-          "type": "Image"
-        },
-        {
-          "name": "Komastsu_Logo25786403134221747.png",
-          "path": "Komastsu_Logo25786403134221747.png",
           "type": "Image"
         }
       ]
