@@ -43,6 +43,21 @@
               "queryRef": "dCalendario.Mês",
               "nativeQueryRef": "Mês",
               "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fPedido"
+                    }
+                  },
+                  "Property": "EMPRESA"
+                }
+              },
+              "queryRef": "fPedido.EMPRESA",
+              "nativeQueryRef": "EMPRESA",
+              "active": false
             }
           ]
         },
