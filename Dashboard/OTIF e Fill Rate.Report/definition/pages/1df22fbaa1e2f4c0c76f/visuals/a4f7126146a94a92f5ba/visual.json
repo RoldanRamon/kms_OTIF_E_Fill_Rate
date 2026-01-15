@@ -8899,15 +8899,15 @@
                                       "Source": "_"
                                     }
                                   },
-                                  "Property": "% FILL_RATE - Linha"
+                                  "Property": "% NO-FILL_RATE - Linha"
                                 },
-                                "Name": "_Medidas.% FILL_RATE - Linha"
+                                "Name": "_Medidas.% NO-FILL_RATE - Linha"
                               }
                             ]
                           }
                         }
                       },
-                      "Property": "_Medidas.% FILL_RATE - Linha"
+                      "Property": "_Medidas.% NO-FILL_RATE - Linha"
                     }
                   },
                   "IncludeAllTypes": 1
@@ -8918,7 +8918,7 @@
                     "kind": "NaturalLanguage",
                     "annotation": {
                       "name": "Valor 10",
-                      "utterance": "% FILL_RATE - linha"
+                      "utterance": "% NO-FILL_RATE - linha"
                     }
                   }
                 }
@@ -9069,7 +9069,9 @@
                   {
                     "value": " (",
                     "textStyle": {
-                      "fontSize": "10.5pt"
+                      "fontWeight": "bold",
+                      "fontSize": "10.5pt",
+                      "color": "#d64550"
                     }
                   },
                   {
@@ -9089,7 +9091,15 @@
                     }
                   },
                   {
-                    "value": ") com problemas de disponibilidade de estoque.",
+                    "value": ")",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "10.5pt",
+                      "color": "#d64550"
+                    }
+                  },
+                  {
+                    "value": " com problemas de disponibilidade de estoque.",
                     "textStyle": {
                       "fontSize": "10.5pt"
                     }
