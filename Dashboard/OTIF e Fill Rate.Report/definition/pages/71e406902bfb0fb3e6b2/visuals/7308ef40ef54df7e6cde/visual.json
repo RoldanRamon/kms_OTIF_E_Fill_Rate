@@ -19,29 +19,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dCalendario"
+                      "Entity": "fPedido"
                     }
                   },
-                  "Property": "Ano Fiscal"
+                  "Property": "@NF_DATA_MES_ANO"
                 }
               },
-              "queryRef": "dCalendario.Ano Fiscal",
-              "nativeQueryRef": "Ano Fiscal",
-              "active": true
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "dCalendario"
-                    }
-                  },
-                  "Property": "Mês"
-                }
-              },
-              "queryRef": "dCalendario.Mês",
-              "nativeQueryRef": "Mês",
+              "queryRef": "fPedido.@NF_DATA_MES_ANO",
+              "nativeQueryRef": "@NF_DATA_MES_ANO",
               "active": true
             },
             {
@@ -118,6 +103,19 @@
       },
       "sortDefinition": {
         "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fPedido"
+                  }
+                },
+                "Property": "@NF_DATA_MES_ANO"
+              }
+            },
+            "direction": "Ascending"
+          },
           {
             "field": {
               "Column": {
@@ -824,6 +822,13 @@
                       "Percent": 0
                     }
                   }
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

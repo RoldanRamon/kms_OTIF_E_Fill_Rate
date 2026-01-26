@@ -10,7 +10,11 @@ table _Medidas
 			
 			CALCULATE(
 			    [_Qtde Total de Linhas],
-			    fPedido[@OTIF Linha] = "OTIF"
+			    fPedido[@OTIF Linha] = "OTIF",
+			    USERELATIONSHIP(
+			            dCalendario[Date],
+			            fPedido[NF_DATA]
+			    )
 			)
 		formatString: #,0
 		displayFolder: OTIF\LINHA
@@ -20,7 +24,11 @@ table _Medidas
 			
 			CALCULATE(
 			    [_Qtde Total de Linhas],
-			    fPedido[@OTIF Linha] = "NO-OTIF"
+			    fPedido[@OTIF Linha] = "NO-OTIF",
+			    USERELATIONSHIP(
+			            dCalendario[Date],
+			            fPedido[NF_DATA]
+			    )
 			)
 		formatString: #,0
 		displayFolder: OTIF\LINHA
@@ -30,7 +38,11 @@ table _Medidas
 			
 			CALCULATE(
 			    [_Qtde Total de Linhas],
-			    fPedido[@OTIF Linha] = "Ainda No Prazo"
+			    fPedido[@OTIF Linha] = "Ainda No Prazo",
+			    USERELATIONSHIP(
+			            dCalendario[Date],
+			            fPedido[NF_DATA]
+			    )
 			)
 		formatString: #,0
 		displayFolder: OTIF\LINHA
@@ -198,7 +210,11 @@ table _Medidas
 	measure 'Qtde Linhas Ainda No Prazo e Ja Pode Atender' =
 			
 			CALCULATE([Qtde Linhas Ainda No Prazo],
-			           fPedido[@StatusBI] = "Já Pode Atender"
+			           fPedido[@StatusBI] = "Já Pode Atender",
+			           USERELATIONSHIP(
+			            dCalendario[Date],
+			            fPedido[NF_DATA]
+			    )
 			           )
 		formatString: #,0
 		displayFolder: OTIF\LINHA
@@ -293,7 +309,11 @@ table _Medidas
 			
 			CALCULATE(
 			    DISTINCTCOUNT(fPedido[CLIENTE]),
-			    fPedido[@OTIF Linha] = "NO-OTIF"
+			    fPedido[@OTIF Linha] = "NO-OTIF",
+			        USERELATIONSHIP(
+			            dCalendario[Date],
+			            fPedido[NF_DATA]
+			    )
 			)
 		formatString: #,0
 		displayFolder: OTIF\LINHA

@@ -21,3 +21,8 @@ relationship ab6fe1b0-29b5-b472-4ccb-cf732e86ebe7
 	fromColumn: fPedido.ID_PEDIDO_SEQ_ITEM
 	toColumn: fBaseCarteira.ID_PEDIDO_SEQ_ITEM
 
+relationship 8af4fd41-b633-f2e1-0ed3-626b861d3dfa
+	isActive: false
+	fromColumn: fPedido.NF_DATA
+	toColumn: dCalendario.Date
+

@@ -391,6 +391,35 @@ table fPedido
 
 		annotation SummarizationSetBy = Automatic
 
+	column @NF_DATA_MES_ANO =
+			
+			DATE (
+			    YEAR ( fPedido[NF_DATA] ),
+			    MONTH ( fPedido[NF_DATA] ),
+			    1
+			)
+		dataType: dateTime
+		formatString: yyyy-mm
+		lineageTag: 35bdc05f-130a-42f9-ac3a-a323e11694c1
+		summarizeBy: none
+		sortByColumn: '@Ord Mês e Ano'
+
+		changedProperty = SortByColumn
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column '@Ord Mês e Ano' = YEAR(fPedido[NF_DATA]) * 100 & MONTH([NF_DATA])
+		lineageTag: 39ceb1c7-ff84-42ba-9efa-6cb58bcd1084
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition fPedido-24034e89-6c6d-42ea-a97d-3af7c3cf61e1 = m
 		mode: import
 		source =
